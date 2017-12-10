@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <com.honeywell.wholesale.ui.base.BaseTextView
+        android:id="@+id/menu_current_shop_name"
+        style="@style/LeftMenuTextItemStyle"
+        android:layout_width="match_parent"
+        android:maxLines="1"
+        android:layout_centerVertical="true"
+        android:ellipsize="end"
+        android:src="@drawable/left_menu_icon_shop_selected"
+        android:layout_toStartOf="@+id/menu_switch_shop"
+        android:layout_marginStart="@dimen/dashboard_menu_text_margin_size"
+        />
+
+    <com.honeywell.wholesale.ui.base.BaseTextView
+        android:id="@+id/menu_switch_shop"
+        style="@style/LeftMenuTextItemStyle"
+        android:maxLines="1"
+        android:layout_width="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/dashboard_menu_text_margin_size"
+        android:text="@string/menu_swtich_shop"
+        android:textSize="12dp"
+        />
+</RelativeLayout>

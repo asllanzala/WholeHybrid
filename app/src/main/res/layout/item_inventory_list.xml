@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingStart="@dimen/left_border_size"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:gravity="center"
+        android:layout_alignParentEnd="true"
+        android:background="#f3f3f3">
+
+        <ImageView
+            android:id="@+id/inventory_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        >
+
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/inventory_title_textView"
+            android:layout_width="160dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="4dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="15dp"
+            android:lines="1" />
+
+        <RelativeLayout
+            android:id="@+id/stock_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inventory_title_textView"
+            android:layout_marginTop="8dp"
+            >
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/stock_title"
+                android:textSize="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray_deep_than_middle"
+                android:layout_gravity="center"
+                android:text="库存 "/>
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/stock_value"
+                android:textSize="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/stock_title"
+                android:singleLine="true"
+                android:layout_gravity="center"
+                android:textColor="@color/black" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/value_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/stock_layout"
+            android:layout_marginTop="8dp"
+            >
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/value_title"
+                android:textSize="13dp"
+                android:textColor="#dc4f11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="单价 "/>
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/value_value"
+                android:textSize="13dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/value_title"
+                android:textColor="#dc4f11"
+                android:layout_gravity="center"
+                android:singleLine="true"
+                android:text="$10,000 "/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bg_gray" />
+    
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingStart="@dimen/left_border_size"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/sku_product_name"
+                    android:layout_width="200dp"
+                    android:layout_height="18dp"
+                    android:layout_marginTop="1dp"
+                    android:maxWidth="127dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:text="货品   " />
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/sku_product_stock_quantity"
+                    android:layout_width="120dp"
+                    android:layout_height="13dp"
+                    android:layout_marginTop="6dp"
+                    android:maxWidth="127dp"
+                    android:singleLine="true"
+                    android:textSize="10dp"
+                    android:textColor="#8a8a8a"
+                    android:text="库存   " />
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/sku_product_unit_price"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textSize="13dp"
+                    android:textColor="#8a8a8a"
+                    android:singleLine="true"
+                    android:text="0" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingBottom="8dp"
+                android:layout_marginStart="11dp">
+
+
+                <ImageView
+                    android:id="@+id/sku_product_no_add"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:clickable="true"
+                    android:src="@drawable/button_num_add" />
+
+                <EditText
+                    android:id="@+id/sku_product_no_edittext"
+                    android:layout_width="70dp"
+                    android:layout_height="34dp"
+                    android:layout_toStartOf="@id/sku_product_no_add"
+                    android:gravity="center"
+                    android:selectAllOnFocus="true"
+                    android:inputType="numberDecimal"
+                    android:background="@drawable/textview_border"
+                    android:layout_marginEnd="4dp"
+                    android:maxLength="8"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:text="0"
+                    android:layout_alignParentBottom="true" />
+
+                <ImageView
+                    android:id="@+id/sku_product_no_minus"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:clickable="true"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toStartOf="@id/sku_product_no_edittext"
+                    android:src="@drawable/button_num_sub" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#f3f3f3" />
+
+</LinearLayout>

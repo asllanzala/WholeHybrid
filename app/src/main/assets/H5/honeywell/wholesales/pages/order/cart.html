@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          id="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/sm-extend.min.css">
+    <link rel="stylesheet" href="cart.css"/>
+</head>
+
+<body>
+<div class="page-group">
+    <div class="page page-current" id="cartListPage">
+        <nav class="bar bar-tab bottom_bar" id="cartBar">
+            <div class="row no-gutter">
+                <div class="col-50">
+                    <a href="#" class="button  oneBtn">
+                    <i class="shop_name">客户:<i class='addCustomerName' style="display:inline-block"></i></i>
+                    <em class="total_money">总计 <em class="product-selMoney"> ￥0</em></em>
+                    </a>
+                </div>
+                <div class="col-50"><a href="javascript:void(0)" class="button button-big twoBtn" data-no-cache="true"
+                                       id="checkout">结算</a></div>
+            </div>
+        </nav>
+        <div class="content  cartInfo">
+            <div class="list-block media-list">
+                <ul id="box">
+                   <!--商品列表的Container-->
+                </ul>
+                <p id="hasNoProInCart">购物篮为空</p>
+                <script type="text/html" id="cart-customer-group-title">
+                    <li class="cart-group-title" id="cart-customer-group-{{customerId}}">
+                        <div class="row">
+                            <div class="col-80 cart-product-json">
+                                <label class="label-checkbox item-content">
+                                    <input type="radio" name="cart-customer-group-radio">
+                                    <div class="item-media cust-name-radio"><i
+                                            class="icon icon-form-checkbox"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title cust-name-radio customerNameInfo">{{custName}}</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-20 removeCartByCustomerID" data-customerId="{{customerId}}">
+                                <a class="item-after">清空</a>
+                            </div>
+                        </div>
+                    </li>
+                </script>
+                <script type="text/html" id="cart-customer-group-title-notTop">
+                    <li class="cart-group-title top-title" id="cart-customer-group-{{customerId}}">
+                        <div class="row">
+                            <div class="col-80 cart-product-json">
+                                <label class="label-checkbox item-content">
+                                    <input type="radio" name="cart-customer-group-radio">
+                                    <div class="item-media cust-name-radio"><i
+                                            class="icon icon-form-checkbox"></i></div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title cust-name-radio customerNameInfo">{{custName}}</div>
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="col-20 removeCartByCustomerID" data-customerId="{{customerId}}">
+                                <a class="item-after">清空</a>
+                            </div>
+                        </div>
+                    </li>
+                </script>
+                <script type="text/html" id="cart-product-list">
+                    <div class="cart-proDetail-info" data-product-json='{{customerJson}}' data-customerId="{{customerId}}">
+                        <label class="label-checkbox item-content">
+                            <input type="checkbox" name="product_cartInfo">
+                            <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
+                            <a href="#" class="item-content" style="width: 100%;">
+                                <div class="item-media"><img src={{productImage}} width="65"></div>
+                                <div class="item-inner">
+                                    <div class="item-text">{{productName}}</div>
+                                    <div class="item-title-row cart-nums">
+                                        <div class="item-title"><i class="product-price">￥{{unitPrice}}</i>/<i class="product-unit">{{unit}}</i></div>
+                                        <div class="item-after">×{{totalNumber}}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </label>
+                    </div>
+                </script>
+            </div>
+        </div>
+        <!--content end-->
+    </div>
+</div>
+<script src="../../js/vendor/require.min.js"></script>
+<script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+<script src="cart.js"></script>
+</body>
+
+</html>

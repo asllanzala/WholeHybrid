@@ -1,0 +1,135 @@
+%fullWidth {
+  width: 100%;
+}
+%fullHeight {
+  height: 100%;
+}
+%marginAuto {
+  margin: 0 auto;
+}
+%pabsolute {
+  position: absolute;
+}
+%prelative {
+  position: relative;
+}
+%textAlign {
+  text-align: center;
+}
+%borderBottom {
+  border-bottom: .05rem solid #e1e1e1;
+}
+%colorBlack {
+  color: #000;
+}
+%colorGray {
+  color: #cccccc;
+}
+%background {
+  background: #FFFFFF;
+}
+$mainColor: #1792E5;
+.bar {
+  background: #333333;
+  @extend %colorWhite;
+}
+%colorWhite {
+  color: #FFFFFF;
+}
+%fontSize16 {
+  font-size: 0.8rem;
+}
+%fontSize14 {
+  font-size: 0.7rem;
+}
+%fontSize13 {
+  font-size: 0.65rem;
+}
+%fontSize12 {
+  font-size: 0.6rem;
+}
+.bottom_bar {
+  border-top: 1px solid #eeeeee; //  height: 2.8rem;
+  background: none;
+  .button.button-big {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border: none;
+  }
+}
+.buttons-tab {
+  @extend %background;
+}
+.buttons-tab .button,
+.buttons-tab .button.active {
+  @extend %colorBlack;
+}
+.buttons-tab .button.active {
+  //border-bottom: 3px solid #FFFFFF;
+  color: $mainColor;
+}
+.list-block {
+  margin: 0;
+  .media-list .item-title {
+    font-weight: 400;
+  }
+}
+.home_title {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.title {
+  padding-left: 0;
+  @extend %textAlign;
+}
+.oneBtn {
+  @extend %background;
+  color: #000000;
+  line-height: 2.5rem;
+  border-radius: 0; //  border: 1px solid #CCCCCC;
+}
+.twoBtn {
+  background-color: #000000;
+  @extend %colorWhite;
+  border: none;
+  line-height: 2.5rem;
+  border-radius: 0;
+}
+.ws_label {
+  color: $mainColor;
+  margin: .8rem;
+}
+i, em { font-style: normal; }
+select { @extend %fontSize14; }
+.borderBottom { border-bottom: .05rem solid #ccc; }
+//radio
+label.label-checkbox i.icon-form-checkbox {
+}
+.icon-form-radio::after {
+}
+select { -webkit-appearance: none; -moz-appearance: none; border: none; @extend %fullWidth; background: none; }
+.modal-inner { -webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0; }
+#modalConfirm-title { text-align: left; }
+#modalConfirm-content { @extend %fontSize14; padding: .5rem 0; text-align: left; }
+#modalConfirm-buttons { @extend %fullWidth; @extend %prelative; }
+#modalConfirm-buttons, #modalConfirm-buttons a { @extend %background; height: 2rem; line-height: 2rem; }
+#modalConfirm-buttons .modal-button { @extend %background; }
+#modalConfirm-buttons a { display: inline-block; position: absolute; color: #0a8ddf; width: 40%; }
+#modalConfirm-buttons #giveup-btn { left: 20%; }
+#modalConfirm-buttons #sure-btn { right: 0; }
+.hasNoInfomation {
+  text-align: center; border-bottom: none; display: none;
+  @extend %pabsolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 2rem;
+  padding: 20px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  @extend %fontSize14;
+}
+.error { border-bottom: .1rem solid red; }
+

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray">
+
+    <ImageView
+        android:id="@+id/main_page_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/main_page_home_bg"
+        android:scaleType="fitXY"
+        />
+    <com.honeywell.wholesale.ui.dashboard.CircleImageView
+        android:id="@+id/main_page_avatar"
+        android:layout_width="64dp"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:paddingBottom="10dp"
+        android:paddingEnd="18dp"
+        android:paddingStart="18dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/user_icon"
+        app:civ_border_color="@android:color/transparent"
+        app:civ_border_width="0px"/>
+    <!--<com.honeywell.wholesale.ui.dashboard.CircleImageView-->
+        <!--android:id="@+id/main_page_avatar"-->
+        <!--android:layout_width="36dp"-->
+        <!--android:layout_height="36dp"-->
+        <!--android:layout_marginStart="21dp"-->
+        <!--android:layout_marginTop="21dp"-->
+        <!--android:src="@drawable/user_icon"-->
+        <!--android:clickable="true"-->
+        <!--/>-->
+
+    <ImageView
+        android:id="@+id/main_page_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginTop="200dp"
+        android:src="@drawable/main_page_home_search"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        />
+
+    <ImageView
+        android:id="@+id/main_page_create_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_page_search"
+        android:layout_marginTop="-20dp"
+        android:clickable="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/main_page_home_create_order"
+        />
+
+    <ImageView
+        android:id="@+id/main_page_in_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_page_create_order"
+        android:layout_marginTop="-12dp"
+        android:clickable="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/main_page_home_in_stock"
+        />
+
+    <ImageView
+        android:id="@+id/main_page_home_sale_return"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_page_in_stock"
+        android:layout_marginTop="-13dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/main_page_home_sale_return"
+        />
+
+    <ImageView
+        android:id="@+id/main_page_create_new_product"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/main_page_home_sale_return"
+        android:layout_marginTop="-13dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/main_page_home_new_product"
+        />
+
+    <com.honeywell.wholesale.ui.base.BaseTextView
+        android:id="@+id/pppp"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/main_page_create_new_product"
+        android:layout_marginTop="-13dp"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        android:textSize="30dp"
+        android:text="sadada"
+        />
+
+
+</RelativeLayout>

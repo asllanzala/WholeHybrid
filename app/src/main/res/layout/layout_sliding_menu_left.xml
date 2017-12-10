@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/sliding_menu_background"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/sliding_menu_item_backgound"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="19dp"
+        android:paddingTop="32dp">
+
+        <com.honeywell.wholesale.ui.dashboard.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="83dp"
+            android:layout_height="83dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/user_icon"
+            app:civ_border_color="@android:color/transparent"
+            app:civ_border_width="0px"/>
+
+        <TextView
+            android:id="@+id/menu_user_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Boss Wu"
+            android:textColor="@color/white"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:id="@+id/menu_user_role_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center_vertical"
+            android:text="@string/menu_user_role_boss"
+            android:textColor="@color/dashboard_left_menu_user_role_color"
+            android:textSize="15dp"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/sliding_menu_left_dividing_line_color"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/sliding_menu_item_backgound"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/menu_shops_list_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboard_item_height"
+                android:background="@drawable/menu_item_selector"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/sliding_menu_left_dividing_line_color"/>
+
+            <LinearLayout
+                android:id="@+id/menu_customers_management"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_item_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/LeftMenuIconItemStyle"
+                    android:src="@drawable/left_menu_icon_customers"
+                    android:visibility="gone"/>
+
+                <TextView
+                    style="@style/LeftMenuTextItemStyle"
+                    android:layout_marginStart="@dimen/dashboard_menu_text_margin_size"
+                    android:text="@string/menu_customer_management"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_vendors_management"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/menu_item_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/LeftMenuIconItemStyle"
+                    android:src="@drawable/left_menu_icon_vendors"
+                    android:visibility="gone"/>
+
+                <TextView
+                    style="@style/LeftMenuTextItemStyle"
+                    android:layout_marginStart="@dimen/dashboard_menu_text_margin_size"
+                    android:text="@string/menu_vendor_management"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/menu_down_vendors_management_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/sliding_menu_left_dividing_line_color"/>
+
+            <LinearLayout
+                android:id="@+id/menu_outlet_management"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboard_item_height"
+                android:background="@drawable/menu_item_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/LeftMenuIconItemStyle"
+                    android:src="@drawable/left_menu_icon_outlets"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    style="@style/LeftMenuTextItemStyle"
+                    android:layout_marginStart="@dimen/dashboard_menu_text_margin_size"
+                    android:text="@string/menu_my_outlets"/>
+            </LinearLayout>
+
+            <View
+                android:id="@+id/menu_down_outlet_management_divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/sliding_menu_left_dividing_line_color"/>
+
+            <LinearLayout
+                android:id="@+id/menu_users_and_accounts"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboard_item_height"
+                android:background="@drawable/menu_item_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/LeftMenuIconItemStyle"
+                    android:src="@drawable/left_menu_icon_users"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    style="@style/LeftMenuTextItemStyle"
+                    android:layout_marginStart="@dimen/dashboard_menu_text_margin_size"
+                    android:text="@string/menu_user_management"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/sliding_menu_left_dividing_line_color"/>
+
+            <LinearLayout
+                android:id="@+id/menu_price_diff"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboard_item_height"
+                android:background="@drawable/menu_item_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/LeftMenuIconItemStyle"
+                    android:src="@drawable/left_menu_icon_users"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    style="@style/LeftMenuTextItemStyle"
+                    android:layout_marginStart="@dimen/dashboard_menu_text_margin_size"
+                    android:text="@string/menu_price_diff"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/sliding_menu_left_dividing_line_color"/>
+
+            <LinearLayout
+                android:id="@+id/menu_logout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboard_item_height"
+                android:background="@drawable/menu_item_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/LeftMenuIconItemStyle"
+                    android:src="@drawable/icon_logout"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    style="@style/LeftMenuTextItemStyle"
+                    android:layout_marginStart="@dimen/dashboard_menu_text_margin_size"
+                    android:text="@string/menu_logout"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/sliding_menu_left_dividing_line_color"/>
+
+            <RelativeLayout
+                android:id="@+id/version_logout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboard_item_height"
+                android:background="@drawable/menu_item_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/menu_current_version_title"
+                    style="@style/LeftMenuTextItemStyle"
+                    android:layout_width="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/dashboard_menu_text_margin_size"
+                    android:layout_toStartOf="@+id/menu_current_version_textview"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:src="@drawable/left_menu_icon_shop_selected"
+                    android:text="@string/menu_version_title"/>
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/menu_current_version_textview"
+                    style="@style/LeftMenuTextItemStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="44dp"
+                    android:maxLines="1"
+                    android:text="@string/menu_swtich_shop"
+                    android:textSize="12dp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/sliding_menu_left_dividing_line_color"/>
+
+            <LinearLayout
+                android:id="@+id/menu_setting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dashboard_item_height"
+                android:background="@drawable/menu_item_selector"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/LeftMenuIconItemStyle"
+                    android:src="@drawable/icon_logout"
+                    android:visibility="gone"
+                    />
+
+                <TextView
+                    style="@style/LeftMenuTextItemStyle"
+                    android:layout_marginStart="@dimen/dashboard_menu_text_margin_size"
+                    android:text="@string/menu_settings"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/sliding_menu_left_dividing_line_color" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

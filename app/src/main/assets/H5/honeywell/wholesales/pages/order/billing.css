@@ -1,0 +1,963 @@
+select, #modalConfirm-buttons {
+  width: 100%; }
+
+.hasNoInfomation {
+  position: absolute; }
+
+#modalConfirm-buttons {
+  position: relative; }
+
+.title, #sureOrderPage .twoBtn {
+  text-align: center; }
+
+.buttons-tab .button,
+.buttons-tab .button.active, .so_custInfo .row .so_custName {
+  color: #000; }
+
+.od-info {
+  color: #cccccc; }
+
+.buttons-tab, .oneBtn, #modalConfirm-buttons, #modalConfirm-buttons a, #modalConfirm-buttons .modal-button, #sureOrderPage .list-block, #treatDetailPage .list-block, .od-title, #orderDetailPage .list-block {
+  background: #FFFFFF; }
+
+.bar {
+  background: #333333; }
+
+/*header字体调整*/
+#orderDetailPage .title{
+  font-weight:normal;
+}
+
+#treatDetailPage .title{
+  font-weight:normal;
+}
+
+.bar, .twoBtn {
+  color: #FFFFFF; }
+
+select, #modalConfirm-content, .hasNoInfomation, #sureOrderPage .list-block, #treatDetailPage .list-block, #discount, .od-title, #orderDetailPage .list-block, #treatDetailPage #productList li {
+  font-size: 0.7rem; }
+
+.od-info, .order-detail-info .row .col-50, #od-money-info p, #productList li .row {
+  font-size: 0.65rem; }
+
+.bottom_bar {
+  border-top: 1px solid #ccc;
+  background: none; }
+
+  .bottom_bar .button.button-big {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border: none; }
+
+.buttons-tab .button.active {
+  color: #1792E5; }
+
+.list-block {
+  margin: 0; }
+  .list-block .media-list .item-title {
+    font-weight: 400; }
+
+.home_title {
+  font-size: 0.7rem;
+  font-weight: 500; }
+
+/*订单确认header调整*/
+#sureOrderPage .title{
+  font-weight:normal;
+}
+
+
+.title {
+  padding-left: 0; }
+
+.oneBtn {
+  color: #000000;
+  line-height: 2.5rem;
+  border-radius: 0; }
+
+.twoBtn {
+  background-color: #303030;
+  border: none;
+  line-height: 2.1rem;
+  border-radius: 0; }
+
+/*确认按钮样式调整*/
+#sureOrderDetailBtn{
+  width:95%;
+  margin:0 auto;
+  border-radius: 0.1rem;
+  -webkit-border-radius: 0.1rem;
+  height:2.1rem;
+}
+
+i, em {
+  font-style: normal; }
+
+.borderBottom {
+  border-bottom: .05rem solid #ccc; }
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  background: none; }
+
+.modal-inner {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0; }
+
+#modalConfirm-title {
+  text-align: left; }
+
+#modalConfirm-content {
+  padding: .5rem 0;
+  text-align: left; }
+
+#modalConfirm-buttons, #modalConfirm-buttons a {
+  height: 2rem;
+  line-height: 2rem; }
+
+#modalConfirm-buttons a {
+  display: inline-block;
+  position: absolute;
+  color: #0a8ddf;
+  width: 40%; }
+
+#modalConfirm-buttons #giveup-btn {
+  left: 20%; }
+
+#modalConfirm-buttons #sure-btn {
+  right: 0; }
+
+.hasNoInfomation {
+  text-align: center;
+  border-bottom: none;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 2rem;
+  padding: 20px;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%); }
+
+.error {
+  border-bottom: .1rem solid red; }
+
+#cartListPage .bar-tab {
+  height: 2.9rem;
+  background: #FFFFFF; }
+
+#sureOrderPage .twoBtn {
+  width:100%;
+  background: #303030;
+  height: 1.7rem;
+  line-height: 1.7rem;
+  margin:0 0.8rem;
+  border-radius:2px;
+  background-color:#ffc700;
+  font-size:0.7rem;
+  }
+.list-block .ws_label {
+  margin:0;
+  padding: 0.2rem 0.8rem;
+  background-color:#f3f3f3;
+  border-bottom:1px solid #ccc;
+  color:#9a9a9a;
+  }
+
+.list-block .row {
+  margin: 0.2rem 0; }
+
+.row .col-50 {
+  margin: 0;
+  width: 48%;
+  color: #000; }
+
+.sureOrder_proList .row .col-50:last-child {
+  text-align: right; }
+
+.sureOrder_selectionInfo .row {
+  padding: 0;
+  text-align: right;
+  color: #000000; }
+
+#discount{
+  color:#d0021b;
+}
+
+/*.so_custInfo {*/
+  /*margin-bottom: .2rem; }*/
+
+.so_custInfo .row {
+  margin: 0; }
+
+.so_custInfo .row .col-50 {
+  padding:0.4rem 0;
+  }
+
+
+.so_custInfo .row .col-50:last-child {
+  text-align: right;
+  color: #1792E5; }
+
+#discount {
+  text-align: right;
+  line-height: 1rem;
+  height: 1rem;
+  font-weight: bold;
+  overflow: hidden; }
+
+#final_money {
+  font-weight: bold;
+  }
+
+.list-block .surePay_label {
+  margin-top: 0;
+  padding-top: 0; }
+
+.surePay_styles li {
+  display: inline-block; }
+
+#invoiceLayout{
+
+  display: none; }
+
+.switchCustomer {
+  color: #1792E5;
+  text-align: right; }
+
+
+.od-title {
+  text-align: center;
+  padding: 1.2rem 0;
+  font-weight: bold;
+  border-bottom: .05rem solid #ccc; }
+
+#orderDetailPage .list-block .row{
+      padding:0 0.8rem;
+      border-top:1px solid #ccc;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+  }
+#orderDetailPage .list-block .row .col-40{
+    padding:0.74rem 0;
+    padding-left:1.8rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+#orderDetailPage .list-block .row .col-60 {
+    padding:0.74rem 0;
+    padding-left:1rem;
+    padding-right:0.1rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+}
+
+#orderDetailPage .list-block .row .col-60 .concatName{
+    display:inline-block;
+    width:40%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+#orderDetailPage .row > [class*=col-] {
+  margin: 0; }
+
+#orderDetailPage .list-block .row:first-child {
+  margin-top: 0; }
+
+#orderDetailPage .list-block .row.row-no-margin {
+  margin-bottom: 0; }
+
+#orderDetailPage .col-40 {
+  width: 40%; }
+
+#orderDetailPage .col-60 {
+  text-align: right;
+  width: 60%; }
+
+#orderDetailPage .ws_label {
+  padding-top: 0; }
+
+.od-custName, .od-info {
+  margin: 0; }
+
+.od-custName {
+  font-weight: bold;
+  padding-top: .2rem; }
+
+.order-detail-info .row .col-50:last-child {
+  text-align: right; }
+
+#od-money-info p {
+  text-align: right; }
+
+#od-money-info p i {
+  display: inline-block;
+  width: 4rem; }
+
+#od-money-info #od-change {
+  color: #1792E5; }
+
+#treatDetailPage #contactName {
+  padding-right: 1rem; }
+
+#treatDetailPage .treatTopInfo {
+  padding: 0;
+  overflow: hidden;
+  margin-bottom: .2rem; }
+
+#treatDetailPage .treatTopInfo li {
+  border-bottom: .01rem solid #EFEFEF;
+  padding: 0 .8rem; }
+
+#treatDetailPage .treatTopInfo .row {
+  margin: .4rem 0; }
+
+#treatDetailPage .treatTopInfo .row:first-child {
+  margin-top: 0;
+  padding-top: .4rem; }
+
+#treatDetailPage .treatTopInfo li:last-child {
+  border-bottom: none; }
+
+#treatDetailPage #productList {
+  padding: 0; }
+
+#treatDetailPage #productList li {
+  border-bottom: .01rem solid #EFEFEF; }
+
+#productList li .row, #productList .ws_label {
+  padding: 0 .8rem; }
+
+#productList .ws_label {
+  padding-top: .5rem; }
+
+#productList li .row {
+  margin: .5rem 0; }
+
+/*# sourceMappingURL=billing.css.map */
+
+
+/*OrderStateDetail start*/
+
+/*header*/
+#orderDetailPage #menu{
+  padding-top:.7rem;
+  font-size:.8rem;
+  color:white;
+}
+
+/*footer Btn*/
+#orderDetailPage .btnRow{
+    margin:0;
+   width:100%;
+   display:flex;
+   justify-content:space-between;
+}
+.row .printOrder{
+   height:1.9rem;
+   line-height:1.9rem;
+   border:0;
+   color:#fff;
+   background-color:#ffc700;
+   border-radius:2px;
+}
+.row .getPay{
+  height:1.9rem;
+  line-height:1.9rem;
+  color:#fff;
+  background-color:#ffc700;
+  border:0;
+  border-radius:2px;
+}
+
+/*payState*/
+.needPay{
+  padding:1.8rem 0;
+  text-align: center;
+  border-bottom:1px solid #f3f5f7;
+}
+.needPay p{
+  margin:0;
+  padding:0;
+  color:#4a90e2
+}
+.needPay .needPayTitle{
+  font-size:0.9rem;
+  color:#4a90e2;
+}
+.needPay .needPayTime{
+  font-size:.6rem;
+  color:#ffc627;
+}
+/*checkOrderDetail*/
+#orderDetailInfomation{
+   border-top:1px solid #ccc;
+   display:flex;
+   align-items:center;
+   justify-content:space-between;
+   padding-left:0.8rem;
+}
+
+#orderDetailInfomation .OrderDetailTitle{
+  background:#fff url("../../images/newUi/orderDetail-icon.png") no-repeat left center;
+  background-size:30%;
+  padding:.7rem 0;
+  padding-left:1.8rem;
+  font-size:.7rem;
+  color:#000;
+}
+#orderDetailInfomation #checkDetailInfo{
+  padding-right: 0.8rem;
+  text-align:right;
+  color:#0894ec;
+  font-size:.8rem;
+}
+/*chioce pay type*/
+.confirmPaySelect,.cancelOrder{
+  display:none;
+  box-sizing:border-box;
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow: hidden;
+  background-color:rgba(169,169,169,0.5);
+  z-index:10000;
+}
+.confirmPaySelect-content{
+  background-color: white;
+  width:100%;
+  height:11rem;
+  position:absolute;
+  bottom:0;
+  overflow: hidden;
+}
+.confirmPaySelect-cancel{
+  color:#000;
+}
+.confirmPaySelect-title{
+  margin-top:0;
+  text-align:left;
+  font-weight:100;
+  height:2.4rem;
+  line-height:2.4rem;
+  border-bottom: 1px solid #ccc;
+  padding-left:0.4rem;
+  padding-right:0.8rem;
+}
+.confirmPaySelect-title span{
+  padding-left:.6rem;
+  color:#000;
+  font-weight:400;
+  font-size:0.85rem;
+}
+
+.confirmPaySelect-input{
+  height:5rem;
+  padding:0 1rem;
+  margin:0;
+}
+.confirmPaySelect-input li{
+  list-style: none;
+  margin-bottom:.5rem;
+}
+
+.confirmPaySelect-input input{
+   width:1rem;
+   height:1rem;
+}
+#choiceCredit{
+  margin-top:.1rem;
+}
+#choiceCash{
+  margin-top:.1rem
+}
+
+.confirmPaySelect-confirm{
+  padding:0 0.8rem;
+  padding-top:.2rem;
+}
+.confirmChoice{
+  height:2rem;
+  padding:.5rem 0;
+  background: #ffc700;
+  border:0;
+  color:#fff;
+}
+.buttonActive{
+  background:#000;
+}
+
+#treatDetailPage #customerNames, #treatDetailPage #contactName,#orderDetailPage #customerName{
+    display:inline-block;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+#everyProductName{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+/*OrderStateDetail end*/
+
+
+/*OrderStateDetail-credit start*/
+.needPay{
+    background-color:#f3f5f7;
+}
+.needPay .needPayTitle-credit{
+  color:red;
+}
+
+.customerName-credit{
+  color:#0894ec;
+}
+
+/*OrderStateDetail-credit end*/
+
+/*OrderStateDetail-clear start*/
+.needPay .needPayTitle-clear{
+  color:#4cd964;
+}
+.cancelOrder .inputContent input{
+  width:100%;
+  height:2rem;
+  font-size:1rem;
+  border:3px solid #666666;
+}
+/*OrderStateDetail-clears end*/
+
+/*OrderStateDetail-clears end*/
+
+/*OrderStateDetail-cancel start*/
+.needPay .needPayTitle-cancel{
+  color:#999999;
+}
+/*OrderStateDetail-clears end*/
+
+.list-block .row div div{
+display:inline-block;
+overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+
+}
+
+.forScroll{
+    position:absolute;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:1000;
+    height:26.2rem;
+    background:white;
+}
+
+#setTotalPrice{
+    height:auto;
+    font-size:0.7rem;
+    line-height:1.1rem;
+}
+
+.sureOrder_selectionInfo .row .col-50{
+        margin-left: 0%;
+        width:50%
+}
+
+/* add popup for choice pay type */
+.popup-choicePayType{
+    background-color:rgba(169,169,169,0.5);
+}
+
+.choice-content{
+    box-sizing:border-box;
+    background-color: white;
+    width:100%;
+    position:absolute;
+    bottom:0;
+}
+
+.choice-title{
+    height:2.5rem;
+    text-align:left;
+    line-height:2.5rem;
+    color: #000;
+    font-weight:400;
+    font-size:0.85rem;
+    border-bottom:1px solid #ccc;
+    padding:0 0.8rem;
+
+}
+.choice-radio{
+    box-sizing:border-box;
+    padding:0 0.8rem;
+}
+.radio{
+  height:2.1rem;
+  display:flex;
+  align-items:center;
+}
+.creditItem{
+    margin-left:2.5rem;
+}
+.radio input[type=radio]{
+    width:1.2rem;
+    height:1.2rem;
+    background-color:#fff;
+    margin-right:1.2rem;
+}
+
+.radio span{
+    font-weight:normal;
+    font-size:0.8rem;
+}
+.choice-confirm{
+    padding:0.3rem 0.8rem;
+    line-height:2rem;
+    font-size:0.7rem;
+}
+.so_custName{
+    margin-left:0;
+    margin-top:0.2rem;
+    margin-bottom:0.2rem;
+}
+.infoUser{
+    width:50%;
+    float:right;
+    text-align:right;
+}
+
+#concatLayout span{
+    display:inline-block;
+    padding:0.3rem 0;
+}
+
+#creditNum,clearToGet{
+    display:inline-block;
+    width: 85%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.modal-overlay.modal-overlay-visible {
+    visibility: visible;
+    opacity: 0.5;
+}
+
+#sureOrderPage .area{
+  padding:0.2rem 0.8rem;
+  border-bottom:1px solid #ccc;
+  height:4rem;
+  font-size:0.7rem;
+}
+
+#remark{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+}
+
+/* sku param */
+.sureOrder_proList{
+
+}
+.detail_name{
+   display:flex;
+   justify-content:space-between;
+   font-size:0.9rem;
+   font-weight:bold;
+}
+.name_title{
+   display:inline-block;
+   width:40%;
+    text-align:left;
+   overflow:hidden;
+   text-overflow:ellipsis;
+   white-space: nowrap;
+}
+.detail_name .name_info{
+    color:#000;
+    display:inline-block;
+    width:50%;
+    overflow: hidden;
+    text-align:right;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+/*
+.overflowAuto{
+    height:5.5rem;
+    overflow:auto;
+    border-top:1px solid #ccc;
+    border-bo:1px solid #ccc;
+}
+*/
+
+/* new ui design in 2017.04.06 */
+#skInfo .col-100{
+    padding:0.4rem 0.8rem;
+    width:100%;
+    margin:0;
+    border-bottom:1px solid #ccc;
+}
+.hiddenBefore{
+    display:none;
+}
+.list_productName,.detail_name{
+    padding:0.4rem 0.8rem;
+    border-bottom:1px solid #ccc;
+}
+.orderNumber{
+    padding:0.2rem 0.8rem;
+    background-color: #f3f3f3;
+    border-bottom:1px solid #ccc;
+    color:#9a9a9a;
+}
+.sureOrder_selectionInfo .row{
+    padding:0 0.8rem;
+}
+.sureOrder_selectionInfo .text-left{
+    text-align:left;
+    color:#9a9a9a;
+}
+.label-switch .checkbox{
+    width:2.6rem;
+}
+.label-switch .checkbox:before{
+    background-color:#e5e5e5;
+}
+.label-switch input[type=checkbox]:checked+.checkbox:after{
+    transform: translateX(1.05rem);
+}
+.label-switch input[type=checkbox]:checked+.checkbox{
+    background:#ffc700;
+}
+.employeeNote div{
+    margin: 0;
+    padding: 0.2rem 0.8rem;
+    background-color: #f3f3f3;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    color: #9a9a9a;
+}
+.cancelImage{
+    margin-top:0.2rem;
+    display:inline-block;
+    width:2rem;
+    height:2rem;
+    float:right;
+    background:url("../../images/newUi/cancel-icon.png") no-repeat right center;
+    background-size:50%;
+}
+.cancelImages{
+    margin-top:0.5rem;
+    width:2rem;
+    height:2rem;
+    float:left;
+    background:url("../../images/newUi/cancelWhite-icon.png") no-repeat left center;
+    background-size:50%;
+}
+#cancelOrderBtn{
+    width:2rem;
+    height:2rem;
+    float:right;
+    background:url("../../images/newUi/more-icon.png") no-repeat right center;
+    background-size:60%;
+}
+.addIcon1{
+    background:url("../../images/newUi/orderNumber-icon.png") no-repeat left center;
+    background-size:20%;
+}
+.addIcon2{
+    background:url("../../images/newUi/orderCustomer-icon.png") no-repeat left center;
+    background-size:20%;
+}
+.addIcon3{
+    background:url("../../images/newUi/orderTotalPrice-icon.png") no-repeat left center;
+    background-size:20%;
+}
+.addIcon4{
+    background:url("../../images/newUi/orderShop-icon.png") no-repeat left center;
+    background-size:20%;
+}
+.addIcon5{
+    background:url("../../images/newUi/orderEmployee-icon.png") no-repeat left center;
+    background-size:20%;
+}
+.addIcon6{
+    background:url("../../images/newUi/orderCreditDeal-icon.png") no-repeat left center;
+    background-size:20%;
+}
+.addIcon7{
+    background:url("../../images/newUi/productBarcode-icon.png") no-repeat left center;
+    background-size:20%;
+}
+.addIcon8{
+    background:url("../../images/newUi/productNumber-icon.png") no-repeat left center;
+    background-size:20%;
+}
+.addIcon9{
+    background:url("../../images/newUi/productUnit-icon.png") no-repeat left center;
+    background-size:20%;
+}
+.addIcon10{
+    background:url("../../images/newUi/stockPrice-icon.png") no-repeat left center;
+    background-size:20%;
+}
+.addIcon11{
+    background:url("../../images/newUi/warehouse-icon.png") no-repeat left center;
+    background-size:20%;
+}
+#orderDetailPage .bottom_bar{
+    height:3.2rem;
+    display:flex;
+    align-items:center;
+    padding:0 0.8rem;
+}
+.contact-name , .contact-phone{
+    padding:0 0.8rem;
+    display:flex;
+    justify-content:space-between;
+}
+
+.several_payType{
+    padding:0 0.8rem;
+    height:2.1rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-size:0.7rem;
+    color:#b4b4b4;
+}
+.payType_input{
+    padding:0 0.8rem;
+    height:2.1rem;
+    font-size:0.8rem;
+    color:#b4b4b4;
+    border-bottom:1px solid #ccc;
+    display:flex;
+    align-items:center;
+}
+.payType_input input{
+    border:0;
+}
+
+.payType_status{
+    padding:0 0.8rem;
+    height:1.4rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-size:0.7rem;
+    color:#505050;
+}
+.total_neededPay{
+    display:flex;
+    justify-content:space-between;
+}
+.status_havePay{
+    display:flex;
+    justify-content:flex-start;
+    width:50%;
+}
+.status_residue{
+    display:flex;
+    justify-content:flex-end;
+    width:50%;
+}
+.status_havePay span,.status_residue span{
+    display:inline-block;
+}
+
+.havePay_number ,.residue_number{
+    width:60%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+
+.total_neededPay{
+    padding:0 0.8rem;
+    height:1.4rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    font-size:0.7rem;
+    color:#505050;
+}
+
+.input_title{
+    width:20%;
+}
+
+/* order detail page  */
+#orderDetailPage .popup-orderDetail .ws_label {
+   margin: 0;
+   padding: 0.4rem 0.8rem;
+   background-color: #f3f3f3;
+   border-bottom: 1px solid #ccc;
+   color: #9a9a9a;
+}
+
+#orderDetailPage .popup-orderDetail .row{
+    padding:0;
+}
+
+#orderDetailPage .popup-orderDetail .row .col-50{
+    width:50%;
+}
+
+#orderDetailPage .popup-orderDetail .sureOrder_selectionInfo .row{
+    padding:0.05rem 0.8rem;
+    margin:0;
+}
+
+#orderDetailPage .popup-orderDetail .sureOrder_selectionInfo .row .col-50:nth-child(2){
+    color:#000;
+}
+
+#orderDetailPage #treatDetailPage .several_pay_type li{
+    height:0rem;
+    padding:0 0.8rem;
+    background-color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border:0;
+    color:rgba(48,48,48,0.5);
+    overflow:hidden;
+}
+.type_title{
+    width:30%;
+}
+.type_value{
+    width:70%;
+    text-align:right;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}

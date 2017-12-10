@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          id="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="productDetail.css"/>
+    <title>添加商品</title>
+</head>
+<body>
+<div class="page-group">
+    <div class="indicator-background"></div>
+    <div class="indicator-div">
+        <span class="indicator-box indicator-img"></span>
+    </div>
+    <div class="page page-current" id="addProductPage">
+        <header class="bar bar-nav" style="padding:0 1rem">
+            <a class="icon icon-left icon-black pull-left backPage" href="#" data-transition='slide-out'></a>
+            <h3 class="title">添加货品</h3>
+            <a class="icon pull-right" id="saveInfo" style="width:2rem;line-height:2rem;color:white;font-size:.8rem"></a>
+        </header>
+        <!-- 这里是页面内容区 -->
+        <div class="content" style="font-size:0.75rem">
+            <div class="content-padded">
+                <div class="login_input day2-login product_name_icon">
+                    <span class="input_content">商品名<span class="needed">*</span></span>
+                    <input type="text" name="product_name" class="product_name"  value="" maxlength="20">
+                </div>
+                <div class="login_input day2-login warehouse_icon">
+                    <div class="pull_down_title_warehouse">
+                        <div class="title_name_warehouse" style="width:auto;color:#9a9a9a;">选择仓库</div>
+                        <div class="title_info_warehouse" style="width:74%;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;padding-right:10%"></div>
+                    </div>
+                </div>
+                <div class="login_input day2-login saleType_icon">
+                    <div class="pull_down_title_saleType">
+                        <div class="title_name_saleType" style="width:auto;color:#9a9a9a;">销售类型<span class="needed">*</span></div>
+                        <div class="title_info_saleType" style="width:74%;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;padding-right:10%"></div>
+                    </div>
+                </div>
+                <div class="product_tags"></div>
+                <script type="text/html" id="product_tag">
+                    <div class="login_input day2-login department_icon">
+                        <div class="pull_down_title_department">
+                            <div class="title_name_department" style="width:auto;color:#9a9a9a;">{{tag_name}}</div>
+                            <div class="title_info_department" style="width:74%;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;padding-right:10%"></div>
+                        </div>
+                    </div>
+                </script>
+                <div class="login_input day2-login barcode_icon">
+                    <span class="input_content">条形码</span>
+                    <input type="text" name="pcode" class="pcode short-name" placeholder="" maxlength="20">
+                </div>
+                <div class="login_input day2-login productNum_icon">
+                    <span class="input_content">货号</span>
+                    <input type="text" name="pNumber" class="pNumber short-name" placeholder="" maxlength="17">
+                </div>
+                <div class="login_input day2-login unit_icon">
+                    <span class="input_content">单位</span>
+                    <input type="text" name="unit short-name" class="unit"  maxlength="6">
+                </div>
+                <div class="login_input day2-login stockPrice_icon">
+                    <span class="input_content">进货价<span class="needed">*</span></span>
+                    <input type="tel" name="stock_price" class="stock_price"  value="" maxlength="11">
+                </div>
+                <div class="login_input day2-login standardPrice_icon">
+                    <span class="input_content">零售价<span class="needed">*</span></span>
+                    <input type="tel" name="standard_price" class="standard_price"  value="" maxlength="11" style="font-weight:normal">
+                </div>
+                <div class="login_input day2-login original_icon">
+                    <span class="input_content">期初库存</span>
+                    <input type="tel" name="originalStoke" class="originalStoke short-name" placeholder="" maxlength="13" style="margin-left:0.1rem;">
+                </div>
+            </div>
+            <div class="borderBottom"></div>
+                <div class="sku">
+                    <div class="sku_switch">
+                        <div class="sku_button">
+                            <div class="sku_button_title" style="color:#9a9a9a">设置商品SKU</div>
+                            <div class="common_switch">
+                                <input type="checkbox" class="switch_checkbox" style="height:0;border:0;overflow:hidden;padding:0;width:0">
+                                <div class="switch_content">
+                                    <div class="content_circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sku_TotallySet">分别设置价格和库存</div>
+                    </div>
+                    <div class="content-padded">
+                        <div class="sku_properties ">
+                            <div class="sku_color">
+                                <div class="name_text color_name">颜色</div>
+                                <div class="value_icon color_value"></div>
+                            </div>
+                            <div class="sku_size">
+                                <div class="name_text size_name">尺码</div>
+                                <div class="value_icon size_value"></div>
+                            </div>
+                            <div class="sku_standard" style="border:0">
+                                <div class="name_text standard_name">规格</div>
+                                <div class="value_icon standard_value"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="borderBottom"></div>
+                <div class="content-padded">
+                    <div class="login_input" id="categoryDiv" style="border:0">
+                        <span class="input_content">分类</span>
+                        <div class="selectDiv" style="display:inline-block">
+                            <select id="productCategory">
+                                <option value="-1" id="pc_default_option" ></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                    <div class="borderBottom"></div>
+                <div class="content-padded">
+                    <div class="product_imgs">
+                        <div>
+                            <div class="imgList">
+                                <script type="text/html" id="addProductImg">
+                                    <div class="deleteImgCon" id="allanTestID" >
+                                        <div class="pro-img">
+                                            <img src="{{imgUrl}}" class="productImg"/>
+                                        </div>
+                                        <img src="../../images/icons/delete-day2.png"  style="width:20%;height:20%;background:white;border-radius:100%"  class="deleteImg" id="{{arrayIndex}}" data-img="{{img}}"/>
+                                    </div>
+                                </script>
+                            </div>
+                            <div class="uploadImageBtn" id="uploadImageBtn1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="addForBorder">
+                    <div class="login_input" style="display:flex;align-items:center;padding:0 0.8rem">
+                        <span class="input_content" style="width:30%" >货品描述备注</span>
+                        <input type="text" name="describe" class="describe short-name" placeholder="" value="" maxlength="20">
+                    </div>
+                </div>
+            </div>
+            <div id="day2-button">
+                <div id="finishAddProduct">继续添加</div>
+            </div>
+            <div class="pull_down_content_saleType" style="top:6.3rem">
+                <div class="content_list_saleType"></div>
+            </div>
+            <div class="product_tag_list"></div>
+            <script type="text/html" id="product_tag_list">
+                <div class="pull_down_content_department">
+                    <div class="content_list_department"></div>
+                </div>
+            </script>
+            <div class="pull_down_content_warehouse" style="top:4.2rem">
+                <div class="content_list_warehouse"></div>
+            </div>
+        </div>
+    </div>
+    <div class="page" id="sku_setPrice">
+        <header class="bar bar-nav">
+            <div class="backPageBtn">
+                <a class="icon icon-left pull-left"></a>
+            </div>
+            <h3 class="title">设置SKU价格与库存</h3>
+        </header>
+        <nav class="bar bar-tab confirmDiv">
+           <button class="confirmButton">确认</button>
+        </nav>
+        <div class="content sku_setPriceContent">
+            <div class="set_tab">
+                <div class="totalStock" >统一库存</div>
+                <div class="totalCost">
+                    <span>统一进价</span>
+                </div>
+                <div class="totalPrice">统一售价</div>
+            </div>
+            <div class="tab_input">
+                <input type="text" class="input_value"  maxlength="9"/>
+                <button class="total_confirm">确定</button>
+                <button class="total_cancel">取消</button>
+            </div>
+            <div class="set_switch">
+                <div class="item-title label">分别设置货号和条形码</div>
+                <div class="item-input">
+                    <div class="common_switch_sku">
+                        <input type="checkbox" class="switch_checkbox_sku" style="height:0;border:0;overflow:hidden;padding:0;width:0">
+                        <div class="switch_content_sku">
+                            <div class="content_circle_sku"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="stock_detail">
+                <ul class="set_content"></ul>
+                <script type="text/html" id="set_list">
+                    <li class="set-item">
+                        <span class="saveData" style="display:none">{{sku_inventory_object}}</span>
+                        <div class="item_titles">
+                            <span class="title_name text_warp">{{sku_value_name}}</span>
+                            <div class="title_number">
+                                <button class="number_minus"> - </button>
+                                <input  class="number_value" type="text" maxlength="9"  value="0"/>
+                                <button class="number_plus"> + </button>
+                            </div>
+                        </div>
+                        <div class="item_detail hiddenBefore item_barcode">
+                            <span class="detail_icon">
+                               <img src="../../images/mobile.png"  width="50%" height="70%" />
+                            </span>
+                            <span class="detail_title text_warp">条形码</span>
+                            <input type="text" class="detail_content text_warp detail_barcode"  maxlength="20" placeholder="请输入条码" />
+                        </div>
+                        <div class="item_detail hiddenBefore item_productCode">
+                            <span class="detail_icon">
+                               <img src="../../images/mobile.png"  width="50%" height="70%" />
+                            </span>
+                            <span class="detail_title text_warp">货号</span>
+                            <input type="text" class="detail_content text_warp detail_productCode" maxlength="20" placeholder="请输入货号" />
+                        </div>
+                        <div class="item_detail item_standard_price">
+                            <span class="detail_icon">
+                               <img src="../../images/mobile.png"  width="50%" height="70%" />
+                            </span>
+                            <span class="detail_title text_warp">零售价</span>
+                            <input type="text" class="detail_content text_warp detail_price"  maxlength="9" placeholder="请输入价格" />
+                        </div>
+                        <div class="item_detail item_stock_price">
+                            <span class="detail_icon">
+                               <img src="../../images/mobile.png"  width="50%" height="70%" />
+                            </span>
+                            <span class="detail_title text_warp">进货价</span>
+                            <input type="text" class="detail_content text_warp detail_cost"  maxlength="9"  placeholder="请输入价格" />
+                        </div>
+                        <div class="item_detail" style="border:0;height:1.2re;">
+                            <button class="detail_delete">
+                                    删除当前SKU属性货品
+                            </button>
+                        </div>
+                        <div class="bottom_backGround"></div>
+                    </li>
+                </script>
+            </div>
+        </div>
+    </div>
+    <div class="page" id="sku_setParam">
+        <div class="pageContent">
+            <header class="bar bar-nav">
+                <div class="backPageBtns">
+                    <a class="icon icon-left pull-left"></a>
+                </div>
+                <a class="icon pull-right" style="top: 0.3rem;color:#fff" id="confirmSku_value">
+                    <i>确认</i>
+                </a>
+                <h3 class="title">选择SKU</h3>
+            </header>
+            <div class="content">
+                <ul class="sku_list"></ul>
+                <script type="text/html" id="set_param">
+                    <li class="sku_item" data-sku_key_id="{{sku_key_id}}">
+                        <div class="item_title">
+                            <span class="item_describe">{{sku_key_name}}</span>
+                            <label class="allChoice">
+                                <input type="checkbox" name="check"  class="allChoiceButton">
+                                <span class="item_allChoice">全选</span>
+                            </label>
+                            <span class="item_edit">编辑</span>
+                        </div>
+                        <div class="item_list">
+
+                        </div>
+                        <div class="item_add">
+                            <button class="add_button"> + </button>
+                        </div>
+                    </li>
+                </script>
+                <script type="text/html" id="set_param_value">
+                    <label class="item_label" data-sku_value_id="{{sku_value_id}}">
+                        <input type="checkbox" />
+                        <button class="item_content" >{{sku_value_name}}</button>
+                    </label>
+                </script>
+            </div>
+        </div>
+        <div class="popup popup-newValue">
+           <div class="popContainer">
+            <div class="card">
+                <div class="card-header">请输入</div>
+                <div class="card-content">
+                    <div class="card-content-inner">
+                        <input  type="text" class="sku_newValue" maxlength="5"/>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="confirmSet">确定</button>
+                    <button class="cancelSet">取消</button>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/vendor/require.min.js"></script>
+<script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+<script src="addProduct.js"></script>
+</body>
+</html>

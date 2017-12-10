@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.honeywell.wholesale.ui.base.BaseTextView
+        android:id="@+id/category_modify_textView"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_centerVertical="true"
+        android:textSize="@dimen/shop_management_title_size"
+        android:paddingStart="26dp"
+        android:paddingEnd="26dp"
+        android:background="@color/bg_gray"
+        android:gravity="center_vertical"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/cart_management_add_order_button_selected_text_color"/>
+
+</LinearLayout>

@@ -1,0 +1,596 @@
+select, #modalConfirm-buttons, #shopImg, .login_input input {
+    width: 100%; }
+
+.hasNoInfomation {
+    position: absolute; }
+
+#modalConfirm-buttons {
+    position: relative; }
+
+.title {
+    text-align: center; }
+
+.buttons-tab .button,
+.buttons-tab .button.active, #shopList .item-inner {
+    color: #000; }
+
+.buttons-tab, .oneBtn, #modalConfirm-buttons, #modalConfirm-buttons a, #modalConfirm-buttons .modal-button, .cust-topIcon, .shop-deInfo, #addShopForm {
+    background: #FFFFFF; }
+
+
+.bar, .twoBtn, .shopInfo, #addShopBtn, #shopDetailPage .pull-right i, #addShopPage header a {
+    color: #FFFFFF; }
+
+
+/*添加商店样式调整*/
+#noSaveShopBtn span{
+    display:inline-block;
+    margin-top:0.4rem;
+    margin-bottom: 0.5rem;
+    height:2rem;
+    line-height:2rem;
+    width:100%;
+    border-right:1px solid #999;}
+
+#addShopPage .topBtn,#addShopPage .topRightBtn{
+    background-color: #333333;}
+
+#shopCategory{
+    display:inline-block;
+    height:1rem;
+    color:#cccccc;
+    font-size:.8rem;
+    width:100%;
+}
+
+#div-select{
+    position:relative;
+}
+#div-select .select{
+    display:none;
+    position:absolute;
+    padding-left:.6rem;
+    width:7rem;
+    height:5rem;
+    right:1rem;
+    top:-1.5rem;
+    background:white;
+    box-shadow: 10px 10px 10px 2px #CCCCCC;
+
+}
+#div-select .select li{
+    margin-bottom: .3rem;
+}
+#div-select .select li:hover{
+    background-color:#666666;
+}
+
+
+.shopAddress {
+    font-size: 0.8rem; }
+
+select, #modalConfirm-content, .hasNoInfomation, .shopInfo .shopOwner i, .list-block.media-list .item-title, #addShopBtn, #shopDetailPage .pull-right i, .shopMobile, .employeeImgs {
+    font-size: 0.7rem; }
+
+.item-subtitle {
+    font-size: 0.65rem; }
+
+.bottom_bar {
+    border-top: 1px solid #eeeeee;
+    background: none; }
+.bottom_bar .button.button-big {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border: none; }
+
+.buttons-tab .button.active {
+    color: #1792E5; }
+
+.list-block {
+    margin: 0; }
+.list-block .media-list .item-title {
+    font-weight: 400; }
+
+.home_title {
+    font-size: 0.7rem;
+    font-weight: 500; }
+
+.title {
+    padding-left: 0; }
+
+.oneBtn {
+    color: #000000;
+    line-height: 2.5rem;
+    border-radius: 0; }
+
+.twoBtn {
+    background-color: #000000;
+    border: none;
+    line-height: 2.5rem;
+    border-radius: 0; }
+
+.ws_label {
+    color: #1792E5;
+    margin: .8rem; }
+
+i, em {
+    font-style: normal; }
+
+.borderBottom {
+    border-bottom: .05rem solid #ccc; }
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    background: white; }
+
+
+.modal-inner {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+
+#modalConfirm-title {
+    text-align: left; }
+
+#modalConfirm-content {
+    padding: .5rem 0;
+    text-align: left; }
+
+#modalConfirm-buttons, #modalConfirm-buttons a {
+    height: 2rem;
+    line-height: 2rem; }
+
+#modalConfirm-buttons a {
+    display: inline-block;
+    position: absolute;
+    color: #0a8ddf;
+    width: 40%; }
+
+#modalConfirm-buttons #giveup-btn {
+    left: 20%; }
+
+#modalConfirm-buttons #sure-btn {
+    right: 0; }
+
+.hasNoInfomation {
+    text-align: center;
+    border-bottom: none;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 2rem;
+    padding: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); }
+
+.error {
+    border-bottom: .1rem solid red; }
+
+/*customer detail html css controller begin */
+.bar-nav ~ .content {
+    top: 2.9rem; }
+
+#customerDetailPage .bar {
+    background: #ff6600; }
+
+
+#sd-handleBars i {
+    width: 1.5rem; }
+
+.shopInfo {
+    padding: 3.5rem .3rem .2rem .5rem;
+  /*  position: fixed;*/
+    width: 100%;
+    z-index: 5; }
+
+.shopInfo .shopName, .shopInfo .shopOwner {
+    position: relative;
+    height: 2.5rem;}
+
+.shopInfo .shopName i {
+    margin-left: 3rem;
+    font-size: 1.2rem;
+    padding-bottom: .2rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    display: block; }
+
+.shopInfo .shopOwner {
+    padding-top: .8rem; }
+
+.shopInfo .shopOwner i {
+    border-bottom: none; }
+
+.ownerAddress, .ownerName {
+    display: block; }
+
+.cust-topIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: #3c3c3c;
+    text-align: center;
+    line-height: 2.5rem;
+    position: absolute;
+    left: 0; }
+
+.list-block.media-list .item-title {
+    font-weight: normal; }
+
+#shopList .item-inner {
+    border-bottom: .01rem solid #CCCCCC; }
+
+#shopList li:last-child .item-inner {
+    border-bottom: none; }
+
+#shopImg {
+    height: 12rem;
+    display: block; }
+
+#shopDetailPage #deleteCustBtn {
+    padding-right: 1rem; }
+
+.employeeImgs img {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 .25rem; }
+
+.shop-deInfo {
+    margin-bottom: .2rem;
+    position: relative;
+    padding: .8rem 0;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    }
+
+.shop-deInfo p {
+    margin: 0; }
+
+.shopAddress {
+    color: #000000;
+    padding-left: 3.5rem; }
+
+.shopMobile, .employeeImgs {
+    color: #999999;
+    padding-left: 3.5rem; }
+
+#deleteShopBtn {
+    margin-right: .8rem; }
+
+.icon-me::before {
+    left: .8rem;
+    top: 1rem; }
+
+.icon-info::before {
+    content: "";
+    position: absolute;
+    background: url(../../images/icons/info.png) no-repeat center center;
+    background-size: contain;
+    left: 1rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 1rem; }
+
+/* #userHead_img {
+    width: 4rem;
+    height: 4rem;
+    margin-left: .8rem;
+    background: #CCCCCC url("../../images/icons/icons24.png") no-repeat center center;
+    background-size: 35%; }
+*/
+/*添加店铺页面样式调整*/
+#addShopForm {
+    padding: .8rem .4rem;
+    padding-bottom: 0.1rem;
+}
+#addShopForm p{
+    margin-top:1.2rem;
+}
+#addShopForm div input{
+    font-size:.8rem;
+}
+
+/* #userHead_img{
+    margin:1.3rem auto;
+    margin-bottom: 1.5rem;
+    border-radius: 100%;
+}
+*/
+.login_input {
+    border-bottom: .05rem solid #ccc; }
+
+.login_input input {
+    border: none;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    }
+
+.error {
+    border-bottom: .05rem solid red; }
+
+/*# sourceMappingURL=shop.css.map */
+
+/* new ui design 2016 12.01*/
+
+/*shop list*/
+#shopListPage .icon-left:before{
+    left:.7rem;
+}
+
+#shopListPage #menu{
+    margin-right:.3rem;
+}
+
+#shopListPage .shopDetail{
+    border-bottom:1px solid #ccc;
+    padding: .5rem .1rem;
+}
+
+#shopListPage header{
+    background-color:#000;
+}
+
+#shopListPage .shopDetail img{
+    border-radius:100%;
+}
+.cphone{
+    font-size:.6rem;
+    color:#cccccc;
+}
+.noInfo div{
+    background-color:#eeeeee;
+    text-align:center;
+    color:#9a9a9a;
+}
+
+
+
+/* shop detail page*/
+
+#shopDetailPage .icon-left:before{
+    left:.6rem;
+}
+
+.more{
+    visibility:hidden;
+}
+
+.toggleCss{
+    visibility:visible;
+}
+
+.moreBtn{
+    display:inline-block;
+    position:relative;
+    width:5rem;
+    left:.2rem;
+}
+
+#shopDetailPage #sd-handleBars{
+    color:white;
+    font-size:.8rem;
+    position:relative;
+    left:.6rem;
+    text-align:center;
+    margin-top:.1rem;
+
+}
+#shopDetailPage #sd-handleBars i{
+      width:4.5rem;
+      color:#3d3d3d;
+      display:block;
+      background:#fff;
+      padding:.4rem .5rem;
+      border-right:0;
+}
+
+#shopDetailPage #sd-handleBars #delete{
+     border-top:0;
+}
+#shopDetailPage #sd-handleBars #updateCust{
+    margin-top:.2rem;
+}
+
+.shopInfo .shopName #shopName{
+    margin-left:.8rem;
+    font-size:1.2rem;
+    padding-bottom:0;
+    line-height: 2.5rem;
+}
+
+.shopInfo p{
+    margin-top:1.8rem;
+    margin-bottom:0.7rem;
+}
+
+#shopDetail-block a{
+    background-color:#fff;
+}
+
+.shopAddress,.shopMobile{
+    padding-left:0;
+}
+
+#shopDetailPage .icon-infomation{
+    margin-left:.2rem;
+    width:1.2rem;
+    height:1.2rem;
+    background:url('../../images/icons/icon-recordItem.png') no-repeat center;
+    background-size:cover;
+}
+
+.item-inner p{
+    margin:0;
+}
+
+#shopDetailPage .item-inner{
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+
+#shopDetailPage .item-content{
+    border-bottom:1px solid #ccc;
+}
+
+.showInformation{
+    background:#ff6600  no-repeat center;
+    background-size:cover;
+}
+
+.showInformation .bar{
+    background-color:transparent;
+}
+
+
+/* add and edit shop page*/
+#addShopPage,#editShopPage{
+    background-color:white;
+}
+
+#addShopPage header,#editShopPage header{
+    background-color:white;
+}
+
+#addShopPage #cancel,#editShopPage #cancels{
+    margin-left:.2rem;
+    margin-top:.5rem;
+    width:1.5rem;
+    height:1.5rem;
+    background:url('../../images/back_black.png') no-repeat center;
+    background-size:38%;
+}
+
+#addShopForm,#addShopForms{
+    padding:0 1.2rem;
+    padding-top:.1rem;
+}
+
+#addShopForm .login_input,#addShopForms .login_input{
+    height: 2.2rem;
+    margin-bottom: 1rem;
+    padding-left: .9rem;
+}
+
+.login_input{
+    border:2px solid #ccc;
+}
+
+.login_input input{
+    padding-top:.4rem;
+}
+
+.confirmBtn{
+    width:100%;
+    margin-top:1.7rem;
+    padding:0 1.2rem;
+    border:0;
+    background-color:#fff;
+}
+
+.confirmBtn #saveShopBtn,.confirmBtn #saveShopBtns{
+    height:2.2rem;
+    display:block;
+    margin:0 auto;
+    text-align:center;
+    line-height:2.2rem;
+}
+
+.saveBtn, .saveBtns{
+    background:#f3f3f3;
+    color:#a1a1a1;
+}
+
+.isRightInput{
+    background:#ffc700;
+    color:#fff;
+}
+
+.errorAdd{
+    border-color:red;
+}
+.choice input{
+    width:94%;
+}
+
+.choice input{
+    background:url(../../images/icons/to_record.png) no-repeat  bottom right;
+    background-size:3%;
+}
+
+.shopImageInfo{
+     padding-bottom:2rem;
+     padding-top:.5rem;
+}
+
+.addShopImage,.addShopImages{
+    position:relative;
+}
+
+#shopImage, #shopImages{
+    display:block;
+    height:4.8rem;
+    width:4.8rem;
+    margin:0 auto;
+    border:.1rem solid #8a8a8a;
+    border-radius:100%;
+    background:url('../../images/icons/camera-day2.png') no-repeat center;
+    background-size:60%;
+}
+
+.showImg,.showImgs{
+    display:block;
+    margin:0 auto;
+    height:4.8rem;
+    width:4.8rem;
+    border-radius:100%;
+    overflow:hidden;
+    border:.1rem solid #8a8a8a;
+}
+.deleteImg,.deleteImgs{
+    display:block;
+    margin:0 auto;
+    width:1rem;
+    height:1rem;
+    background:white;
+    border-radius:100%;
+    position:absolute;
+    top:.2rem;
+    left:9.5rem;
+}
+
+#addShopPage .icon-left:before,#editShopPage .icon-left:before{
+    left:.6rem;
+}
+
+#addShopPage .popup-industry header,#editShopPage .popup-industry header{
+    background-color:#000;
+}
+
+#addShopPage .popup-overlay .modal-overlay-visible,#editShopPage .popup-overlay .modal-overlay-visible{
+    visibility:hidden;
+}
+
+.industries{
+    padding:1rem 1.2rem;
+    color:#4c4c4c;
+    border:1px solid #cccccc;
+    border-top:0;
+}
+
+.title{
+    position:static;
+}

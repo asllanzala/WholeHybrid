@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_title_bar"/>
+
+    <TextView
+        android:id="@+id/fragment_chart_main_role_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="你现在是店员，暂无权限。所以，努力工作吧，用不了多久你就会升职加薪、当上总经理、出任CEO、迎娶白富美、走上人生巅峰！想想是不是还有点小激动呢？！"
+        android:textSize="20dp"
+        android:visibility="gone"
+        />
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/fragment_chart_main_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#f5f5f5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/chart_day_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:background="#f5f5f5"
+                        android:gravity="center"
+                        android:text="日"
+                        android:textColor="#4c4c4c"
+                        android:textSize="15dp"/>
+
+                    <View
+                        android:id="@+id/chart_day_view"
+                        android:layout_width="120dp"
+                        android:layout_height="3dp"
+                        android:background="#f60000"
+                        android:textColor="#4c4c4c"
+                        android:visibility="visible"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#f5f5f5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/chart_month_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:background="#f5f5f5"
+                        android:gravity="center"
+                        android:text="月"
+                        android:textColor="#4c4c4c"
+                        android:textSize="15dp"/>
+
+                    <View
+                        android:id="@+id/chart_month_view"
+                        android:layout_width="120dp"
+                        android:layout_height="3dp"
+                        android:background="#f60000"
+                        android:textColor="#4c4c4c"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#f5f5f5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/chart_year_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="53dp"
+                        android:background="#f5f5f5"
+                        android:gravity="center"
+                        android:text="年"
+                        android:textColor="#4c4c4c"
+                        android:textSize="15dp"/>
+
+                    <View
+                        android:id="@+id/chart_year_view"
+                        android:layout_width="120dp"
+                        android:layout_height="3dp"
+                        android:background="#f60000"
+                        android:textColor="#4c4c4c"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a7a7a7"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:background="#f5f5f5"
+                android:gravity="center_vertical"
+                android:paddingLeft="17dp"
+                android:paddingRight="17dp">
+
+                <TextView
+                    android:id="@+id/chart_calender_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#f5f5f5"
+                    android:gravity="center_vertical"
+                    android:text="日期"
+                    android:textColor="#4c4c4c"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/chart_kind_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="#f5f5f5"
+                    android:gravity="center_vertical"
+                    android:text="销售额-利润"
+                    android:textColor="#4c4c4c"
+                    android:textSize="14dp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a7a7a7"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@color/white"
+                tools:context=".ChatDemo.ChatActivity">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="266dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:paddingTop="35dp">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/id_recyclerview_horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:scrollbars="none"/>
+
+                    <com.honeywell.wholesale.ui.newreport.AxisView
+                        android:id="@+id/left_axis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="206dp"
+                        android:layout_alignParentLeft="true"/>
+
+                    <com.honeywell.wholesale.ui.newreport.AxisView
+                        android:id="@+id/right_axis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="206dp"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="19dp"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:id="@+id/chart_bef_sale_view"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:background="#ffca30"/>
+
+                    <TextView
+                        android:id="@+id/chart_sale_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/chart_bef_sale_view"
+                        android:gravity="top"
+                        android:text="销售额"
+                        android:textColor="#4e4e4e"
+                        android:textSize="10dp"/>
+
+                    <View
+                        android:id="@+id/chart_bef_profit_view"
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_toRightOf="@id/chart_sale_text_view"
+                        android:background="#81b235"/>
+
+                    <TextView
+                        android:id="@+id/chart_profit_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/chart_bef_profit_view"
+                        android:gravity="top"
+                        android:text="利润"
+                        android:textColor="#4e4e4e"
+                        android:textSize="10dp"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a7a7a7"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/chart_day_sale_money_title_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当日销售额"
+                        android:textColor="#373737"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/chart_day_sale_money_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当日销售额"
+                        android:textColor="#f46e17"
+                        android:textSize="20dp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="#a7a7a7"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/chart_day_profit_money_title_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当日利润额"
+                        android:textColor="#373737"
+                        android:textSize="10dp"/>
+
+                    <TextView
+                        android:id="@+id/chart_day_profit_money_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当日利润额"
+                        android:textColor="#80b237"
+                        android:textSize="20dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a7a7a7"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#f5f5f5"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="#f5f5f5"
+                    android:gravity="center"
+                    android:paddingLeft="28dp"
+                    android:text="应收余额"
+                    android:textColor="#4c4c4c"
+                    android:textSize="12dp"/>
+
+                <TextView
+                    android:id="@+id/chart_day_credit_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:background="#f5f5f5"
+                    android:gravity="center"
+                    android:paddingRight="20dp"
+                    android:text="¥ 应收余额"
+                    android:textColor="#4c4c4c"
+                    android:textSize="12dp"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#a7a7a7"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+

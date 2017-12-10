@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="MSUI: Build mobile apps with simple HTML, CSS, and JS components.">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/sm-extend.min.css">
+    <link rel="stylesheet" href="productDetail.css"/>
+    <title>adjust Inventory</title>
+
+</head>
+<body>
+<!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+    <div class="page-group">
+        <div class="indicator-background"></div>
+        <div class="indicator-div">
+            <span class="indicator-box indicator-img"></span>
+        </div>
+        <div class="page" id="adjustInventory">
+            <header class="bar bar-nav">
+                <div class="backPageBtn">
+                    <a class="icon icon-left pull-left"></a>
+                </div>
+                <h3 class="title">库存调整</h3>
+            </header>
+            <nav class="bar bar-tab confirmDiv" style="background-color:#fff">
+                <button class="confirmButton">保存</button>
+            </nav>
+            <div class="content">
+                <div class="item_warehouse">
+                    <div class="warehouse_title">仓库</div>
+                    <div class="warehouse_choice" style="color:#ccc">衣裤</div>
+                </div>
+                <div class="item_header" style="border:0">
+                    <div class="header_img">
+                        <img src="../../images/key.png" />
+                    </div>
+                    <div class="header_info">
+                        <div class="info_name text_warp">货品</div>
+                        <div class="info_stock">100件</div>
+                        <div class="info_priceQuery text_warp">￥ 100-200</div>
+                    </div>
+                </div>
+                <div class="item_background"></div>
+                <div class="items_content">
+                     <ul class="content_list" style="height:auto"></ul>
+                     <script type="text/html" id="list_item">
+                        <li class="list_item" style="padding:0">
+                            <div class="content_info">
+                                <div class="content_name text_warp" data-inventory_id="{{inventory_id}}"  data-warehouse_inventory_id ="{{warehouse_inventory_id}}"style="border:0">{{sku_value_name}}</div>
+                                <div class="detail_right" style="padding:0">
+                                    <button class="right_minus"> - </button>
+                                    <input type="text" class="right_value" maxlength="13"  value="0"/>
+                                    <button class="right_plus"> + </button>
+                                </div>
+                            </div>
+                            <div class="content_detail" style="height:2.1rem;display:flex;padding:0 0.8rem;align-items:center">
+                                <div class="detail_left">
+                                    <div class="left_stock">{{quantity}}</div>
+                                    <!--<div class="left_price">{{standard_price}}</div>-->
+                                </div>
+                            </div>
+                            <!--<div class="item_detail" style="border:0;height:1.2re;">-->
+                                <!--<button class="detail_delete">-->
+                                    <!--删除不需要调整库存的货品-->
+                                <!--</button>-->
+                            <!--</div>-->
+                        </li>
+                     </script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/vendor/require.min.js"></script>
+    <script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+    <script src="adjustInventory.js"></script>
+</body>
+</html>

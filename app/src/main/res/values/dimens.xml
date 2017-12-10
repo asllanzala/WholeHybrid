@@ -1,0 +1,19 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <!--===========refactor===========-->
+    <dimen name="wholesale_edit_text_height">40dp</dimen>
+    <dimen name="wholesale_edit_text_title_width">90dp</dimen>
+    <dimen name="wholesale_edit_text_size">15sp</dimen>
+    <dimen name="wholesale_edit_text_title_size">15sp</dimen>
+    <dimen name="wholesale_edit_text_hint_size">15sp</dimen>
+    <dimen name="wholesale_edit_text_padding_start_end">18dp</dimen>
+    <dimen name="wholesale_edit_text_margin_vertical">20dp</dimen>
+
+    <dimen name="wholesale_edit_text2_left_icon_size">24dp</dimen>
+    <dimen name="wholesale_edit_text2_left_icon_margin_left">14dp</dimen>
+    <dimen name="wholesale_edit_text2_left_icon_margin_right">8dp</dimen>
+    <dimen name="wholesale_edit_text2_title_width">84dp</dimen>
+
+    <dimen name="wholesale_divider_padding_start_end">20dp</dimen>
+    <dimen name="wholesale_button_text_size">15sp</dimen>
+</resources>

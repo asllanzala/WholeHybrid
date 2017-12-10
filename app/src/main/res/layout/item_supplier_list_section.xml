@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="20dp"
+    android:background="@color/friend_listview_section_color"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/left_border_size"
+    android:paddingRight="@dimen/right_border_size"
+    >
+
+    <com.honeywell.wholesale.ui.base.BaseTextView
+        android:id="@+id/supplier_list_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text=""
+        android:textAllCaps="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        android:textSize="14dp"
+        android:visibility="visible" />
+
+</LinearLayout>

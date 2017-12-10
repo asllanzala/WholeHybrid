@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="inventory_sort">
+        <item>按名称</item>
+        <item>降序排列</item>
+        <item>升序排列</item>
+        <!--<item>按90天销售量降</item>-->
+        <!--<item>按前次进货日期</item>-->
+    </string-array>
+
+    <string-array name="transaction_select_range">
+        <item>近一周</item>
+        <item>近一个月</item>
+        <item>近三个月</item>
+        <item>全部</item>
+    </string-array>
+
+    <string-array name="transaction_select_order">
+        <item>按时间</item>
+        <item>按金额</item>
+        <item>按客户</item>
+    </string-array>
+
+    <string-array name="transaction_unpaied_select_credit">
+        <item>账期</item>
+        <item>金额</item>
+        <item>客户</item>
+    </string-array>
+
+    <string-array name="transaction_paid_select_time">
+        <item>7日</item>
+        <item>30日</item>
+        <item>90日</item>
+        <item>1年</item>
+    </string-array>
+
+    <string-array name="transaction_paid_select_paidOrder">
+        <item>金额</item>
+        <item>客户</item>
+        <item>完成时间</item>
+    </string-array>
+
+    <string-array name="report_income_select_time">
+        <item>日报</item>
+        <item>月报</item>
+        <item>年报</item>
+    </string-array>
+
+    <string-array name="report_select_time">
+        <item>7日</item>
+        <item>30日</item>
+        <item>90日</item>
+        <item>6个月</item>
+        <item>1年</item>
+    </string-array>
+
+    <string-array name="report_select_product">
+        <item>销售额Top5</item>
+        <item>利润Top5</item>
+        <item>销量Top5</item>
+        <item>周转率</item>
+        <item>库存</item>
+    </string-array>
+
+    <string-array name="report_select_customer">
+        <item>销售额Top5</item>
+        <item>利润Top5</item>
+        <item>赊账额Top5</item>
+    </string-array>
+
+    <string-array name="report_select_supplier">
+        <item>进货额Top5</item>
+        <item>应付款Top10</item>
+    </string-array>
+
+    <string-array name="product_sub_list">
+        <item>上述Top5总销售额</item>
+        <item>上述Top5销售额贡献率</item>
+        <item>上述Top5总利润</item>
+        <item>上述Top5利润率贡献率</item>
+    </string-array>
+
+    <string-array name="customer_sub_list">
+        <item>上述Top5总销售额</item>
+        <item>上述Top5销售额贡献率</item>
+        <item>上述Top5总利润</item>
+        <item>上述Top5利润率贡献率</item>
+    </string-array>
+
+    <string-array name="supplier_sub_list">
+        <item>上述Top5总进货额</item>
+        <item>上述Top5进货额占比</item>
+        <item>上述Top5总应付额</item>
+        <item>上述Top5总应付款占比</item>
+    </string-array>
+
+    <string-array name="income_daily_sub_list">
+        <item>销售额</item>
+        <item>利润</item>
+        <item>交易数量</item>
+        <item>新增总应收账款</item>
+        <item>结清总应收账款</item>
+    </string-array>
+
+    <string-array name="income_monthly_sub_list">
+        <item>销售额</item>
+        <item>利润</item>
+        <item>交易数量</item>
+        <item>新增总应收账款</item>
+        <item>结清总应收账款</item>
+        <item>新增客户</item>
+    </string-array>
+
+    <string-array name="income_yearly_sub_list">
+        <item>销售额</item>
+        <item>利润</item>
+        <item>交易数量</item>
+        <item>新增总应收账款</item>
+        <item>结清总应收账款</item>
+        <item>新增客户</item>
+    </string-array>
+
+
+    <string-array name="individual_guest">
+        <item>散客</item>
+    </string-array>
+
+    <string-array name="cart_more_list">
+        <item>删除订单</item>
+        <item>清空订单货品</item>
+    </string-array>
+
+    <string-array name="transaction_more_list">
+        <item>作废的交易</item>
+        <item>搜索</item>
+    </string-array>
+
+    <string-array name="inventory_more_list">
+        <item>进货登记</item>
+        <item>库存登记</item>
+    </string-array>
+    <string-array name="main_tabbar_title">
+        <item>@string/dashboard_tab_inventory</item>
+        <item>@string/dashboard_tab_transaction</item>
+        <item>@string/dashboard_fragment_title_home</item>
+        <item>@string/dashboard_tab_friend</item>
+        <item>@string/dashboard_tab_report</item>
+    </string-array>
+    <array name="main_tabbar_icon">
+        <item>@drawable/main_tabbar_inventory</item>
+        <item>@drawable/main_tabbar_transaction</item>
+        <item>@drawable/main_tabbar_home</item>
+        <item>@drawable/main_tabbar_friend</item>
+        <item>@drawable/main_tabbar_report</item>
+    </array>
+</resources>

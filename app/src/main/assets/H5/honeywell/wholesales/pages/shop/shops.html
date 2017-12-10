@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          id="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="shop.css"/>
+</head>
+<body>
+<div class="page-group">
+    <!--shop list page-->
+    <div class="page page-current" id="shopListPage">
+        <header class="bar bar-nav">
+            <div class="backPageBtns">
+                <a class="icon icon-left pull-left backHomeBtn" id="backHomeBtn"></a>
+            </div>
+            <a class="icon pull-right" id="menu">
+                <i id="addShopBtn">开店铺</i>
+            </a>
+            <h3 class="title">店铺管理</h3>
+        </header>
+        <div class="content" id="shopList">
+            <div class="list-block media-list">
+                <ul id="box"></ul>
+                <script id="shopTemplate" type="text/html">
+                    <li class="shopDetail item-link" data-currentShopId="{{shop_id}}"
+                        data-img="{{shop_img}}" data-address="{{shop_address}}"
+                        data-industry="{{shop_industry}}" data-industryid="{{shop_industryid}}">
+                        <div class="item-content">
+                            <div class="item-media">
+                                <img src="../../images/icons/shopImg.png" width="42" height="42"
+                                     class='shopsImage'>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title shopName">{{shop_name}}</div>
+                                </div>
+                                <div class="item-subtitle"><i class="cphone">{{contact_phone}}</i>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </script>
+                <script type='text/html' id='noInfo'>
+                    <div class='noInfo'>
+                        <div class='content-block'>暂无店铺，快去开店吧 >_< !</div>
+                    </div>
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <!--add shop page-->
+    <div class="page" id="addShopPage">
+        <header class="bar bar-nav">
+            <div class="backPageBtn">
+                <a class="icon pull-left" id="cancel"></a>
+            </div>
+        </header>
+        <div class="content">
+            <div id="addShopForm">
+                <div class="shopImageInfo">
+                    <div class="addShopImage"></div>
+                    <div id='shopImage'></div>
+                    <script type='text/html' id="showShopImg">
+                        <img src="{{imgSrc}}" class='showImg'/>
+                        <img src="../../images/icons/delete-day2.png" class='deleteImg'/>
+                    </script>
+                </div>
+                <div class="login_input">
+                    <input type="text" name="name" class="name" placeholder="店铺名（必填--中英文数字和'_'）"
+                           value="" maxlength="20">
+                </div>
+                <!--<div class="login_input choice">-->
+                    <!--<input type="text" name="name" class='industry' disabled placeholder="行业（请选择）"-->
+                           <!--value="" maxlength="20">-->
+                <!--</div>-->
+                <div class="login_input">
+                    <input type="text" name="address" class="address"
+                           placeholder="地址（必填--中英文数字和'_'）" value="" maxlength="20">
+                </div>
+                <div class="login_input">
+                    <input type="tel" name="telephone" class="telephone"
+                           placeholder="联系方式（必填--手机或固话）" value="" maxlength="14">
+                </div>
+
+            </div>
+            <button class='confirmBtn'>
+                <span id="saveShopBtn" class='saveBtn'>保存</span>
+            </button>
+        </div>
+        <div class='popup popup-industry'>
+            <header class='bar bar-nav'>
+                <a class='icon icon-left pull-left' id='closeModal'></a>
+                <h3 class='title'>行业选择</h3>
+            </header>
+            <div class='content list-block' id='industryArray'></div>
+            <script type='text/html' id='industryTemplate'>
+                <div class='industries item-link' data-industryid="{{industryid}}">{{industries}}
+                </div>
+            </script>
+        </div>
+    </div>
+
+    <!--shop page detail-->
+    <div class="page" id="shopDetailPage">
+        <div class="content">
+            <div class='showInformation'>
+                <header class="bar bar-nav" id="cust_header" style="position:static">
+                    <div class="backPageBtn">
+                        <a class="icon icon-left pull-left" id="backBtn"></a>
+                    </div>
+                    <a class="icon pull-right" id="sd-handleBars">
+                        <span class='moreBtn'>更多</span>
+                          <span class='more'>
+                            <i id="updateCust">编辑</i>
+                            <i id="delete">删除</i>
+                          </span>
+                    </a>
+                </header>
+                <div class="shopInfo">
+                    <p class="shopName">
+                        <i id="shopName">店铺名称</i>
+                    </p>
+                </div>
+            </div>
+            <div class="list-block" id="shopDetail-block">
+                <a href='#' class="item-content">
+                    <div class='item-media'>
+                        <span class="icon-infomation"></span>
+                    </div>
+                    <div class='item-inner'>
+                        <div class='item-title-row'>
+                            <p class="shopAddress">呵呵</p>
+                            <p class="shopMobile">1897888333</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="alertDiv">
+            <div class="alertTitle">
+                确认删除店铺?
+            </div>
+            <div class="deleteBtn">
+                <span>删除</span>
+            </div>
+            <div class='emptyDiv'></div>
+        </div>
+    </div>
+
+    <!--edit shop page-->
+    <div class="page" id="editShopPage">
+        <header class="bar bar-nav">
+            <div class="backPageBtn">
+                <a class="icon pull-left" id="cancels"></a>
+            </div>
+        </header>
+        <div class="content">
+            <div id="addShopForms">
+                <div class="shopImageInfo">
+                    <div class="addShopImages"></div>
+                    <div id='shopImages'></div>
+                    <script type='text/html' id="showShopImgs">
+                        <img src="{{imgSrc}}" class='showImgs'/>
+                        <img src="../../images/icons/delete-day2.png" class='deleteImgs'/>
+                    </script>
+                </div>
+                <div class="login_input">
+                    <input type="text" name="name" class="name" placeholder="店铺名（必填--中英文数字和'_'）"
+                           value="" maxlength="20">
+                </div>
+                <!--<div class="login_input choice">-->
+                    <!--<input type="text" name="name" class='industry' disabled placeholder="行业（请选择）"-->
+                           <!--value="" maxlength="20">-->
+                <!--</div>-->
+                <div class="login_input">
+                    <input type="text" name="address" class="address"
+                           placeholder="地址（必填--中英文数字和'_'）" value="" maxlength="20">
+                </div>
+                <div class="login_input">
+                    <input type="tel" name="telephone" class="telephone"
+                           placeholder="联系方式（必填--手机或固话）" value="" maxlength="14">
+                </div>
+
+            </div>
+            <button class='confirmBtn'>
+                <span id="saveShopBtns" class='saveBtns'>保存</span>
+            </button>
+        </div>
+        <div class='popup popup-industry'>
+            <header class='bar bar-nav'>
+                <a class='icon icon-left pull-left' id='closeModals'></a>
+                <h3 class='title'>行业选择</h3>
+            </header>
+            <div class='content list-block' id='industryArrays'></div>
+            <script type='text/html' id='industryTemplates'>
+                <div class='industries item-link' data-industryid="{{industryid}}">{{industries}}
+                </div>
+            </script>
+        </div>
+    </div>
+
+</div>
+
+<script src="../../js/vendor/require.min.js"></script>
+<script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+<script src="shops.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/title_bar_gray_background"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/transaction_cancel_back_imageView"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="4dp"
+            android:paddingBottom="19dp"
+            android:paddingEnd="22dp"
+            android:paddingStart="22dp"
+            android:paddingTop="19dp"
+            android:src="@drawable/icon_left_btn" />
+
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/transaction_cancel_title_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/transaction_cancel_title"
+            android:textColor="@color/white"
+            android:textSize="@dimen/shop_management_title_size" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/transaction_cancel_list_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_gray">
+
+        <ListView
+            android:id="@+id/transaction_cancel_info_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:choiceMode="multipleChoice"
+            android:divider="@color/shop_listview_divider_color"
+            android:dividerHeight="1dp" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="MSUI: Build mobile apps with simple HTML, CSS, and JS components.">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/sm-extend.min.css">
+    <link rel="stylesheet" href="productDetail.css"/>
+    <link rel="stylesheet" href="shipment.css" />
+    <title>StockIn</title>
+</head>
+<body>
+<!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+<div class="page-group">
+    <div class="indicator-background"></div>
+    <div class="indicator-div">
+        <span class="indicator-box indicator-img"></span>
+    </div>
+    <div class="page" id="stockInPage">
+        <header class="bar bar-nav">
+            <div class="backPageBtn">
+                <a class="icon icon-left pull-left"></a>
+            </div>
+            <h3 class="title">入库</h3>
+        </header>
+        <nav class="bar bar-tab confirmDiv" style="background-color:#fff">
+            <button class="confirmButton">确认</button>
+        </nav>
+        <div class="content sku_setPriceContent">
+            <div class="set_tab" style="height:2.7rem" >
+                <div class="totalStock">
+                    <span>统一库存</span>
+                </div>
+                <div class="totalCost">统一进价</div>
+            </div>
+            <div class="tab_input">
+                <input type="text" class="input_value"  maxlength="9"/>
+                <button class="total_confirm">确定</button>
+                <button class="total_cancel">取消</button>
+            </div>
+            <div class="tab_choiceSupplier">
+                <div class="choiceSupplier">
+                    <span>选择供应商</span>
+                    <input class="supplierName" type="text"  readonly/>
+                </div>
+            </div>
+            <div class="item_warehouse">
+                <div class="warehouse_title">仓库</div>
+                <div class="warehouse_choice" style="color:#ccc"></div>
+            </div>
+            <div class="stock_detail">
+                <ul class="set_content"></ul>
+                <script type="text/html" id="set_list">
+                    <li class="set-item" data-inventory_id="{{inventory_id}}">
+                        <div class="item_titles">
+                            <span class="title_name text_warp">{{sku_value_name}}</span>
+                            <div class="title_number">
+                                <button class="number_minus"> - </button>
+                                <input  class="number_value" type="text" maxlength="9"  value="0" />
+                                <button class="number_plus"> + </button>
+                            </div>
+                        </div>
+                        <div class="item_detail item_stock_price" style="border:0">
+                            <span class="detail_title text_warp">进货价</span>
+                            <input type="tel" class="detail_content text_warp detail_cost"  maxlength="12"  placeholder="请输入价格" />
+                        </div>
+                        <div class="bottom_backGround"></div>
+                    </li>
+                </script>
+            </div>
+        </div>
+        <div class="popup popup-supplier">
+            <div id="supplierPage">
+                <header class="bar bar-nav">
+                    <a class="icon icon-left pull-left closePopup " href="#" data-transition='slide-out' data-no-cache="true"></a>
+                    <h1 class="title">选择供应商</h1>
+                </header>
+                <div class="content">
+                    <div class="list-block supplier_list">
+                        <div class="list-group">
+                            <ul id="supplierList"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/vendor/require.min.js"></script>
+    <script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+    <script src="stockIn.js"></script>
+</div>
+</body>
+</html>

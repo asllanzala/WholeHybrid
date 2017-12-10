@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_management_cart_list_layout"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="81dp"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="25dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/cart_management_select_imageView"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/shop_manegement_selector" />
+
+        <LinearLayout
+            android:id="@+id/cart_management_product_imagmeView_layout"
+            android:layout_width="61dp"
+            android:layout_height="61dp"
+            android:layout_margin="10dp"
+            android:layout_marginStart="21dp"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/cart_management_select_imageView"
+            android:gravity="center"
+            android:background="#f3f3f3">
+
+            <ImageView
+                android:id="@+id/cart_management_product_imagmeView"
+                android:layout_width="@dimen/cart_management_image_size"
+                android:layout_height="@dimen/cart_management_image_size" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/cart_management_product_info_linearlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cart_management_product_imagmeView_layout"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_marginStart="17dp">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/cart_management_product_name_textView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="商品名称"
+                android:textColor="@color/cart_management_list_up_text_color"
+                android:layout_marginStart="14dp"
+                android:textSize="15dp"/>
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/cart_management_product_price_textView"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="商品价格/单位"
+                android:textColor="@color/cart_management_list__down_text_color"
+                android:layout_marginStart="14dp"
+                android:textSize="14dp"/>
+
+        </LinearLayout>
+
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/cart_management_amount_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="14dp"
+            android:textColor="@color/cart_management_list__down_text_color"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

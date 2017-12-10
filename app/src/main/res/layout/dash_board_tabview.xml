@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.honeywell.wholesale.ui.widget.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/tab_image"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_centerHorizontal="true"
+        app:layout_heightPercent="54%"
+        app:layout_marginTopPercent="6%"
+        />
+
+    <com.honeywell.wholesale.ui.base.BaseTextView
+        android:id="@+id/tab_lable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tab_image"
+        android:layout_centerHorizontal="true"
+        android:textColor="@drawable/selector_tab_text_color"
+        android:textSize="10sp"
+        app:layout_heightPercent="28%"
+        app:layout_marginTopPercent="4%"
+        />
+
+</com.honeywell.wholesale.ui.widget.PercentRelativeLayout>

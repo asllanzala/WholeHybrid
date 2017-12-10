@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dialogui_ll_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dialog_log_shape_wihte_round_corner"
+        android:gravity="center"
+        android:minHeight="120dp"
+        android:minWidth="300dp"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/pb_bg"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:indeterminateDrawable="@drawable/dialogui_rotate_mum_light"
+            android:indeterminateDuration="1200"/>
+
+        <TextView
+            android:id="@+id/dialog_tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="300dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="检测中..."
+            android:textColor="@color/text_black"/>
+
+        <ListView
+            android:id="@+id/dialog_lv_log"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:divider="@null"
+            ></ListView>
+    </LinearLayout>
+
+</RelativeLayout>

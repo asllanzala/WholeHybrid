@@ -1,0 +1,109 @@
+/* setting product number page 2017.04.11 */
+.page{
+   background-color:#f5f5f5;
+}
+.bar-nav{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:#2e3336;
+}
+.bar_title{
+    font-size:0.9rem;
+    font-weight:300;
+}
+.bar_backButton ,.bar_confirm{
+    position:absolute;
+    top:0.8rem;
+    width:1.5rem;
+    height:1.5rem;
+}
+.bar_backButton{
+     left:0.8rem;
+     background:url("../../images/newUi/back-icon.png") no-repeat center;
+     background-size:40%;
+}
+.bar_confirm{
+    right:0.8rem;
+    background:url("../../images/newUi/productFinish-icon.png") no-repeat center;
+    background-size:80%;
+}
+.auto_setting{
+    height:2.55rem;
+    padding:0 0.8rem;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid #ccc;
+    background-color:#fff;
+}
+.auto_setting div{
+    display:flex;
+    align-items:center;
+}
+.setting_title,.detail_prefixTitle ,.detail_productNumberText{
+    color:#c4c4c4;
+    font-size:0.8rem;
+    font-weight:300;
+}
+.auto_content{
+    height:0rem;
+    padding:0 0.8rem;
+    background-color:#fff;
+    overflow:hidden;
+}
+.content_detail{
+    height:2.5rem;
+    display:flex;
+    align-items:center;
+}
+.content_detail:nth-child(2){
+    justify-content:space-between;
+}
+.content_detail:nth-child(1){
+    border-bottom:1px solid #ccc;
+}
+.detail_prefixTitle{
+    width:30%;
+}
+.detail_prefixInput{
+    font-size:0.7rem;
+    border:0;
+}
+.detail_productNumberComponent{
+    display:flex;
+    justify-content:space-between;
+}
+.detail_productNumberComponent button{
+    width:1.77rem;
+    height:1.77rem;
+    background-color:#f5f5f5;
+    border:0;
+    border-radius:5px;
+    font-size:1.8rem;
+    line-height:0.8rem;
+    color:#828282;
+    font-weight:300;
+    margin:0 0.2rem;
+}
+.productNumberComponent_value{
+    display:inline-block;
+    width:2rem;
+    height:1.77rem;
+    background-color:#f5f5f5;
+    text-align:center;
+    line-height:2rem;
+    font-size:0.8rem;
+}
+.warehouse_content{
+    height:2.5rem;
+    background-color:#fff;
+    padding:0 0.8rem;
+}
+.warehouse_content .warehouse_manege{
+     border:0;
+     color:#444;
+     background:url("../../images/newUi/moreBlack-icon.png") no-repeat right center;
+     background-size:3%;
+}

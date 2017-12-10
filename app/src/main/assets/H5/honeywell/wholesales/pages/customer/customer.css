@@ -1,0 +1,801 @@
+select, #modalConfirm-buttons, .login_input input, .logined_userList {
+    width: 100%; }
+
+.noDataView, .logined_userList, .error {
+    position: absolute; }
+
+#modalConfirm-buttons, .login_userInfo, .detail-con, .detail-con .list-block {
+    position: relative; }
+
+.title, .detail-username, .detail-job {
+    text-align: center; }
+
+.buttons-tab .button,
+.buttons-tab .button.active, .grouptitle {
+    color: #000; }
+
+.buttons-tab, .oneBtn, #modalConfirm-buttons, #modalConfirm-buttons a, #modalConfirm-buttons .modal-button, .logined_userList, .cust-topIcon, .cust-concatInfo, .transion_title, .cd-transionLog, .se_menu, #addCustomerForm, .detail-con, #addSupplierPage .content {
+    background: #FFFFFF; }
+
+.bar {
+    background: #333333; }
+
+.bar, .twoBtn, .button.button-fill, .error, .shopInfo, #accountManagePage #addAccountBtn, #addAccountPage #cancel, #customer_detail_page .icon, .detail-username, .detail-job, #account_menu a, #addCustomerPage #cancel, #upSupplierDialog #cancel, #upSupplierDialog #saveSupplier, #addSupplierPage #cancel, #addSupplierPage #menu, #cancelAccountBtn, #handelAccountBtn {
+    color: #FFFFFF; }
+
+.shopUser, .transion_title, #customer_detail_page .badge {
+    font-size: 0.8rem; }
+
+select, #modalConfirm-content, .noDataView, .shopInfo .shopOwner i, .shopMobile, .cd-detailInfo li .item-inner, .cd-transionLog li .item-inner, .cd-detailInfo .item-after {
+    font-size: 0.7rem; }
+
+.detail-job, #account_menu a {
+    font-size: 0.65rem; }
+
+.bottom_bar {
+    border-top: 1px solid #eeeeee;
+    background: none; }
+.bottom_bar .button.button-big {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border: none; }
+
+.buttons-tab .button.active {
+    color: #1792E5; }
+
+.list-block {
+    margin: 0; }
+.list-block .media-list .item-title {
+    font-weight: 400; }
+
+.home_title {
+    font-size: 0.7rem;
+    font-weight: 500; }
+
+.title {
+    padding-left: 0; }
+
+.oneBtn {
+    color: #000000;
+    line-height: 2.5rem;
+    border-radius: 0; }
+
+.twoBtn {
+    background-color: #000000;
+    border: none;
+    line-height: 2.5rem;
+    border-radius: 0; }
+
+.ws_label {
+    color: #1792E5;
+    margin: .8rem; }
+
+i, em {
+    font-style: normal; }
+
+.borderBottom {
+    border-bottom: .05rem solid #ccc; }
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: none; }
+
+.modal-inner {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+
+#modalConfirm-title {
+    text-align: left; }
+
+#modalConfirm-content {
+    padding: .5rem 0;
+    text-align: left; }
+
+#modalConfirm-buttons, #modalConfirm-buttons a {
+    height: 2rem;
+    line-height: 2rem; }
+
+#modalConfirm-buttons a {
+    display: inline-block;
+    position: absolute;
+    color: #0a8ddf;
+    width: 40%; }
+
+#modalConfirm-buttons #giveup-btn {
+    left: 20%; }
+
+#modalConfirm-buttons #sure-btn {
+    right: 0; }
+
+.noDataView {
+    text-align: center;
+    border-bottom: none;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 2rem;
+    padding: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); }
+
+.error {
+    border-color: .1rem solid red; }
+
+.login_form {
+    padding: .8rem; }
+
+.login_input input {
+    color: #000;
+    display: block;
+    border: none;
+    padding-top: .4rem;
+    font-size: .8rem; }
+
+.button.button-fill {
+    background: #303030; }
+
+.logined_userList {
+    padding-left: .5rem;
+    z-index: 2;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    display: none; }
+
+.error {
+    background: #303030;
+    top: 95%; }
+
+/*customer detail html css controller begin */
+
+#customerDetailPage .bar {
+    background: #f76600; }
+
+.shopInfo {
+    background:#f76600;
+    padding: 3.5rem .3rem 0rem .5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 5; }
+
+.shopInfo .shopName, .shopInfo .shopOwner {
+    position: relative;
+    height:2.5rem;
+}
+
+.shopInfo .shopName #add-customerName {
+    position: absolute;
+    top:-1rem;
+    margin-left: 3rem;
+    font-size: 1.2rem;
+    padding-bottom: .2rem;
+    display: block; }
+.shopInfo .shopName .customer_name{
+    margin-left: 3rem;
+    font-size: 1.5rem;
+    line-height:2.5rem;
+    padding-bottom: .2rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    display: block;
+}
+
+
+#customerDetailPage #deleteCust {
+    padding-right: .6rem; }
+
+.cust-concatInfo {
+    border-bottom: .2rem solid #CCCCCC;
+    padding: .2rem 0; }
+
+#customerDetailPage .list-block .item-media + .item-inner, #supplierDetailPage .list-block .item-media + .item-inner {
+    padding-left: 1.7rem; }
+
+#customerDetailPage .item-title, #supplierDetailPage .item-title {
+    color: #1a1a1a; }
+#customerDetailPage .item-title{
+    float:left;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+#customerDetailPage .item-after{
+    float:right;
+}
+#customerDetailPage .item-subtitle, #supplierDetailPage .item-subtitle {
+    color: #6e727b; }
+
+.shopInfo .shopOwner {
+    padding-top: .8rem; }
+
+.shopInfo .shopOwner i {
+    border-bottom: none; }
+
+.ownerAddress, .ownerName {
+    display: block; }
+
+.icon-qhome::before, .icon-car::before, .icon-info::before, .icon-transLog::before {
+    content: "";
+    background: url(../../images/icons/home_e.png) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: .5rem; }
+
+.icon-car::before {
+    background: url(../../images/icons/car.png) no-repeat center center;
+    background-size: contain;
+    left: 1rem;
+    top: .8rem; }
+
+.icon-info::before {
+    background: url(../../images/icons/info.png) no-repeat center center;
+    background-size: contain;
+    left: 1rem; }
+
+.icon-transLog::before {
+    background: url(../../images/icons/transaction_log.png) no-repeat center center;
+    background-size: contain;
+    left: 1rem; }
+
+.cust-topIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: #3c3c3c;
+    text-align: center;
+    line-height: 2.5rem;
+    position: absolute;
+    left: 0; }
+
+#custDetail-block {
+    position: absolute;
+    width: 100%;
+    z-index: 2; }
+
+#menu i {
+    color: #fff;
+    font-size: .7rem;
+    display: inline-block;
+    width: 2rem;
+    text-align: center; }
+
+.cust-concatInfo {
+    position: relative; }
+
+.cust-concatInfo p {
+    margin: 0; }
+
+.shopUser {
+    color: #000000; }
+
+.shopMobile {
+    color: #999999; }
+
+/*客户详情页样式微调*/
+.icon-me:before {
+    left: 1rem;
+    top: 1rem; }
+
+/*客户详情页样式微调*/
+.cd-detailInfo li .item-inner, .cd-transionLog li .item-inner {
+    padding-left: 2.5rem;
+    color: #000000;
+    position: relative; }
+
+.cd-detailInfo .item-after {
+    color: #000000; }
+
+.transion_title {
+    margin-top: .2rem;
+    line-height: 2.8rem;
+    color: #000000; }
+
+.cd-transionLog {
+    padding: 0;
+    /*margin-top: .2rem;*/ }
+
+.se_menu {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 2.2rem;
+    width: 50%; }
+
+.se_menu li {
+    line-height: 1.5rem;
+    color: #000;
+    font-size: .8rem;
+    padding: .5rem 0 0 20%; }
+
+/*end*/
+#customersListPage .showCustomerDetail{border-bottom: .05rem solid #ccc; }
+#customersListPage .showCustomerDetail:last-child{border-bottom: none; }
+#customersListPage .item-title {
+    color: #000;
+    font-size: .8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#customersListPage .list-block .item-link .item-inner {
+    padding-right:4.5rem;
+}
+
+#customersListPage .item-subtitle {
+    color: #999;
+    font-size: .7rem; }
+
+.list-block .cd-detailInfo .item-inner:after {
+    background-color: #ffffff; }
+
+#supplierDetailPage #supplier_header, #supplierDetailPage .shopInfo {
+    background: #669900; }
+
+#accountManagePage #customerList li .item-inner {
+    border-bottom: .05rem solid #CCCCCC; }
+
+#accountManagePage #addAccountBtn {
+    line-height: 2.9rem;
+    float: right;
+    z-index: 99; }
+
+#accountManagePage #addAccountBtn, #addAccountPage #cancel, #addAccountPage #menu {
+    font-size: .7rem;
+    height: 2.9rem;
+    display: inline-block;
+    width: 3rem;
+    text-align: center; }
+
+#addAccountPage #cancel, #addAccountPage #menu {
+    width: 50%; }
+
+/*添加客户 header 调整*/
+#customersListPage #menu{
+    padding-top:.5rem;
+}
+#cancel span{
+    display:inline-block;
+    margin-top:0.4rem;
+    margin-bottom: 0.5rem;
+    height:2rem;
+    line-height:2rem;
+    width:100%;
+    border-right:1px solid #999;
+}
+
+/*内容区调整*/
+.row .col-50 {
+    width: 47%;
+    margin-left: 3%;
+    padding-right: 0.5rem;
+}
+
+ /*customerDetial调整*/
+#customerDetailPage #menu{
+    background-color:#f76600;
+    padding-top:0.5rem;
+    padding-left:.1rem;
+    padding-right:.1rem;
+}
+
+#addAccountPage .topBtn, #addAccountPage .topRightBtn {
+    padding-top: 0; }
+
+#addCustomerForm {
+    padding-bottom: .8rem;
+    padding-left:.5rem;
+    padding-right:.5rem;
+}
+
+#addCustomerForm .content-padded {
+    padding-top:0.1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#userHead_img {
+    border-bottom: .05rem solid #ccc;
+    padding: 1rem 0 1rem 0; }
+
+#addCustomerForm #userHead_img span {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border: .05rem dashed #a0a0a0;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: url("../../images/icons/camera.png") no-repeat center center; }
+
+#addCustomerForm .login_label {
+    margin-top:1.1rem;
+    margin-bottom: 0; }
+
+#accountManagePage #menu {
+    padding: 0; }
+
+#customer_detail_page .bar, #customer_detail_page .topUser {
+    background: #333333; }
+
+#customer_detail_page .icon {
+    display: inline-block; }
+
+#customer_detail_page .topUser {
+    height: 9rem; }
+
+.topUser img {
+    width: 4rem;
+    height: 4rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    padding: 3rem auto; }
+
+.detail-con .detail-padded:first-child .login_label {
+    margin-top: 0; }
+
+.detail-con .login_label {
+    padding-top: .5rem; }
+
+.detail-con .login_input {
+    height: 1.5rem;
+    font-size: .7rem; }
+
+.detail-con .detail-padded:last-child .login_input {
+    border-bottom: none; }
+
+.detail-username {
+    font-size: 1rem;
+    margin: 0; }
+
+.detail-job {
+    margin: 0; }
+
+#account_menu {
+    padding: 0;
+    line-height: 2.8rem; }
+
+#account_menu #deleteAccountBtn {
+    display: none; }
+
+#account_menu #deleteAccountBtn, #account_menu #updateAccountBtn {
+    width: 3rem;
+    display: inline-block;
+    text-align: center; }
+
+#cdDelete {
+    padding-right: 1rem; }
+
+#account-detail-ul li {
+    border-bottom: .2rem solid #eeeeee;
+    padding: 0.5rem; }
+
+#account-detail-ul .item-inner {
+    margin-left: 2.2rem; }
+
+.icon-key::before, .icon-mobile::before {
+    content: "";
+    background: url(../../images/key.png) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 1rem; }
+
+.icon-mobile::before {
+    background: url(../../images/mobile.png) no-repeat center center;
+    background-size: contain; }
+
+#customer_detail_page .icon-home::before, #customer_detail_page .icon-me::before {
+    top: 1rem; }
+
+#customer_detail_page .badge {
+    color: #1792e5;
+    background-color: transparent; }
+
+#addCustomerPage .login_label:first-child, #upSupplierDialog .login_label:first-child {
+    margin-top: 0.4rem;
+    padding-top: .8rem; }
+
+#addCustomerPage #addPaddingTop{
+    margin-top:0.1rem;
+}
+#addSupplierPage .login_input {
+    height: 1.5rem; }
+
+#addSupplierPage .login_label {
+    margin-bottom: 0; }
+
+#addSupplierPage #concatInfo .col-50 {
+    margin-left: 3%; }
+
+#account_detail_page .topUser {
+    background: #333;
+    padding: .8rem 0; }
+
+
+/*2016-11-28  new design*/
+
+/* add and edit customer page*/
+#addCustomerPage{
+background-color:white;
+}
+
+#addCustomerPage header{
+    background-color:white;
+}
+
+#addCustomerPage #cancel{
+    margin-left:.2rem;
+    margin-top:.5rem;
+    width:1.5rem;
+    height:1.5rem;
+    background:url('../../images/back_black.png') no-repeat center;
+    background-size:38%;
+}
+
+#addCustomerForm{
+    padding:0 1.2rem;
+    padding-top:.1rem;
+}
+
+#addCustomerForm .login_input{
+   height: 2.2rem;
+   margin-bottom: 1rem;
+   padding-left: .9rem;
+}
+
+.login_input{
+   border:2px solid #ccc;
+}
+
+.confirmBtn{
+    margin-top:1.7rem;
+    padding:0 1.2rem;
+    width:100%;
+    background-color:#fff;
+    border:0;
+}
+
+.confirmBtn #menu{
+    height:2.2rem;
+    display:block;
+    margin:0 auto;
+    text-align:center;
+    line-height:2.2rem;
+}
+
+.saveBtn{
+    background:#f3f3f3;
+    color:#a1a1a1;
+}
+
+.isRightInput{
+    background:#ffc700;
+    color:#fff;
+}
+
+.errorAdd{
+   border-color:red;
+}
+
+/*customer detail*/
+#customerDetailPage #custDetail-block .newOrder{
+    position:absolute;
+    right:1.2rem;
+    top:1rem;
+    color:red;
+}
+
+
+#customerDetailPage #menu{
+    color:white;
+    font-size:.8rem;
+    position:relative;
+    left:.6rem;
+    text-align:center;
+    margin-top:.1rem;
+
+}
+#customerDetailPage #menu i{
+  width:4.5rem;
+  color:#3d3d3d;
+  display:block;
+  background:#fff;
+  padding:.4rem .5rem;
+  border-right:0;
+}
+
+#customerDetailPage #menu #delete{
+ border-top:0;
+}
+#customerDetailPage #menu #updateCust{
+    margin-top:.2rem;
+}
+
+.shopInfo .shopName .customer_name{
+    margin-left:.8rem;
+    font-size:1.2rem;
+    padding-bottom:0;
+}
+
+.shopInfo p{
+   margin-top:1.8rem;
+   margin-bottom:0.7rem;
+}
+
+.cust-concatInfo{
+ padding:.35rem 0;
+ border-bottom: 2px solid #CCCCCC
+}
+
+.icon-me:before {
+    top:1.3rem;
+
+}
+
+.list-block .item-media+.item-inner{
+        margin-left: .45rem;
+}
+
+.recordList{
+  height:1rem;
+  width:1rem;
+  background:url('../../images/icons/to_record.png') no-repeat center;
+  background-size:50%;
+}
+
+#custDetail-block .item-title{
+    color:#4c4c4c;
+}
+
+.more{
+    visibility:hidden;
+}
+
+.toggleCss{
+    visibility:visible;
+}
+
+.moreBtn{
+    display:inline-block;
+    position:relative;
+    width:5rem;
+    left:.2rem;
+}
+
+#customerDetailPage .icon-me:before{
+    background:url('../../images/icons/addPerson.png') no-repeat center;
+    background-size:100%;
+    top:1.6rem;
+}
+
+#customerDetailPage .icon-record{
+    background:url('../../images/icons/productRecord.png') no-repeat center;
+}
+
+#customerDetailPage .icon-recordItem{
+    background:url('../../images/icons/icon-recordItem.png') no-repeat center;
+}
+
+#customerDetailPage .icon-record,#customerDetailPage .icon-recordItem{
+    margin-left:.2rem;
+    display:inline-block;
+    height:1.2rem;
+    width:1.2rem;
+    background-size:95%;
+}
+
+#customerDetailPage .shopUser{
+    width:100%;
+}
+
+#customerDetailPage .shopUser .row{
+    margin-bottom:.25rem;
+}
+#customerDetailPage .shopUser .row .col-50{
+    color:#959595;
+    font-size:.7rem;
+}
+#customerDetailPage .shopUser .row .col-40 ,#customerDetailPage .shopUser .row .col-60{
+    color:#959595;
+    font-size:.7rem;
+    margin-left:3%;
+}
+
+
+#customerDetailPage #addIcon{
+    position:absolute;
+    top:.9rem;
+    left:.8rem;
+}
+
+#customerDetailPage .lastLi{
+  padding:.25rem 0;
+}
+
+/*deal record*/
+#dealRecordPage header{
+    background-color:#000000;
+}
+
+#dealRecordPage .title{
+    font-weight:normal;
+}
+
+#dealRecordPage .icon-left:before{
+    left:.7rem;
+}
+
+.dealInfo{
+ padding:.8rem 1rem;
+ background-color:white;
+ border:1px solid #cccccc;
+ border-top:0;
+}
+
+#dealRecordPage .col-50{
+ width:50%;
+ margin-left:0;
+ padding-right:0;
+}
+
+#dealRecordPage .col-80 ,#dealRecordPage .col-20{
+    margin-left:0;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+#dealRecordPage .col-80{
+    width:80%;
+}
+
+#dealRecordPage .col-20{
+    width:20%;
+    text-align:right;
+}
+
+
+.customerName ,.productPrice{
+    color:#4c4c4c;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.productPrice ,.productNumber{
+    text-align:right;
+}
+
+.productName, .productProperty ,.dealTime{
+    font-size:.7rem;
+    color:#9a9a9a;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.orderState{
+    color:red;
+}
+
+.noInfo{
+    display:none;
+}
+.noInfo div{
+    background-color:#eeeeee;
+    text-align:center;
+    color:#9a9a9a;
+}

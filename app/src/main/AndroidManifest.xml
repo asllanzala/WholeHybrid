@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.honeywell.wholesale">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="com.honeywell.decode.permission.DECODE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.qualcomm.permission.USE_QCRIL_MSG_TUNNEL" />
+
+    <application
+        android:name=".framework.application.WholesaleApplication"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.honeywell.wholesale.framework.utils.WSGlideModule"
+            android:value="GlideModule" />
+
+        <uses-library android:name="android.test.runner" />
+
+        <activity
+            android:name=".ui.login.SplashActivity"
+            android:configChanges="locale"
+            android:screenOrientation="portrait">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTask"/>
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.login.GestureLockActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- 商品相关 Start -->
+        <activity
+            android:name=".ui.scan.ProductDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.inventory.ProductStockInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.inventory.AddProductActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.search.TransactionSearchActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <!-- 商品相关End -->
+
+        <activity
+            android:name=".ui.payment.SignatureActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.order.OrderConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.order.OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.supplier.SupplierManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.OutletManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.UserAccountsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.payment.PaymentResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.customer.CustomerManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.customer.CustomerDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.supplier.SupplierDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectpic.SelectImageTestActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.selectpic.ImageSelectorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.search.BaseSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.transaction.preorders.PreOrdersCustomerActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".ui.transaction.preorders.PreTransactionActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".ui.menu.shop.ShopManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.transaction.cart.CartManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.inventory.ProductShipmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.transaction.cancel.CancelOrderActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.friend.customer.AddCustomerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.friend.supplier.AddSupplierActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.category.AddCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.category.ModifyCategoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.search.GlobalBaseSearchActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".ui.search.SectionSearchActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity
+            android:name=".ui.transaction.preorders.search.PreTransactionSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.transaction.preorders.PreTransactionCartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.transaction.preorders.search.PreTransactionSkuActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/skuDialog" />
+        <activity
+            android:name=".ui.menu.setting.MenuSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.setting.warehouse.WareHouseAddActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+
+        </activity>
+        <activity
+            android:name=".ui.menu.setting.warehouse.WareHouseManagerActivity"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+
+        </activity>
+        <activity
+            android:name=".ui.menu.setting.warehouse.WareHouseUpdateActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.setting.warehouse.WareHouseSelectOwnerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.menu.setting.warehouse.WareHouseDelete"
+            android:screenOrientation="portrait"
+            android:theme="@style/skuDialog" />
+        <activity
+            android:name=".ui.search.InventorySearchActivity"
+            android:screenOrientation="portrait" />
+
+        <!-- <activity -->
+        <!-- android:name=".ui.ImageUploadActivity" -->
+        <!-- android:launchMode="singleInstance" -->
+        <!-- android:screenOrientation="portrait"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+
+        <receiver
+            android:name=".framework.service.BootReceiver"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="honeywell.scan.action" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".framework.service.AlarmReceiver">
+            <intent-filter>
+                <action android:name="honeywell.alarm.action" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name=".framework.service.DaemonService" />
+
+        <receiver android:name=".framework.service.DownloadReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+
+
+
+        <!-- 退货相关的activity -->
+        <activity
+            android:name=".ui.saleReturn.PreSaleReturnActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name=".ui.saleReturn.PreSaleReturnSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.saleReturn.PreSaleReturnSkuSelectActicity"
+            android:screenOrientation="portrait"
+            android:theme="@style/skuDialog"/>
+        <activity
+            android:name=".ui.saleReturn.SaleReturnOrderConfirmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"/>
+        <activity
+            android:name=".ui.saleReturn.SaleReturnPaySelectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/skuDialog" />
+        <activity
+            android:name=".ui.saleReturn.SaleReturnOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.saleReturn.SaleReturnOrderStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.saleReturn.SaleReturnCancelActivity"
+            android:screenOrientation="portrait" />
+
+
+
+
+        <!-- 补差价相关的activity -->
+        <activity
+            android:name=".ui.priceDiff.PriceDiffActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name=".ui.priceDiff.PriceDiffSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.priceDiff.PriceDiffSkuSelectActicity"
+            android:screenOrientation="portrait"
+            android:theme="@style/skuDialog"/>
+        <activity
+            android:name=".ui.priceDiff.PriceDiffOrderConfirmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"/>
+        <activity
+            android:name=".ui.priceDiff.PriceDiffPaySelectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/skuDialog" />
+        <activity
+            android:name=".ui.priceDiff.PriceDiffOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.priceDiff.PriceDiffOrderStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.priceDiff.PriceDiffCancelActivity"
+            android:screenOrientation="portrait" />
+
+
+        <!-- 采购单相关的activity -->
+        <activity
+            android:name=".ui.purchase.activity.PurchaseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name=".ui.purchase.activity.PurchaseSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.purchase.activity.PurchaseSkuSelectActicity"
+            android:screenOrientation="portrait"
+            android:theme="@style/skuDialog"/>
+        <activity
+            android:name=".ui.purchase.activity.PurchaseOrderConfirmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MyAppTheme"/>
+        <activity
+            android:name=".ui.purchase.activity.PurchasePaySelectActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/skuDialog" />
+        <activity
+            android:name=".ui.purchase.activity.PurchaseOrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.purchase.activity.PurchaseOrderStatusActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.purchase.activity.PurchaseCancelActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.purchase.activity.SupplierSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.purchase.activity.BatchSelectActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.purchase.activity.ExtraCostSelectActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

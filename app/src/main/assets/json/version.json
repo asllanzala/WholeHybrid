@@ -1,0 +1,10 @@
+{
+  "device": {
+    "product_id": "00100009",               //固定
+    "version": "200",                                       //本升级包的apk版本号
+    "file": "wholesale.apk",                    //apk文件名
+    "lowestUpgradableFrom": "100",      //支持从哪个版本升级，如无要求可填任意一个之前发布的版本。
+    "versionName": "2.0.0",                           //版本描述
+    "versionDetail": "1.first release;2.中文版"
+  }
+}

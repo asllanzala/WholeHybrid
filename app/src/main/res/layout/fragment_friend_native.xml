@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include layout="@layout/main_title_bar"/>
+    <LinearLayout
+        android:id="@+id/friend_fragment_sub_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transaction_tab_bg_color"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/friend_tab_customer"
+                style="@style/tabLevel2TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transaction_tab_bg_color"
+                android:gravity="center"
+                android:text="@string/friend_fragment_tab_customer"
+                android:textSize="14dp" />
+
+            <View
+                android:id="@+id/friend_tab_customer_selected_sign"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transaction_tab_bg_color"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/friend_tab_supplier"
+                style="@style/tabLevel2TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transaction_tab_bg_color"
+                android:gravity="center"
+                android:text="@string/friend_fragment_tab_supplier"
+                android:textSize="14dp" />
+
+            <View
+                android:id="@+id/friend_tab_supplier_selected_sign"
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/friend_customer_listView_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="visible"
+            android:background="@color/transaction_tab_format_border_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/friend_customer_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/transaction_tab_format_border_color"
+                android:dividerHeight="1dp"
+                android:scrollbars="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

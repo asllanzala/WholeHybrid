@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="MSUI: Build mobile apps with simple HTML, CSS, and JS components.">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/sm-extend.min.css">
+    <link rel="stylesheet" href="setting.css"/>
+    <title>setting</title>
+
+</head>
+<body>
+<!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+    <div class="page-group">
+        <div class="indicator-background"></div>
+        <div class="indicator-div">
+            <span class="indicator-box indicator-img"></span>
+        </div>
+        <div class="page page-current" id="setting_auto_productNumber" >
+           <header class="bar bar-nav">
+               <div class="bar_backButton"></div>
+               <div class="bar_title">设置</div>
+               <div class="bar_confirm"></div>
+           </header>
+            <div class="content">
+                <div class="auto_setting">
+                    <div class="setting_title">自动生成货号</div>
+                    <div class="common_switch">
+                        <input type="checkbox" class="switch_checkbox" style="height:0;border:0;overflow:hidden;padding:0">
+                        <div class="switch_content">
+                            <div class="content_circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <ul class="auto_content">
+                    <li class="content_detail">
+                        <span class="detail_prefixTitle">货号前缀</span>
+                        <input  type="text" class="detail_prefixInput" placeholder="仅可输入字母和-. /" maxlength="5" style="width:60%"/>
+                    </li>
+                    <li class="content_detail">
+                        <div class="detail_productNumberText">货号数字长度</div>
+                        <div class="detail_productNumberComponent">
+                            <button class="productNumberComponent_minus"> - </button>
+                            <span class="productNumberComponent_value">12</span>
+                            <button class="productNumberComponent_plus"> + </button>
+                        </div>
+                    </li>
+                </ul>
+                <div class="warehouse_content">
+                    <div class="content_detail warehouse_manege">仓库管理</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/vendor/require.min.js"></script>
+    <script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+    <script src="setting.js"></script>
+</body>
+</html>

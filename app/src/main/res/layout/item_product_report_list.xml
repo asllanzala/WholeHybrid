@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+    
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/report_product_imageView"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/icon_logout"
+        android:layout_margin="10dp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="6dp"
+        >
+        
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/report_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14dp"
+            android:layout_marginTop="4dp"
+            android:text="123123"
+            />
+        
+        <LinearLayout
+            android:id="@+id/report_product_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/report_product_name"
+            android:orientation="horizontal">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/report_sales_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:singleLine="true"
+                android:text="销售额"
+                />
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/report_sales_number"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:singleLine="true"
+                android:text="销量"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/report_product_info"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/report_product_profit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:textSize="14dp"
+                android:text="利润"
+                />
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/report_product_stock"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14dp"
+                android:singleLine="true"
+                android:text="库存"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginStart="@dimen/left_border_size"
+        android:layout_marginEnd="@dimen/right_border_size"
+        android:gravity="center_vertical">
+
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/null_batch_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/light_blue"
+            android:text="213213"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_gray" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="@dimen/left_border_size"
+        android:layout_marginEnd="@dimen/right_border_size">
+
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/null_batch_content_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_alignParentTop="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_gray" />
+
+        </RelativeLayout>
+
+</LinearLayout>

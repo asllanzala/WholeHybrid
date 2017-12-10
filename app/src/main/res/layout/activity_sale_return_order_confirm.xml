@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_cart_management_title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/sale_return_order_scrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_layout">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:paddingStart="@dimen/left_border_size"
+                    android:background="@color/sale_return_text_title_color">
+
+                    <com.honeywell.wholesale.ui.base.BaseTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/sale_return_confirm_title_color"
+                        android:text="退货金额"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:paddingStart="@dimen/left_border_size"
+                        android:paddingEnd="@dimen/right_border_size">
+
+                        <com.honeywell.wholesale.ui.base.BaseTextView
+                            android:id="@+id/total_money_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/sale_return_confirm_content_color"
+                            android:text="总价(￥)"/>
+
+                        <com.honeywell.wholesale.ui.base.BaseTextView
+                            android:id="@+id/total_money_content_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:maxWidth="200dp"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_gray"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:paddingStart="@dimen/left_border_size"
+                        android:paddingEnd="@dimen/right_border_size">
+
+                        <com.honeywell.wholesale.ui.base.BaseTextView
+                            android:id="@+id/actual_money_title_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/sale_return_confirm_content_color"
+                            android:text="实退(￥)"/>
+
+                        <EditText
+                            android:id="@+id/actual_money_content_text_view"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|end"
+                            android:maxWidth="200dp"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:background="@null"
+                            android:layout_alignParentEnd="true"
+                            android:focusable="true"
+                            android:selectAllOnFocus="true"
+                            android:textColor="@color/sale_return_adjust_text_color"
+                            android:textSize="15dp" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_gray"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:paddingStart="@dimen/left_border_size"
+                        android:paddingEnd="@dimen/right_border_size">
+
+                        <com.honeywell.wholesale.ui.base.BaseTextView
+                            android:id="@+id/adjust_title_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/sale_return_confirm_content_color"
+                            android:text="调整(￥)"/>
+
+                        <com.honeywell.wholesale.ui.base.BaseTextView
+                            android:id="@+id/adjust_content_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:maxWidth="200dp"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/bg_gray"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:paddingStart="@dimen/left_border_size"
+                    android:background="@color/sale_return_text_title_color">
+
+                    <com.honeywell.wholesale.ui.base.BaseTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/sale_return_confirm_title_color"
+                        android:text="退货清单"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/pre_transaction_up_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/product_containner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:paddingStart="@dimen/left_border_size"
+                    android:background="@color/sale_return_text_title_color">
+
+                    <com.honeywell.wholesale.ui.base.BaseTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/sale_return_confirm_title_color"
+                        android:text="客户信息"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/left_border_size"
+                    android:paddingEnd="@dimen/right_border_size"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp">
+
+                        <com.honeywell.wholesale.ui.base.BaseTextView
+                            android:id="@+id/customer_title_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/sale_return_confirm_content_color"
+                            android:text="顾客"/>
+
+                        <com.honeywell.wholesale.ui.base.BaseTextView
+                            android:id="@+id/customer_content_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp">
+
+                        <com.honeywell.wholesale.ui.base.BaseTextView
+                            android:id="@+id/shop_title_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/sale_return_confirm_content_color"
+                            android:text="店铺"/>
+
+                        <com.honeywell.wholesale.ui.base.BaseTextView
+                            android:id="@+id/shop_content_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp">
+
+                        <com.honeywell.wholesale.ui.base.BaseTextView
+                            android:id="@+id/employee_title_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/sale_return_confirm_content_color"
+                            android:text="开单人"/>
+
+                        <com.honeywell.wholesale.ui.base.BaseTextView
+                            android:id="@+id/employee_content_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp">
+
+                        <com.honeywell.wholesale.ui.base.BaseTextView
+                            android:id="@+id/warehouse_title_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentStart="true"
+                            android:textColor="@color/sale_return_confirm_content_color"
+                            android:text="退货仓库"/>
+
+                        <com.honeywell.wholesale.ui.base.BaseTextView
+                            android:id="@+id/warehouse_content_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentEnd="true"
+                            android:maxWidth="200dp"
+                            android:singleLine="true"
+                            android:ellipsize="end"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:paddingStart="@dimen/left_border_size"
+                    android:background="@color/sale_return_text_title_color">
+
+                    <com.honeywell.wholesale.ui.base.BaseTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/sale_return_confirm_title_color"
+                        android:text="备注"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/remark_edit_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="116dp"
+                    android:background="@null"
+                    android:paddingStart="20dp"
+                    android:singleLine="false"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentTop="true"
+                android:background="@color/bg_gray"/>
+
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="318dp"
+                android:layout_height="34dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/button_style"
+                android:textColor="@color/white"
+                android:text="确认退货"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

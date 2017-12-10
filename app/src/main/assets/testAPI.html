@@ -1,0 +1,131 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>
+        js调用java
+    </title>
+</head>
+
+<body>
+<font size="2"><p id="logView"></p></font>
+<font size="2"><p id="nullView"></p></font>
+
+<p>
+    <input type="button" id="callNative1" value="callNative(无Handler)" onclick="sendMessage();"
+    />
+</p>
+<p>
+    <input type="button" id="callNative2" value="callNative(注册Handler)" onclick="callNative();"
+    />
+</p>
+<p>
+    <input type="button" id="requestNetwork" value="发起网络请求(注册Handler)" onclick="requestNetwork();"
+    />
+</p>
+<p>
+    <input type="file" value="打开文件"/>
+</p>
+</body>
+
+<script type="text/javascript" src="view/hybridApi/JsCallNativeEventName.js"></script>
+<script type="text/javascript" src="view/hybridApi/NativeCallJsEventName.js"></script>
+
+<script>
+        //发消息给Native, 使用默认DefaultHandler处理。这个方法知识用来做测试。
+        function sendMessage() {
+            var data = {name: 'Allan', data: 'Mao'};
+            window.JsTunnel.callNativeNoHandler(
+                data
+                , function(responseData) {
+                    document.getElementById("logView").innerHTML = "Send message to Java Response: " + responseData
+                }
+            );
+        }
+
+        //调用Native方法, 使用特定的Handler处理。这里可以调用底层各种不同的业务逻辑方法。
+        // 发送数据格式如方法中所示
+        // 数据返回格式为{ack : '1', msg: '执行成功', response : '这里不同的API可以定义不同的返回值'｝;
+        //             {ack : '0', msg: '执行失败，以及具体错误内容，方便调试', response : '这里不同的API可以定义不同的返回值'｝;
+        function callNative() {
+            // 这里模拟了发送一个调用底层logout的方法. 其他需要让底层做一些特殊事情的可以在这里做。
+            var data = {method: NATIVE_METHOD_LOGOUT, data: "this is a json body"};
+            //call native method
+            window.JsTunnel.callNativeEventHandler(
+                JS_CALL_NATIVE_EVENT_EXECUTE_NATIVE_METHOD
+                , data
+                , function(responseData) {
+                    document.getElementById("logView").innerHTML = "Java Method Response: " + responseData
+                }
+            );
+        }
+
+        //发起网络请求。H5构造好API请求的json数据，底层来进行网络请求，然后把网络请求的结果返回给H5层。
+        function requestNetwork() {
+            // 开启loading
+            var data = {urlMethod: 'reg/boss/register', apiMethod: 'POST', requestBody: '{"employeeID":"18114476199", "password": "1234567"}' };
+            //call native method
+            window.JsTunnel.callNativeEventHandler(
+                JS_CALL_NATIVE_EVENT_REQUEST_WEB_API
+                , data
+                , function(responseData) {
+                    document.getElementById("logView").innerHTML = "Native Network Request Response: " + responseData;
+                    // 刷新页面数据
+                    // 结束loading
+                }
+            );
+        }
+
+        function connectJsTunnel(callback) {
+            if (window.JsTunnel) {
+                callback(JsTunnel)
+            } else {
+                // JS还没加载完，就等“JsTunnelReady”事件
+                document.addEventListener(
+                    'JsTunnelReady'
+                    , function() {
+                        callback(JsTunnel)
+                    },
+                    false
+                );
+            }
+        }
+
+
+        connectJsTunnel(function(jsTunnel) {
+            // 初始化混合开发通道
+            jsTunnel.init(function(requestData, responseCallback) {
+                document.getElementById("logView").innerHTML = ("JS Default Handler got a native Data: = " + requestData);
+
+                var data = {
+                    'Javascript Responds': 'JS response data to Native'
+                };
+                
+                console.log('JS responding with', JSON.stringify(data));
+                responseCallback(data);
+            });
+
+            // 注册页面后退事件
+            jsTunnel.registerHandler(
+                NATIVE_CALL_JS_EVENT_PAGE_GO_BACK,
+                function(data, responseCallback) {
+                    document.getElementById("logView").innerHTML = ("JS Registered Handler received data from Java: = " + data);
+                    var responseData = "Javascript Says Right back aka!";
+                    responseCallback(responseData);
+                }
+            );
+        })
+
+
+
+        //联通JS通道
+        connectJsTunnel(function(jsTunnel) {
+
+            jsTunnel.init();
+
+
+        })
+
+
+</script>
+
+</html>

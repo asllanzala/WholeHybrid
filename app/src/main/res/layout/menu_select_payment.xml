@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_deep_than_middle">
+
+    <LinearLayout
+        android:id="@+id/pay_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/activity_header_height"
+            android:layout_marginStart="@dimen/activity_header_margin"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text="@string/payment_method_title"/>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/pay_menu_gridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pay_title_layout"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:numColumns="4"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        android:background="@color/gray_very_light"
+        android:horizontalSpacing="10dp"
+        >
+
+    </GridView>
+
+</RelativeLayout>

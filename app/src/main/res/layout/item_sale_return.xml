@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/left_border_size"
+        android:paddingRight="@dimen/right_border_size">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/product_name"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="7dp"
+                    android:layout_marginStart="11dp"
+                    android:maxWidth="127dp"
+                    android:singleLine="true"
+                    android:textSize="15dp"
+                    android:text="货品   " />
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/product_no_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="3dp"
+                    android:layout_centerHorizontal="true"
+                    android:padding="0dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLength="8"
+                    android:maxWidth="90dp"
+                    android:textSize="15dp"
+                    android:text="0" />
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/product_unit"
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_toStartOf="@+id/product_unit_price"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="7dp"
+                    android:gravity="center"
+                    android:textSize="13dp"
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:text="¥" />
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/product_unit_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:gravity="center_vertical|end"
+                    android:layout_marginStart="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="3dp"
+                    android:maxWidth="70dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:text="0" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_gray" />
+
+</LinearLayout>

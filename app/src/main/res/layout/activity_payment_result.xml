@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_header_height"
+        android:background="@color/light_blue">
+
+        <TextView
+            android:id="@+id/payment_result_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/activity_header_margin"
+            android:text="@string/payment_result_tag"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/icon_ok_log" />
+
+
+    <TextView
+        android:id="@+id/payment_money_collected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:text="@string/payment_result"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/payment_money_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_money_collected"
+        android:layout_marginTop="20dp"
+        android:text="$1,760"
+        android:textColor="@color/black"
+        android:textSize="36dp" />
+
+    <Button
+        android:id="@+id/payment_print_receipt"
+        android:layout_width="112dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/payment_money_amount"
+        android:layout_marginTop="24dp"
+        android:background="@color/black"
+        android:text="@string/payment_result_recepit"
+        android:textColor="@color/white" />
+
+</LinearLayout>

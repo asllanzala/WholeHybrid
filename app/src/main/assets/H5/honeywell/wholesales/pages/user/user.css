@@ -1,0 +1,812 @@
+select, #modalConfirm-buttons, .login_input input, .logined_userList {
+    width: 100%; }
+
+.noDataView, .logined_userList, .error {
+    position: absolute; }
+
+#modalConfirm-buttons, .login_userInfo, .detail-con, .detail-con .list-block {
+    position: relative; }
+
+.title, .detail-username, .detail-job {
+    text-align: center; }
+
+.buttons-tab .button,
+.buttons-tab .button.active, .grouptitle {
+    color: #000; }
+
+.buttons-tab, .oneBtn, #modalConfirm-buttons, #modalConfirm-buttons a, #modalConfirm-buttons .modal-button, .logined_userList, .cust-topIcon, .cust-concatInfo, .transion_title, .cd-transionLog, .se_menu, #addCustomerForm, .detail-con, #addSupplierPage .content {
+    background: #FFFFFF; }
+
+.bar {
+    background: #333333; }
+
+.bar, .twoBtn, .button.button-fill, .error, .shopInfo, #accountManagePage #addAccountBtn, #addAccountPage #cancel, #addAccountPage #menu, #customer_detail_page .icon, .detail-username, .detail-job, #account_menu a, #addCustomerPage #cancel, #addCustomerPage #menu, #upSupplierDialog #cancel, #upSupplierDialog #saveSupplier, #addSupplierPage #cancel, #addSupplierPage #menu, #cancelAccountBtn, #handelAccountBtn {
+    color: #FFFFFF; }
+
+.shopUser, .transion_title, #customer_detail_page .badge {
+    font-size: 0.8rem; }
+
+select, #modalConfirm-content, .noDataView, .shopInfo .shopOwner i, .shopMobile, .cd-detailInfo li .item-inner, .cd-transionLog li .item-inner, .cd-detailInfo .item-after {
+    font-size: 0.7rem; }
+
+.detail-job, #account_menu a {
+    font-size: 0.7rem; }
+
+.bottom_bar {
+    border-top: 1px solid #eeeeee;
+    background: none; }
+.bottom_bar .button.button-big {
+    height: 2.5rem;
+    line-height: 2.5rem;
+    border: none; }
+
+.buttons-tab .button.active {
+    color: #1792E5; }
+
+.list-block {
+    margin: 0; }
+.list-block .media-list .item-title {
+    font-weight: 400; }
+
+.home_title {
+    font-size: 0.7rem;
+    font-weight: 500; }
+
+.title {
+    padding-left: 0; }
+
+.oneBtn {
+    color: #000000;
+    line-height: 2.5rem;
+    border-radius: 0; }
+
+.twoBtn {
+    background-color: #000000;
+    border: none;
+    line-height: 2.5rem;
+    border-radius: 0; }
+
+.ws_label {
+    color: #1792E5;
+    margin: .8rem; }
+
+i, em {
+    font-style: normal; }
+
+.borderBottom {
+    border-bottom: .05rem solid #ccc; }
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: none; }
+
+.modal-inner {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+
+#modalConfirm-title {
+    text-align: left; }
+
+#modalConfirm-content {
+    padding: .5rem 0;
+    text-align: left; }
+
+#modalConfirm-buttons, #modalConfirm-buttons a {
+    height: 2rem;
+    line-height: 2rem; }
+
+#modalConfirm-buttons a {
+    display: inline-block;
+    position: absolute;
+    color: #0a8ddf;
+    width: 40%; }
+
+#modalConfirm-buttons #giveup-btn {
+    left: 20%; }
+
+#modalConfirm-buttons #sure-btn {
+    right: 0; }
+
+.noDataView {
+    text-align: center;
+    border-bottom: none;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 2rem;
+    padding: 20px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%); }
+
+.error {
+    border-bottom: .1rem solid red; }
+
+.login_form {
+    padding: .8rem; }
+
+.login_input {
+    border-bottom: .05rem solid #ccc;
+    height: 2rem; }
+
+.login_input input {
+    color: #000;
+    display: block;
+    border: none;
+    padding-top: .4rem;
+    font-size: .8rem; }
+
+.button.button-fill {
+    background: #303030; }
+
+.logined_userList {
+    padding-left: .5rem;
+    z-index: 2;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    display: none; }
+
+.error {
+    background: #303030;
+    top: 95%; }
+
+/*customer detail html css controller begin */
+.bar-nav ~ .content {
+    top: 2.9rem; }
+
+#customerDetailPage .bar {
+    background: #f37021; }
+
+.shopInfo {
+    background: #f37021;
+    padding: 3.5rem .3rem .8rem .5rem;
+    position: fixed;
+    width: 100%;
+    z-index: 5; }
+
+.shopInfo .shopName, .shopInfo .shopOwner {
+    position: relative; }
+
+.shopInfo .shopName i {
+    margin-left: 3rem;
+    font-size: 1.2rem;
+    padding-bottom: .2rem;
+    display: block; }
+
+#customerDetailPage #deleteCust {
+    padding-right: .6rem; }
+
+.cust-concatInfo {
+    border-bottom: .2rem solid #CCCCCC;
+    padding: .2rem 0; }
+
+#customerDetailPage .list-block .item-media + .item-inner, #supplierDetailPage .list-block .item-media + .item-inner {
+    padding-left: 1.7rem; }
+
+#customerDetailPage .item-title, #supplierDetailPage .item-title {
+    color: #1a1a1a; }
+
+#customerDetailPage .item-subtitle, #supplierDetailPage .item-subtitle {
+    color: #6e727b; }
+
+.shopInfo .shopOwner {
+    padding-top: .8rem; }
+
+.shopInfo .shopOwner i {
+    border-bottom: none; }
+
+.ownerAddress, .ownerName {
+    display: block; }
+
+.icon-qhome::before, .icon-car::before, .icon-info::before, .icon-transLog::before {
+    content: "";
+    background: url(../../images/icons/home_e.png) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: .5rem; }
+
+.icon-car::before {
+    background: url(../../images/icons/car.png) no-repeat center center;
+    background-size: contain;
+    left: 1rem;
+    top: 1.2rem; }
+
+.icon-info::before {
+    background: url(../../images/icons/info.png) no-repeat center center;
+    background-size: contain;
+    left: 1rem; }
+
+.icon-transLog::before {
+    background: url(../../images/icons/transaction_log.png) no-repeat center center;
+    background-size: contain;
+    left: 1rem; }
+
+.cust-topIcon {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    color: #3c3c3c;
+    text-align: center;
+    line-height: 2.5rem;
+    position: absolute;
+    left: 0; }
+
+#custDetail-block {
+    position: absolute;
+    width: 100%;
+    z-index: 2; }
+
+#menu i {
+    color: #fff;
+    font-size: .7rem;
+    display: inline-block;
+    width: 2rem;
+    text-align: center; }
+
+.cust-concatInfo {
+    position: relative; }
+
+.cust-concatInfo p {
+    margin: 0; }
+
+.shopUser {
+    color: #000000; }
+
+.shopMobile {
+    color: #999999; }
+
+.icon-me:before {
+    left: .8rem;
+    top: 1rem; }
+
+.cd-detailInfo li .item-inner, .cd-transionLog li .item-inner {
+    padding-left: 3rem;
+    color: #000000;
+    position: relative; }
+
+.cd-detailInfo .item-after {
+    color: #000000; }
+
+.transion_title {
+    margin-top: .2rem;
+    line-height: 2.8rem;
+    color: #000000; }
+
+.cd-transionLog {
+    padding: 0;
+    /*margin-top: .2rem;*/ }
+
+.se_menu {
+    display: none;
+    position: absolute;
+    right: 1rem;
+    top: 2.2rem;
+    width: 50%; }
+
+.se_menu li {
+    line-height: 1.5rem;
+    color: #000;
+    font-size: .8rem;
+    padding: .5rem 0 0 20%; }
+
+/*end*/
+#customersListPage .showCustomerDetail{border-bottom: .05rem solid #ccc; }
+#customersListPage .showCustomerDetail:last-child{border-bottom: none; }
+#customersListPage .item-title {
+    color: #000;
+    font-size: .8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#customersListPage .list-block .item-link .item-inner {
+    padding-right:4.5rem;
+}
+
+#customersListPage .item-subtitle {
+    color: #999;
+    font-size: .7rem; }
+
+.list-block .cd-detailInfo .item-inner:after {
+    background-color: #ffffff; }
+
+#supplierDetailPage #supplier_header, #supplierDetailPage .shopInfo {
+    background: #669900; }
+
+
+#accountManagePage #addAccountBtn {
+    line-height: 2.9rem;
+    float: right;
+    z-index: 99; }
+
+#accountManagePage #addAccountBtn, #addAccountPage #cancel, #addAccountPage #menu {
+    font-size: .7rem;
+    height: 2.9rem;
+    display: inline-block;
+    width: 3rem;
+    text-align: center; }
+
+#addAccountPage #cancel, #addAccountPage #menu {
+    width: 50%; }
+
+#addAccountPage .topBtn, #addAccountPage .topRightBtn {
+    padding-top: 0; }
+
+#addCustomerForm {
+    padding-bottom: .8rem; }
+
+#addCustomerForm .content-padded {
+    margin-top: 0; }
+
+#userHead_img {
+    border-bottom: .05rem solid #ccc;
+    padding: 1rem 0 1rem 0; }
+
+#addCustomerForm #userHead_img span {
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    border: .05rem dashed #a0a0a0;
+    margin: 0 auto;
+    border-radius: 50%;
+    background: url("../../images/icons/camera.png") no-repeat center center; }
+
+#addCustomerForm .login_input {
+    height: 1.5rem; }
+
+#addCustomerForm .login_label {
+    margin-bottom: 0; }
+
+#accountManagePage #menu {
+    padding: 0; }
+
+#customer_detail_page .bar, #customer_detail_page .topUser {
+    background: #333333; }
+
+#customer_detail_page .icon {
+    display: inline-block; }
+
+#customer_detail_page .topUser {
+    height: 9rem; }
+
+.topUser img {
+    width: 4.7rem;
+    height: 4.7rem;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: block;
+    padding: 3rem auto; }
+
+.detail-con .detail-padded:first-child .login_label {
+    margin-top: 0; }
+
+.detail-con .login_label {
+    padding-top: .5rem; }
+
+.detail-con .login_input {
+    height: 1.5rem;
+    font-size: .7rem; }
+
+.detail-con .detail-padded:last-child .login_input {
+    border-bottom: none; }
+
+.detail-username {
+    width:80%;
+    height:2.1rem;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    margin-top:.7rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    }
+
+.detail-job {
+    margin: 0; }
+
+#account_menu {
+    padding-top: 0.5rem;
+    line-height:1.6rem; }
+
+#account_menu #deleteAccountBtn{
+    padding-right:.6rem;
+
+}
+#account_menu #updateAccountBtn{
+    padding-right:.2rem;
+
+}
+#account_menu #deleteAccountBtn {
+    display: none; }
+
+#account_menu #deleteAccountBtn, #account_menu #updateAccountBtn {
+    width: 2rem;
+    display: inline-block;
+    text-align: center; }
+
+#cdDelete {
+    padding-right: 1rem; }
+
+#account-detail-ul li {
+    border-bottom: .2rem solid #eeeeee;
+    padding: 0.5rem;
+}
+
+#account-detail-ul .item-inner {
+    margin-left: 2.2rem; }
+
+.icon-key::before, .icon-mobile::before {
+    content: "";
+    background: url(../../images/key.png) no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    top: 1rem;
+    left:.8rem;
+}
+.icon-home::before{
+    top: 1rem;
+    left:.8rem;
+}
+
+.icon-mobile::before {
+    background: url(../../images/icons/telephone.png) no-repeat center center;
+    background-size: contain;
+    left:1.2rem;
+     }
+
+#customer_detail_page .icon-home::before, #customer_detail_page .icon-me::before {
+    top: 1rem; }
+
+#customer_detail_page .badge {
+    color: #1792e5;
+    background-color: transparent; }
+
+#addCustomerPage .login_label:first-child, #upSupplierDialog .login_label:first-child {
+    margin-top: 0;
+    padding-top: .8rem; }
+
+#addSupplierPage .login_input {
+    height: 1.5rem; }
+
+#addSupplierPage .login_label {
+    margin-bottom: 0; }
+
+#addSupplierPage #concatInfo .col-50 {
+    margin-left: 3%; }
+
+#account_detail_page .topUser {
+    background: #333;
+}
+
+#roleName{
+    height:1.2rem;
+    font-size:.8rem;
+    color:#cccccc;
+}
+
+#accountManagePage .title{
+    font-weight:100;
+}
+#accountManagePage .item-media img{
+    border-radius: 100%;
+    margin-left:.8rem;
+}
+
+/* new ui design  2016.12.06*/
+
+/*shop list page */
+#accountManagePage header{
+    background-color:#000;
+}
+
+#accountManagePage .icon-left:before{
+    left:.7rem;
+}
+
+#accountManagePage .account-detail-li {
+    background-color:#fff;
+    border-bottom:1px solid #ccc;
+}
+
+#accountManagePage .account-detail-li a{
+    padding: .5rem .1rem;
+}
+
+#accountManagePage .employee_name{
+    font-size:0.7rem;
+    font-weight:normal;
+}
+
+#accountManagePage .erole{
+    margin-top:0.2rem;
+    font-size:0.6rem;
+    color:#cccccc;
+}
+
+/* add  user page*/
+#addUserPage{
+    background-color:white;
+}
+
+#addUserPage header{
+    background-color:white;
+}
+
+#addUserPage #cancel,#editUserPage #cancels{
+    margin-left:.2rem;
+    margin-top:.5rem;
+    width:1.5rem;
+    height:1.5rem;
+    background:url('../../images/back_black.png') no-repeat center;
+    background-size:38%;
+}
+
+#addUserForm,#addUserForms{
+    padding:0 1.2rem;
+    padding-top:.1rem;
+}
+
+#addUserForm .login_input,#addUserForms .login_input{
+    height: 2.2rem;
+    margin-bottom: 1rem;
+    padding-left: .9rem;
+}
+
+.login_input{
+    border:2px solid #ccc;
+}
+
+.login_input input{
+    padding-top:.4rem;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+
+.confirmBtn{
+    width:100%;
+    margin-top:1.7rem;
+    padding:0 1.2rem;
+    border:0;
+    background-color:#fff;
+}
+
+.confirmBtn #saveUserBtn, .confirmBtn #saveUserBtns{
+    height:2.2rem;
+    display:block;
+    margin:0 auto;
+    text-align:center;
+    line-height:2.2rem;
+}
+
+.saveBtn, .saveBtns{
+    background:#f3f3f3;
+    color:#a1a1a1;
+}
+
+.isRightInput{
+    background:#ffc700;
+    color:#fff;
+}
+
+.errorAdd{
+    border-color:red;
+}
+.choice input,.choices input{
+    width:94%;
+}
+
+.choice input,.choices input{
+    background:url(../../images/icons/to_record.png) no-repeat  bottom right;
+    background-size:3%;
+}
+
+.addUserImage,.addUserImages{
+   position:relative;
+}
+
+.userImageInfo{
+     padding-bottom:2rem;
+     padding-top:.5rem;
+}
+
+#userImage,#userImages{
+   display:block;
+   height:4.8rem;
+   width:4.8rem;
+   margin:0 auto;
+   border:.1rem solid #8a8a8a;
+   border-radius:100%;
+   background:url('../../images/icons/camera-day2.png') no-repeat center;
+   background-size:60%;
+}
+
+.userImg,.userImgs{
+    display:block;
+    margin:0 auto;
+    height:4.8rem;
+    width:4.8rem;
+    border-radius:100%;
+    overflow:hidden;
+    border:.1rem solid #8a8a8a;
+}
+
+.showImg,.showImgs{
+    display:block;
+    margin:0 auto;
+    height:4.8rem;
+    width:4.8rem;
+    border-radius:100%;
+    overflow:hidden;
+    border:.1rem solid #8a8a8a;
+}
+.deleteImg,.deleteImgs{
+    display:block;
+    margin:0 auto;
+    width:1rem;
+    height:1rem;
+    background:white;
+    border-radius:100%;
+    position:absolute;
+    top:.2rem;
+    left:9.5rem;
+}
+
+#addUserPage .icon-left:before{
+    left:.6rem;
+}
+
+#addUserPage .popup-industry header{
+    background-color:#000;
+}
+
+#addUserPage .popup-overlay .modal-overlay-visible,#editUserPage .popup-overlay .modal-overlay-visible{
+    visibility:hidden;
+}
+
+.role,.roles,.shops{
+    padding:1rem 1.2rem;
+    color:#4c4c4c;
+    border:1px solid #cccccc;
+    border-top:0;
+}
+
+/* new ui design 2016.12.15 */
+#account_detail_page .icon-left:before{
+    left:0.6rem;
+}
+
+.more{
+    visibility:hidden;
+}
+
+.toggleCss{
+    visibility:visible;
+}
+
+.moreBtn{
+    display:inline-block;
+    position:relative;
+    width:5rem;
+    left:.2rem;
+    font-size:0.8rem;
+}
+
+#account_detail_page #account_menu{
+    color:white;
+    font-size:.7rem;
+    position:relative;
+    left:.6rem;
+    text-align:center;
+    margin-top:.1rem;
+
+}
+
+#account_detail_page #account_menu i{
+      width:4.5rem;
+      color:#3d3d3d;
+      display:block;
+      background:#fff;
+      padding:.4rem .5rem;
+      border-right:0;
+}
+
+#account_detail_page #account_menu #delete{
+     border-top:0;
+}
+
+.topUser .shopName #shopName{
+    margin-left:.8rem;
+    font-size:1.2rem;
+    padding-bottom:0;
+    line-height: 2.5rem;
+}
+
+.topUser #roleName{
+    height:2.2rem;
+    padding-bottom:1rem;
+}
+
+.detail-con .icon-me:before{
+   background: url(../../images/icons/lock.png) no-repeat center center;
+   background-size:contain;
+   left:1.2rem;
+}
+
+.userTimeInfo .icon-me:before{
+   background: url(../../images/icons/time-icon.png) no-repeat center center;
+   background-size:contain;
+   left:1.2rem;
+}
+
+/* edit user information page */
+
+#editUserPage{
+background-color:white;
+}
+
+#editUserPage header{
+    background-color:white;
+}
+
+#editUserPage #cancels{
+    margin-left:.2rem;
+    margin-top:.5rem;
+    width:1.5rem;
+    height:1.5rem;
+    background:url('../../images/back_black.png') no-repeat center;
+    background-size:38%;
+}
+
+.title{
+    position:static;
+}
+
+/* set user time */
+.popup-setTime{
+   background:rgba(148,148,148,0);
+}
+
+#totalTime,#userLeft{
+    font-size:0.75rem;
+}
+#userLeft button{
+    width:2rem;
+    border:1px solid buttonface;
+    background:white;
+}
+#userLeft .leftMouths{
+    height:1.4rem;
+    width:4rem;
+    border:1px solid buttonface;
+    text-align:center;
+}
+
+.card-header,.card-footer{
+   display:flex;
+   justify-content:space-around;
+}
+.confirmSet,.cancelSet{
+  width:5rem;
+  border:1px solid buttonface;
+  border-radius:2px;
+  background:white;
+}
+
+.detail-username{
+
+}

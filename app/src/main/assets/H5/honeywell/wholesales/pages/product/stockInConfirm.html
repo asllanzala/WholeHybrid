@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+          content="MSUI: Build mobile apps with simple HTML, CSS, and JS components.">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="stockConfirm.css"/>
+    <title>stockInConfirm</title>
+    <script src="../../js/vendor/require.min.js"></script>
+    <script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+    <script src="stockInConfirm.js"></script>
+</head>
+<body>
+<!-- stockInPage -->
+<div class="page" id="stockInConfirmPage">
+    <header class="bar bar-nav" id="supplier_header">
+        <a class="icon icon-left pull-left back"></a>
+        <a class="icon pull-right">
+            <i id="confirm_stockInfo_btn">完成</i>
+        </a>
+        <h3 class="title" id="stockInPageTitle">补登进价</h3>
+    </header>
+    <div class="content">
+        <div id="stokeInProductForm">
+            <p class="product_name"></p>
+            <p class="product_code"></p>
+            <div class="content-padded">
+                <p class="login_label">供应商</p>
+                <div class="login_input">
+                    <input type="text" class="quantity" id="vendor" value="" readonly>
+                </div>
+                <p class="login_label">数量</p>
+                <div class="login_input">
+                    <input type="tel" class="num" value="">
+                </div>
+                <div class="row">
+                    <div class="col-50">
+                        <p class="login_label">单位进价</p>
+                        <div class="login_input">
+                            <input type="tel" name="stockPrice" class="stockPrice"  placeholder="" value="">
+                        </div>
+                    </div>
+                    <div class="col-50">
+                        <p class="login_label">总进价</p>
+                        <div class="login_input">
+                            <input type="tel" name="totalPrice" class="totalPrice" placeholder="" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--content end-->
+</div>
+
+</body>
+</html>

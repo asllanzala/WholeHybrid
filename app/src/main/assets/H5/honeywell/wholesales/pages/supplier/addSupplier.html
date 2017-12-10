@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          id="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="supplier.css"/>
+</head>
+<body>
+<div>
+    <div class="indicator-background"></div>
+    <div class="indicator-div">
+        <span class="indicator-box indicator-img"></span>
+    </div>
+    <div class="page page-current" id="addSupplierPage">
+        <header class="bar bar-nav">
+            <a class="icon pull-left backNative" id="cancel"></a>
+        </header>
+        <div class="content">
+            <div id="addSupplierForm">
+                <div class="content-padded">
+                    <div class="login_input">
+                        <input type="text" name="name" class="name" placeholder="供应商名（必填--中英文数字和'_'）" maxlength="20">
+                    </div>
+                </div>
+                <div class="content-padded" id="concatInfo">
+                    <div class="login_input">
+                        <input type="text" name="concat" class="concat" placeholder="联系人（必填--中英文数字和'_'）" maxlength="10">
+                    </div>
+                    <div class="login_input">
+                        <input type="tel" name="telephone" class="telephone" placeholder="联系方式（必填--手机或固话）" maxlength="14"/>
+                    </div>
+                    <div class="login_input">
+                        <input type="text" name="note" class="note" placeholder="备注（选填--中英文数字和'_'）" maxlength="20">
+                    </div>
+                </div >
+            </div>
+            <button class='confirmBtn'>
+                <span id="menu" class='saveBtn'>保存</span>
+            </button>
+        </div>
+    </div>
+</div>
+<script src="../../js/vendor/require.min.js"></script>
+<script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+<script src="supplier.js"></script>
+</body>
+</html>

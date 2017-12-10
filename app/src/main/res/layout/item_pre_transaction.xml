@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/left_border_size"
+        android:paddingRight="@dimen/right_border_size">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/product_name"
+                    android:layout_width="100dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="7dp"
+                    android:maxWidth="127dp"
+                    android:singleLine="true"
+                    android:textSize="15dp"
+                    android:text="货品   " />
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/product_unit"
+                    android:layout_width="10dp"
+                    android:layout_height="20dp"
+                    android:layout_toEndOf="@id/product_name"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="7dp"
+                    android:gravity="center"
+                    android:textSize="13dp"
+                    android:textColor="#ee2020"
+                    android:singleLine="true"
+                    android:text="¥" />
+
+                <EditText
+                    android:id="@+id/product_unit_price"
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:layout_marginStart="5dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="3dp"
+                    android:layout_toEndOf="@id/product_unit"
+                    android:selectAllOnFocus="true"
+                    android:maxLength="12"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:padding="0dp"
+                    android:background="@drawable/textview_border"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:text="0" />
+
+                <ImageView
+                    android:id="@+id/product_no_add"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="3dp"
+                    android:clickable="true"
+                    android:src="@drawable/button_num_add" />
+
+                <EditText
+                    android:id="@+id/product_no_text_view"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:layout_toStartOf="@id/product_no_add"
+                    android:gravity="center"
+                    android:selectAllOnFocus="true"
+                    android:inputType="numberDecimal"
+                    android:layout_marginEnd="4dp"
+                    android:singleLine="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="3dp"
+                    android:ellipsize="end"
+                    android:padding="0dp"
+                    android:maxLength="8"
+                    android:background="@drawable/textview_border"
+                    android:textSize="15dp"
+                    android:text="0"
+                    />
+
+                <ImageView
+                    android:id="@+id/product_no_minus"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:clickable="true"
+                    android:gravity="center_vertical"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_toStartOf="@id/product_no_text_view"
+                    android:src="@drawable/button_num_sub" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_gray" />
+
+</LinearLayout>

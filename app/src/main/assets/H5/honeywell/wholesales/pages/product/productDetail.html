@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="MSUI: Build mobile apps with simple HTML, CSS, and JS components.">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/sm-extend.min.css">
+    <link rel="stylesheet" href="productDetail.css"/>
+    <title>Product Detail</title>
+    <script src="../../js/vendor/require.min.js"></script>
+    <script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+    <script src="productDetail.js"></script>
+</head>
+<body>
+<!-- page集合的容器，里面放多个平行的.page，其他.page作为内联页面由路由控制展示 -->
+<div class="page-group">
+    <div class="indicator-background"></div>
+    <div class="indicator-div">
+        <span class="indicator-box indicator-img"></span>
+    </div>
+    <div class="page page-current" id="scanProPage">
+        <nav class="bar bar-tab bottom_bar" id="scanBottom">
+            <div class="stockInList">
+                <div class="row">
+                    <div class="col-100" style="color:#666;font-size:0.7rem;margin-left:0;text-align:left" id="checkStockList">入库记录</div>
+                </div>
+            </div>
+            <div class="ws_button">
+                <div class="bottom_buttons">
+                    <div><a href="adjustInventory.html" class="button button-big  twoBtn external" id="pd-update-numsInfo">修改库存</a>
+                    </div>
+                    <!--<div><a href="stockIn.html" class="button button-big oneBtn external">入库</a>-->
+                    <!--</div>-->
+                    <div><span  class="button button-big  twoBtn external" id="openDeal">开单</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- 这里是页面内容区 -->
+        <div class="content" id="productContent">
+            <div id="prodetail-swiper"></div>
+            <script id="pd-content" type="text/html">
+                <div class="swiper-container" data-space-between='10'>
+                    <div class="swiper-wrapper"></div>
+                    <div class="swiper-pagination" ></div>
+                    <a class="icon icon-left pull-left" id="backHomeBtn" style="display:inline-block;padding:2rem;padding-top:0"></a>
+                    <a class="icon pull-right" id="menu" ></a>
+                    <ul id="secMenu" data-visible="false">
+                        <li id="pd-edit-info">编辑</li>
+                        <li id="delelte-product">删除</li>
+                    </ul>
+                </div>
+                <div class="product_info_con">
+                    <div class="product_top" style="margin:0">
+                        <h4 class="ws_product_name"></h4>
+                        <div class="codeAndNum">
+                            <h6 class="ws_code"></h6>
+                        </div>
+                        <div class="list-block">
+                            <div class="item-content" style="min-height:0">
+                                <div class="item-inner" style="min-height:0">
+                                    <div class="item-after product-kc" style="margin:0"><sapn class="stockText">库存</sapn>&nbsp;<i class="number"></i></div>
+                                    <div class="item-title standard_price"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product_describe">
+                    <div class="describe_text"></div>
+                </div>
+                <div class="product_prices">
+                    <div class="list-block">
+                        <a href="javascript:void(0)" class="item-content" style="justify-content: flex-start;">
+                            <div class="item-inner" style="width:auto;margin-right:2rem">条形码</div>
+                            <div class="item-after ws_number value_color">-</div>
+                        </a>
+                        <a href="javascript:void(0)" class="item-content" style="justify-content: flex-start;">
+                            <div class="item-inner" style="width:auto;margin-right:2rem">供应商</div>
+                            <div class="item-after value_color" id="pd_supplier"></div>
+                        </a>
+                        <a href="javascript:void(0)" class="item-content" style="justify-content: flex-start;">
+                            <div class="item-inner" style="width:auto;margin-right:2rem">总销量</div>
+                            <div class="item-after value_color" id="pd_zxl" style="color:#444">-</div>
+                        </a>
+                        <div class="item-content last_item-content">
+                            <div class="content_detail">
+                                <div class="item-inner" style="margin-right: 2.1rem;width:2rem;">类别</div>
+                                <div class="item-after value_color" id="pd_type" style="line-height:1.6rem">-</div>
+                            </div>
+                            <div class="content_detail">
+                                <div class="item-inner" style="margin-right: 2.1rem;width:2rem;">单位</div>
+                                <div class="item-after  value_color" id="pd_unit" style="line-height:1.6rem">-</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom_background"></div>
+            </script>
+         </div>
+         <div class="popup popup-choice_product_sku">
+             <div class="product_sku_content">
+                 <div class="item_header header_position">
+                     <div class="header_img">
+                         <img src="../../images/key.png" />
+                     </div>
+                     <div class="header_info">
+                         <div class="info_name text_warp">货品</div>
+                         <div class="info_stock"></div>
+                         <div class="info_priceQuery text_warp"></div>
+                     </div>
+                 </div>
+                 <div class="items_contents">
+                     <ul class="content_lists"></ul>
+                     <script type="text/html" id="list_item">
+                         <li class="list_item list_background">
+                             <div class="content_name text_warp" data-inventory_id="{{data-inventory_id}}" style="border:0">{{sku_value_name}}</div>
+                             <div class="content_detail">
+                                 <div class="detail_left">
+                                     <div class="left_stock">{{quantity}}件</div>
+                                     <div class="left_price" data-standard_price="{{data_standard_price}}">￥{{standard_price}}</div>
+                                 </div>
+                                 <div class="detail_right">
+                                     <button class="right_minus"> - </button>
+                                     <input type="text" class="right_value" maxlength="13"  value="0"/>
+                                     <button class="right_plus"> + </button>
+                                 </div>
+                             </div>
+                         </li>
+                     </script>
+                 </div>
+                 <div class="item_confirms">
+                     <button class="confirm_cancel" >取消</button>
+                     <button class="confirm_can" >保存</button>
+                 </div>
+             </div>
+         </div>
+    </div>
+
+</div>
+</body>
+</html>

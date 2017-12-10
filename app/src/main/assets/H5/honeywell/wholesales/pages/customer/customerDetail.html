@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          id="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="customer.css"/>
+</head>
+<body>
+<div>
+    <div class="indicator-background"></div>
+    <div class="indicator-div">
+        <span class="indicator-box indicator-img"></span>
+    </div>
+    <div class="page page-current" id="customerDetailPage">
+        <header class="bar bar-nav" id="cust_header">
+            <a class="icon icon-left pull-left " id="backBtn" style="margin-left:.5rem"></a>
+            <a class="icon pull-right" id="menu">
+                <span class='moreBtn'>更多</span>
+                  <span class='more'>
+                    <i id="updateCust" >编辑</i>
+                    <i id="delete">删除</i>
+                  </span>
+            </a>
+        </header>
+        <div class="content">
+            <div class="shopInfo">
+                <p class="shopName">
+                    <i class="customer_name">客户名称</i>
+                </p>
+            </div>
+            <div class="list-block media-list" id="custDetail-block">
+                <ul>
+                    <li class="cust-concatInfo">
+                        <a href="#" class="item-content">
+                            <div class="item-media"><span class="icon icon-me"></span></div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title shopUser" id="contact_name">小姐</div>
+                                </div>
+                                <div class="item-subtitle shopMobile" id="contact_phone" style="color:#959595">+86 13905751121</div>
+                                <div class='newOrder'>创建订单</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cust-concatInfo customerNode">
+                        <a href="#" class="item-content">
+                            <div class="item-media">
+                                <span class="icon"></span>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title-row">
+                                    <div class="item-title shopUser" id="desc_memo">备注信息</div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cust-concatInfo" style="border-top:.3rem solid #eeeeee;">
+                        <a href="#" class="item-content">
+                            <div class="item-media" id='addIcon' style="padding:0;">
+                                <i class="icon-recordItem"></i>
+                            </div>
+                            <div class="item-inner" style="padding-left:0rem;margin-left:.35rem;padding-bottom:0">
+                                <div class="item-title-row" id='recordItem'>
+                                    <div class="item-title shopUser">
+                                        <div class='row' style="margin-left:1.3rem;">
+                                            <div class='col-50'>当前赊账额</div>
+                                            <div class='col-50' style="text-align:right" id="currentCredit">3000</div>
+                                        </div>
+                                        <div class='row' style="margin-left:1.3rem;">
+                                            <div class='col-50'>赊账笔数</div>
+                                            <div class='col-50' style="text-align:right" id="creditNumber">3000</div>
+                                        </div>
+                                        <div class='row' style="margin-left:1.3rem;">
+                                            <div class='col-50'>总交易额</div>
+                                            <div class='col-50' style="text-align:right" id="totalPrice">3000</div>
+                                        </div>
+                                        <div class='row' style="margin-left:1.3rem;">
+                                            <div class='col-50'>总订单数</div>
+                                            <div class='col-50' style="text-align:right" id="totalDealNum">3000</div>
+                                        </div>
+                                        <div class='row' style="margin-left:1.3rem;">
+                                            <div class='col-40'>前次拿货时间</div>
+                                            <div class='col-60' style="text-align:right" id="lastDealTime">2016-11-11</div>
+                                        </div>
+                                        <!--<div class='row' style="margin-left:1.3rem;">-->
+                                            <!--<div class='col-50'>前次拿货金额</div>-->
+                                            <!--<div class='col-50' style="text-align:right">3000</div>-->
+                                        <!--</div>-->
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="cust-concatInfo lastLi">
+                        <a href="#" class="item-content">
+                            <div class="item-media">
+                                <i class="icon-record"></i>
+                            </div>
+                            <div class="item-inner" style="padding-left:.3rem">
+                                <div class="item-title-row" id='dealRecord'>
+                                    <div class="item-title shopUser" >交易记录</div>
+                                    <span class='recordList'></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="alertDiv">
+                <div class="alertTitle">
+                    确认删除该客户?
+                </div>
+                <div class="deleteBtn">
+                    <span>删除</span>
+                </div>
+                <div class='emptyDiv'></div>
+            </div>
+        </div>
+    </div>
+    <!--<div class="page" id="dealRecordPage">-->
+        <!--<header class="bar bar-nav">-->
+            <!--<a class="icon icon-left pull-left back"></a>-->
+            <!--<h3 class='title'>交易记录</h3>-->
+        <!--</header>-->
+        <!--<div class="content">-->
+            <!--<div class='recordInfo list-block media-list'></div>-->
+            <!--<script type='text/html' id='dealInfomation'>-->
+                <!--<div class="dealInfo item-link" data-index={{index}}>-->
+                    <!--<div class='row'>-->
+                        <!--<div class='col-50 customerName'>{{customerName}}</div>-->
+                        <!--<div class='col-50 productPrice'>{{productPrice}}</div>-->
+                    <!--</div>-->
+                    <!--<div class='row'>-->
+                        <!--<div class='col-80'>-->
+                            <!--<span class='productName'>{{productName}}</span>-->
+                            <!--<span class='productProperty'>{{productProperty}}</span>-->
+                        <!--</div>-->
+                        <!--<div class='col-20 orderState'>{{orderState}}</div>-->
+                    <!--</div>-->
+                    <!--<div class='dealTime'>-->
+                        <!--<span class='dealTime'>{{dealTime}}</span>-->
+                        <!--<span class='dealMan'>{{dealMan}}</span>-->
+                        <!--<span class='dealType'>{{dealType}}</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</script>-->
+            <!--<div class='noInfo'>-->
+                <!--<div class='content-block'>暂无交易记录，快去卖货吧 >_< !</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+    <script src="../../js/vendor/require.min.js"></script>
+    <script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+    <script src="customer.js?timestrap=1000"></script>
+</body>
+</html>

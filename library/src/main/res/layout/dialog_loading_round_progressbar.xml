@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/dialogui_ll_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/dialog_log_shape_wihte_round_corner"
+        android:gravity="center"
+        android:minHeight="120dp"
+        android:minWidth="120dp"
+        android:orientation="vertical">
+
+        <!--<com.honeywell.lib.widgets.RoundProgressBar-->
+        <!--android:id="@+id/round_progress"-->
+        <!--android:layout_width="70dp"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--app:roundColor="#A0A0A0"-->
+        <!--app:roundProgressColor="#6495ED"-->
+        <!--app:roundWidth="4dp"-->
+        <!--app:textColor="#6495ED"-->
+        <!--app:textSize="15sp"-->
+        <!--/>-->
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="15dp">
+
+            <com.honeywell.lib.widgets.SmoothRoundProgressBar
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                app:cpb_duration="2000"
+                app:cpb_endColor="#6495ED"
+                />
+            <!--app:cpb_endColor="@android:color/holo_blue_dark"-->
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0%"
+                android:textColor="#6495ED"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/dialog_tv_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="300dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="检测中..."
+            android:textColor="@color/text_black"/>
+    </LinearLayout>
+
+</RelativeLayout>

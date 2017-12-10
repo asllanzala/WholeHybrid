@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_cart_management_title_bar" />
+    <include layout="@layout/activity_cart_management_listview_headerview"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_gray">
+
+        <RelativeLayout
+            android:id="@+id/cart_management_list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/bg_gray">
+
+            <ListView
+                android:id="@+id/cart_management_info_listView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:choiceMode="multipleChoice"
+                android:layout_marginTop="1dp"
+                android:divider="@color/shop_listview_divider_color"
+                android:dividerHeight="1dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="116dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white">
+
+            <RelativeLayout
+                android:id="@+id/cart_management_all_select_layout"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="25dp"
+                android:gravity="center_vertical">
+
+                <RelativeLayout
+                    android:id="@+id/cart_management_all_select_sublayout"
+                    android:layout_width="121dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true">
+
+                    <ImageView
+                        android:id="@+id/cart_management_all_select_imageView"
+                        android:layout_width="21dp"
+                        android:layout_height="21dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/shop_manegement_selector" />
+
+
+                    <com.honeywell.wholesale.ui.base.BaseTextView
+                        android:id="@+id/cart_management_product_name_textView"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/cart_management_all_select_imageView"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="全选"
+                        android:textColor="@color/cart_management_list_up_text_color"
+                        android:textSize="15dp" />
+
+                </RelativeLayout>
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/cart_management_total_price_textview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="20dp"
+                    android:text="总价¥"
+                    android:textColor="@color/cart_management_list_up_text_color"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/cart_management_add_button"
+                android:layout_width="310dp"
+                android:layout_height="42dp"
+                android:background="#f3f3f3"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="22dp"
+                android:text="加入订单"
+                android:textColor="#b6b6b6"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</LinearLayout>

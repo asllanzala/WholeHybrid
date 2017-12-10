@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          id="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="user.css"/>
+    <style>
+        #accountManagePage .list-block .item-content { padding-left: 0; }
+    </style>
+</head>
+<body>
+    <div class="page-group">
+        <!--account List-->
+        <div class="page page-current" id="accountManagePage">
+            <header class="bar bar-nav" id="cust_header">
+                <div class="backPageBtns" id="backPageBtn">
+                    <a class="icon icon-left pull-left" ></a>
+                </div>
+                <a class="icon pull-right" id="menu"  style="visibility:hidden">
+                    <i id="addAccountBtn">用户创建</i>
+                </a>
+                <h3 class="title">账户管理</h3>
+            </header>
+            <div class="content" id="customerList">
+                <div class="list-block media-list">
+                    <ul id="box">
+                    </ul>
+                    <script type="text/html" id="accountListTemplate">
+                        <li class="account-detail-li">
+                            <a href="javascript:void(0)" class="item-link">
+                                <div class="item-content">
+                                    <div class="item-media">
+                                        <img src="../../images/icons/employee.png" width="40" height="40" style="border:1px solid #878787;border-radius:100%">
+                                    </div>
+                                    <div class="item-inner">
+                                        <div class="item-title-row">
+                                            <div class="item-title employee_name">{{employee_name}}</div>
+                                            <input type="hidden" class="employeeArraySequence" value="{{employeeArraySequence}}"/>
+                                            <div class=" item-after erole">{{roleName}}</div>
+                                        </div>
+                                        <div class="item-subtitle leftTime">剩余{{leftTime}}</div>
+                                        <div class="item-text expireTime" style="height:auto">到期时间：{{expireTime}}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </script>
+                    <p class="noDataView">没有任何用户信息</p>
+                </div>
+            </div>
+        </div>
+
+        <!--add Account-->
+        <div class="page" id="addUserPage">
+            <header class="bar bar-nav" >
+                <div class="backPageBtn">
+                    <a class="icon pull-left" id="cancel"></a>
+                </div>
+            </header>
+            <div class="content">
+                <div id="addUserForm">
+                    <div class="userImageInfo">
+                        <div class="addUserImage"></div>
+                        <div id='userImage'></div>
+                        <script type='text/html' id="showUserImg">
+                            <img src="{{imgSrc}}" class='showImg' />
+                            <img src="../../images/icons/delete-day2.png"  class='deleteImg'/>
+                        </script>
+                    </div>
+                    <div class="login_input">
+                        <input type="text" name="name" class="name" placeholder="昵称（必填--中英文数字和'_'）" value="" maxlength="20">
+                    </div>
+                    <div class="login_input">
+                        <input type="tel" name="telephone" class="telephone" placeholder="联系方式（必填--手机或固话）" value="" maxlength="14">
+                    </div>
+                    <div class="login_input">
+                        <input type="password" name="password" class="password" placeholder="密码(必填--大于5位包含大小写英文和数字)" value="" maxlength="16">
+                    </div>
+                    <div class="login_input choice">
+                        <input type="text" name="name"  class='roleText'  placeholder="权限（请选择）" disabled value="店员"  maxlength="20">
+                    </div>
+                </div>
+                <button class='confirmBtn'>
+                    <span id="saveUserBtn" class='saveBtn'>保存</span>
+                </button>
+            </div>
+            <!--<div class='popup popup-role'>-->
+                <!--<header class='bar bar-nav' style="background:black">-->
+                    <!--<a class='icon icon-left pull-left' id='closeModal'></a>-->
+                    <!--<h3 class='title'>职务与权限</h3>-->
+                <!--</header>-->
+                <!--<div class='content list-block' id='roleArray'>-->
+                    <!--<div class='role item-link'>老板</div>-->
+                    <!--<div class='role item-link'>店员</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+
+        <!--account Detail-->
+        <div class="page" id="account_detail_page">
+            <header class="bar bar-nav" id="cust_headers">
+                <div class="backPageBtn">
+                    <a class="icon icon-left pull-left"></a>
+                </div>
+                <a class="icon pull-right" id="account_menu">
+                    <span class='moreBtn'>更多</span>
+                  <div class='more'>
+                      <i id="setUserTime">设置月数</i>
+                      <i id="updateCust" >编辑</i>
+                      <i id="delete">删除</i>
+                  </div>
+                </a>
+            </header>
+            <div class="content">
+                <div class="topUser">
+                    <img src="../../images/icons/employee.png"  style="background-color:white" class="employeeImage"/>
+                    <p class="detail-username"></p>
+                    <p class="detail-job" id="roleName">店员</p>
+                </div>
+                <div class="detail-con">
+                    <div class="list-block">
+                        <ul id="account-detail-ul">
+                            <li class="item-content">
+                                <div class="item-media"><i class="icon icon-mobile"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title" id="phone"></div>
+                                </div>
+                            </li>
+                            <li class="item-content">
+                                <div class="item-media"><i class="icon icon-me"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title" id="login_name"></div>
+                                </div>
+                            </li>
+                            <li class="item-content userTimeInfo">
+                                <div class="item-media"><i class="icon icon-me"></i></div>
+                                <div class="item-inner">
+                                    <div class="item-title">
+                                        <div class="userLeftTime"></div>
+                                        <div class="userExpireTime"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="alertDiv">
+                <div class="alertTitle">
+                    确认删除该用户?
+                </div>
+                <div class="deleteBtn">
+                    <span>删除</span>
+                </div>
+                <div class='emptyDiv'></div>
+            </div>
+            <div class="popup popup-setTime" >
+                <div class="card" style="margin-top:8rem">
+                    <div class="card-header">请输入要设置的月数</div>
+                    <div class="card-content">
+                        <div class="card-content-inner">
+                            <div>总月数：<span id="totalTime">15</span></div>
+                            <div id="userLeft">
+                                用户剩余：<button class="minus"> - </button>
+                                <input  class="leftMouths" type="tel" value="12" />
+                                <button class="plus"> + </button>个月<span class="leftDays"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="confirmSet">确定</button>
+                        <button class="cancelSet">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--edit Account-->
+        <div class="page" id="editUserPage">
+            <header class="bar bar-nav">
+                <div class="backPageBtn">
+                    <a class="icon pull-left" id="cancels"></a>
+                </div>
+            </header>
+            <div class="content">
+                <div id="addUserForms">
+                    <div class="userImageInfo">
+                        <div class="addUserImages"></div>
+                        <div id='userImages'></div>
+                        <script type='text/html' id="showUserImgs">
+                            <img src="{{imgSrc}}" class='showImgs' />
+                            <img src="../../images/icons/delete-day2.png"  class='deleteImgs'/>
+                        </script>
+                    </div>
+                    <div class="login_input">
+                        <input type="text" name="name" class="name" placeholder="昵称（必填--中英文数字和'_'）" value="" maxlength="20">
+                    </div>
+                    <div class="login_input">
+                        <input type="tel" name="telephone" class="telephone" placeholder="联系方式（必填--手机或固话）" value="" maxlength="14">
+                    </div>
+                    <div class="login_input">
+                        <input type="password" name="password" class="password" placeholder="密码(必填--大于5位包含大小写英文和数字)" value="" maxlength="16">
+                    </div>
+                    <div class="login_input choices">
+                        <input type="text" name="name"  class='roleTexts'  placeholder="权限（请选择）" disabled value="老板"  maxlength="20">
+                    </div>
+                    <div class="login_input changeShop" style="padding-top:0.2rem;overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">原有的店铺</div>
+                </div>
+                <button class='confirmBtn'>
+                    <span id="saveUserBtns" class='saveBtns'>保存</span>
+                </button>
+            </div>
+            <!--<div class='popup popup-roles'>-->
+                <!--<header class='bar bar-nav' style="background:black">-->
+                    <!--<a class='icon icon-left pull-left' id='closeModals'></a>-->
+                    <!--<h3 class='title'>职务与权限</h3>-->
+                <!--</header>-->
+                <!--<div class='content list-block' id='roleArrays'>-->
+                    <!--<div class='roles item-link'>老板</div>-->
+                    <!--<div class='roles item-link'>店员</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class='popup popup-shops'>
+                <header class='bar bar-nav' style="background:black">
+                    <a class='icon icon-left pull-left' id='shopModel'></a>
+                    <h3 class='title'>选择店铺</h3>
+                </header>
+                <div class='content list-block' id='shopArrays'>
+                </div>
+                <script type="text/html" id="shopsTemplate">
+                    <div class='shops item-link' data-shopid="{{shopId}}">{{shopName}}</div>
+                </script>
+            </div>
+        </div>
+
+    </div>
+    <script src="../../js/vendor/require.min.js"></script>
+    <script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+    <script src="account.js" id="jsAccount"></script>
+</body>
+</html>

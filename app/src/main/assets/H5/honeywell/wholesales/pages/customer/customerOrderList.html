@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          id="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="customer.css"/>
+</head>
+<body>
+<div>
+    <div class="page current-page" id="dealRecordPage">
+        <header class="bar bar-nav">
+            <a class="icon icon-left pull-left back"></a>
+            <h3 class='title'>交易记录</h3>
+        </header>
+        <div class="content">
+            <div class='recordInfo list-block media-list'></div>
+            <script type='text/html' id='dealInfomation'>
+                <div class="dealInfo item-link" data-index={{index}}>
+                    <div class='row'>
+                        <div class='col-50 customerName'>{{customerName}}</div>
+                        <div class='col-50 productPrice'>{{productPrice}}</div>
+                    </div>
+                    <div class='row'>
+                        <div class='col-80'>
+                            <span class='productName'>{{productName}}</span>
+                            <span class='productProperty'>{{productProperty}}</span>
+                        </div>
+                        <div class='col-20 orderState'>{{orderState}}</div>
+                    </div>
+                    <div class='dealTime'>
+                        <span class='dealTime'>{{dealTime}}</span>
+                        <!--<span class='dealMan'>{{dealMan}}</span>-->
+                        <span class='dealType'>{{dealType}}</span>
+                    </div>
+                </div>
+            </script>
+            <div class='noInfo'>
+                <div class='content-block'>暂无交易记录，快去卖货吧 >_< !</div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="../../js/vendor/require.min.js"></script>
+    <script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+    <script src="customer.js?timestrap=1000"></script>
+</body>
+</html>

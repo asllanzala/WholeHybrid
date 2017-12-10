@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingEnd="@dimen/right_temp_border_size"
+    >
+
+    <ImageView
+        android:id="@+id/pre_search_result_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerVertical="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/pre_search_text_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/pre_search_result_icon"
+        android:paddingStart="@dimen/left_temp_border_size"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        >
+
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/pre_search_title_textView"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxWidth="150dp"
+            android:textSize="16dp"
+            />
+
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/pre_search_price_info_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pre_search_title_textView"
+            android:layout_marginTop="4dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxWidth="130dp"
+            android:textSize="14dp"
+            android:text="321"
+            />
+
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/pre_search_stock_info_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_below="@id/pre_search_price_info_textView"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:maxWidth="130dp"
+            android:gravity="end"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pre_search_edittext_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/pre_search_text_layout"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:descendantFocusability="beforeDescendants"
+        android:layout_centerVertical="true"
+        >
+
+        <ImageView
+            android:id="@+id/pre_search_product_no_add"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:clickable="true"
+            android:src="@drawable/button_num_add" />
+
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/pre_search_product_no_text_view"
+            android:layout_width="60dp"
+            android:layout_height="34dp"
+            android:layout_toStartOf="@id/pre_search_product_no_add"
+            android:gravity="center"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/textview_border"
+            android:maxLength="8"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textSize="13dp"
+            android:text="111"
+            android:layout_alignParentBottom="true"
+            />
+
+        <ImageView
+            android:id="@+id/pre_search_product_no_minus"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:clickable="true"
+            android:layout_marginEnd="4dp"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_toStartOf="@id/pre_search_product_no_text_view"
+            android:src="@drawable/button_num_sub" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

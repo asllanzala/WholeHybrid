@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical" >
+
+    <include layout="@layout/activity_cart_management_title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingEnd="@dimen/right_border_size"
+            android:paddingStart="@dimen/left_border_size">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/warehouse_add_name_iamge_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/warehouse_name"/>
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/warehouse_add_name_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/warehouse_add_name_iamge_view"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/warehouse_text_size"
+                    android:textColor="@color/warehouse_add_text_color"
+                    android:text="仓库名"/>
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/warehouse_add_name_star_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/warehouse_add_name_text_view"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/warehouse_text_size"
+                    android:textColor="@color/warehouse_add_text_star_color"
+                    android:text=" *"/>
+
+                <EditText
+                    android:id="@+id/warehouse_add_name_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="200dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:maxLength="30"
+                    style="@style/editStyle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/warehouse_text_size"
+                    android:textColor="@color/warehouse_add_edit_color"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/error_change_color_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_gray"/>
+
+            <RelativeLayout
+                android:id="@+id/warehouse_add_owner_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/warehouse_add_owner_iamge_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/warehouse_owner"/>
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/warehouse_add_owner_text_view"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@id/warehouse_add_owner_iamge_view"
+                    android:textSize="@dimen/warehouse_text_size"
+                    android:textColor="@color/warehouse_add_text_color"
+                    android:text="负责人"/>
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/warehouse_add_owner_right_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/editStyle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/warehouse_text_size"
+                    android:textColor="@color/warehouse_add_edit_color"
+                    android:text=""/>
+
+                <ImageView
+                    android:id="@+id/warehouse_add_owner_right_iamge_view"
+                    android:layout_width="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/icon_right_btn"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_gray"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/warehouse_add_address_iamge_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/warehouse_address"/>
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/warehouse_add_address_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@id/warehouse_add_address_iamge_view"
+                    android:textSize="@dimen/warehouse_text_size"
+                    android:textColor="@color/warehouse_add_text_color"
+                    android:text="地址"/>
+
+                <EditText
+                    android:id="@+id/warehouse_add_location_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="200"
+                    style="@style/editStyle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/warehouse_text_size"
+                    android:textColor="@color/warehouse_add_edit_color"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_gray"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/warehouse_add_comment_iamge_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/warehouse_comment"/>
+
+                <com.honeywell.wholesale.ui.base.BaseTextView
+                    android:id="@+id/warehouse_add_comment_text_view"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toEndOf="@id/warehouse_add_comment_iamge_view"
+                    android:textSize="@dimen/warehouse_text_size"
+                    android:textColor="@color/warehouse_add_text_color"
+                    android:text="备注"/>
+
+                <EditText
+                    android:id="@+id/warehouse_add_remark_edit_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="200"
+                    style="@style/editStyle"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:textSize="@dimen/warehouse_text_size"
+                    android:textColor="@color/warehouse_add_edit_color"
+                    android:text=""/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_gray"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/warehouse_add_submit_button"
+            android:layout_width="320dp"
+            android:layout_height="36dp"
+            style="@style/buttonStyle"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="20dp"
+            android:textSize="15dp"
+            android:text="提交"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

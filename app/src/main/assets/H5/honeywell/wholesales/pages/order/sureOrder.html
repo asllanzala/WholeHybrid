@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          id="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/sm-extend.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="billing.css"/>
+    <link rel="stylesheet" href="iconfont.css" />
+</head>
+<body>
+<div>
+    <div class="indicator-background"></div>
+    <div class="indicator-div">
+        <span class="indicator-box indicator-img"></span>
+    </div>
+    <div class="page page-current" id="sureOrderPage">
+        <header class="bar bar-nav">
+            <a class="icon icon-left pull-left back backHomeBtn" href="javascript:void(0);"
+               data-transition='slide-out'></a>
+            <h3 class="title">订单确认</h3>
+        </header>
+        <!-- 工具栏 -->
+        <nav class="bar bar-tab bottom_bar" style="background-color:white;display:flex;align-items:center">
+            <button class="twoBtn" id="sureOrderBtn">确认开单</button>
+        </nav>
+        <div class="content sureOrderContent">
+            <div class="forScroll">
+            <div class="list-block so_custInfo">
+                <p class="ws_label">客户信息</p>
+                <div class="row" id="skInfo">
+                    <div class="col-100 so_custName" >顾客<div id="customerName" class="infoUser">散客/新客户</div></div>
+                    <div class="col-100 so_custName" >店铺<div id="shopName" class="infoUser">杂货店</div></div>
+                    <div class="col-100 so_custName" >开单<div id="employeeName" class="infoUser">小章</div></div>
+                    <div class="col-100 so_custName hiddenBefore" >联系方式<div id="contactPhone" class="infoUser"></div>
+                </div>
+            </div>
+            <div class="list-block">
+                <p class="ws_label" >货品清单</p>
+                <ul>
+                    <li class="sureOrder_proList overflowAuto" id="productList"></li>
+                       <script type="text/html" id="proListTemplate">
+                            <div class="proList">
+                                <div class="list_productName" data-product_id="{{product_id}}" style="font-size:0.9rem;font-weight:bold">{{list_productName}}</div>
+                            </div>
+                       </script>
+                        <script type="text/html" id="listItemTemplate">
+                            <div class="list_detail">
+                                <div class="detail_name">
+                                    <span class="name_title" style="font-weight:bold;text-align:left;color:#000;font-size:0.9rem">{{sku_name}}</span>
+                                    <span class="name_info">{{sku_info}}</span>
+                                </div>
+                                <!--<div class="detail_name">-->
+                                    <!--<span class="name_title">货品价格</span>-->
+                                    <!--<span class="name_info">{{standard_price}}</span>-->
+                                <!--</div>-->
+                                <!--<div class="detail_name">-->
+                                    <!--<span class="name_title">货品数量</span>-->
+                                    <!--<span class="name_info">{{sale_account}}</span>-->
+                                <!--</div>-->
+                            </div>
+                        </script>
+                    <li class="sureOrder_selectionInfo">
+                        <div class="orderNumber">订单金额</div>
+                        <div class="row">
+                            <div class="col-50 text-left">总价(￥):</div>
+                            <div class="col-50" id="total_money"  style="font-weight:bold;text-align:right;color:#000;font-size:0.9rem" ></div>
+                        </div>
+                        <div class="row" style="border-bottom:1px solid #ccc;margin:0 0.8rem;padding:0">
+                            <div class="col-50 text-left">实际收款(￥)：</div>
+                            <div class="col-50" id="final_money">
+                                <input type="tel" placeholder="请输入总价"  value="" id="setTotalPrice" maxlength="12"  style="text-align:right;font-size:0.9rem;font-weight:bold;color:orange"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-50 text-left">调整(￥)：</div>
+                            <div class="col-50 text-right"><input type="tel"  value="" id="discount" disabled maxlength="12" style="text-align:right;font-size:0.9rem;font-weight:bold"/></div>
+                        </div>
+                        <div class="item-content">
+                            <div class="item-media" style="width:20%;text-align:right"><i class="icon icon-form-toggle"></i></div>
+                            <div class="item-inner" style="width:80%;text-align:right;padding:0">
+                                <div class="item-title label" style="width:65%;text-align:right;color:#939393">此单由收银员收款</div>
+                                <div class="item-input" style="width:35%;position:relative;left:-1.5rem;transform: scale(0.7);">
+                                    <label class="label-switch">
+                                        <input type="checkbox" class="switch" >
+                                        <div class="checkbox"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="employeeNote">
+                            <div>订单备注</div>
+                            <textarea class="area"  placeholder="请输入(50字内)" maxlength="50" ></textarea>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--content end-->
+        </div>
+        </div>
+    </div>
+        <div class="popup popup-choicePayType">
+            <div class="choice-content">
+                <div class="choice-title">
+                    <div class="cancelImage"></div>
+                    选择付款方式
+                </div>
+                <div class="several_payType">
+                    <div class="payType_title">此单含多种付款方式</div>
+                    <div class="common_switch">
+                        <input type="checkbox" class="switch_checkbox" style="height:0;border:0;overflow:hidden;padding:0;width:0">
+                        <div class="switch_content">
+                            <div class="content_circle"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="choice-radio" >
+                    <label class="radio" for="cashType" >
+                        <input type="radio" name="pay" checked class="payType" id="cashType">
+                        <span class="payType_title">现金</span>
+                    </label>
+                    <label class="radio" for="pay_alipay">
+                        <input type="radio" name="pay" class="payType" id="pay_alipay">
+                        <span class="payType_title">支付宝</span>
+                    </label>
+                    <label class="radio" for="pay_wechat">
+                        <input type="radio" name="pay" class="payType" id="pay_wechat">
+                        <span class="payType_title">微信</span>
+                    </label>
+                    <label class="radio" for="pay_bankCard">
+                        <input type="radio" name="pay" class="payType" id="pay_bankCard">
+                        <span class="payType_title">银行卡</span>
+                    </label>
+                    <label class="radio" for="creditType">
+                        <input type="radio" name="pay" class="payType" id="creditType">
+                        <span class="payType_title">赊账</span>
+                    </label>
+                    <!--<label class="creditItem"><span id="creditNum"></span></label>-->
+                </div>
+                <ul class="choice-payType" style="display:none">
+                    <li class="payType_input">
+                        <span class="input_title">现金</span>
+                        <input type="tel" class="payType_crash"  data-crashaccountid ="{{crashAccountId}}"/>
+                    </li>
+                    <li class="payType_input">
+                        <span class="input_title">支付宝</span>
+                        <input type="tel" class="payType_alipay" data-alipayaccountid ="{{alipayAccountId}}"/>
+                    </li>
+                    <li class="payType_input">
+                        <span class="input_title">微信</span>
+                        <input type="tel" class="payType_wechat" data-wechataccountid ="{{wechatAccountId}}"/>
+                    </li>
+                    <li class="payType_input">
+                        <span class="input_title">银行卡</span>
+                        <input type="tel" class="payType_bankCard" data-bankcardaccountid ="{{bankCardAccountId}}"/>
+                    </li>
+                    <li class="payType_input">
+                        <span class="input_title">赊账</span>
+                        <input type="tel" class="payType_credit" data-creditaccountid ="{{creditAccountId}}"/>
+                    </li>
+                    <li class="payType_status">
+                        <div class="status_havePay">
+                            <span>已收合计:</span>
+                            <span class="havePay_number"></span>
+                        </div>
+                        <div class="status_residue">
+                            <span>剩余:</span>
+                            <span class="residue_number"></span>
+                        </div>
+                    </li>
+                </ul>
+                <div class="total_neededPay">
+                    <div class="customer_credit">
+                        <span class="credit_title">客户赊账金额:</span>
+                        <span class="credit_number"></span>
+                    </div>
+                    <div class="total_payMoney">
+                        <span class="neededPay_title">总价:</span>
+                        <span class="neededPay_number">1000</span>
+                    </div>
+                </div>
+                <div class="choice-confirm" style="width:100%">
+                    <button  class="button confirmChoice" id="methodConfirm" style="width:100%;background:#ffc700;line-height:0.7rem;font-size:0.7rem;height:1.7rem;">确认</button>
+                </div>
+            </div>
+        </div>
+</div>
+</div>
+<script src="../../js/vendor/require.min.js"></script>
+<script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+<script src="order.js"></script>
+</body>
+</html>

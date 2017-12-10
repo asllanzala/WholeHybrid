@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          id="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="customer.css"/>
+</head>
+<body>
+<div>
+    <!--<div class="indicator-background"></div>-->
+    <!--<div class="indicator-div">-->
+        <!--<span class="indicator-box indicator-img"></span>-->
+    <!--</div>-->
+    <div class="page page-current" id="customersListPage">
+        <header class="bar bar-nav" id="cust_header">
+            <a class="icon icon-left pull-left backHomeBtn" id="backHomeBtn"></a>
+            <a class="icon pull-right" id="menu">
+                <i id="searchBtn">查询</i>
+                <i id="addCustBtn">添加</i>
+            </a>
+            <h1 class="title">客户名录</h1>
+        </header>
+        <div class="content">
+            <!--<div class="buttons-tab" style="height: 2.1rem;">-->
+            <!--<a href="#tab1" class="tab-link active button customers_all">全部</a>-->
+            <!--<a href="#tab2" class="tab-link button customer_debt">有欠款</a>-->
+            <!--<a href="#tab3" class="tab-link button customer_name">按名字</a>-->
+            <!--&lt;!&ndash;<a href="#tab2" class="tab-link button vendors_btn">有欠款</a>&ndash;&gt;-->
+            <!--</div>-->
+            <div class="list-group list-block media-list">
+                <ul class="customerList" id="customerList">
+                    <script type="text/html" id="custMoTemp">
+                        <li data-cid="{{customer_id}}" class="showCustomerDetail" data-cusInfo='{{customerObj}}'>
+                            <a href="javascript:void(0)" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">{{customer_name}}</div>
+                                    </div>
+                                    <div class="item-subtitle">{{contact_phone}}</div>
+                                </div>
+                            </a>
+                        </li>
+                    </script>
+                </ul>
+                <p class="noDataView">没有任何客户信息</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="page" id="updateCustPage">
+        <!--<header class="bar bar-nav">
+            <a class="icon icon-left pull-left back"></a>
+            <h1 class="title">Update Customer</h1>
+        </header>-->
+        <nav class="bar bar-tab">
+            <a href="#customersListPage" class="button button-big  twoBtn updateCust_btn">update</a>
+        </nav>
+        <div class="content ">
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner content-padded">
+                                <div class="item-title label">id</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="customer id" class="cust_upId" name="customer_id"
+                                           readonly="true">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner content-padded">
+                                <div class="item-title label">phone</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="customer phone" name="customer_phone"
+                                           class="cust_upPhone">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner content-padded">
+                                <div class="item-title label">name</div>
+                                <div class="item-input">
+                                    <input type="email" placeholder="customer name" name="customer_name"
+                                           class="cust_upName">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner content-padded">
+                                <div class="item-title label">address</div>
+                                <div class="item-input">
+                                    <textarea name="address" class="address"
+                                              placeholder="enter aceeept address"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="updateVendorPage">
+        <!--<header class="bar bar-nav">
+            <a class="icon icon-left pull-left back"></a>
+            <h1 class="title">Update Customer</h1>
+        </header>-->
+        <nav class="bar bar-tab">
+            <a href="#customersListPage" class="button button-big  twoBtn updateVendor_btn">update</a>
+        </nav>
+        <div class="content ">
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner content-padded">
+                                <div class="item-title label">ID</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="supplier id" class="supplier_id" name="supplier_id"
+                                           readonly="true">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner content-padded">
+                                <div class="item-title label">phone</div>
+                                <div class="item-input">
+                                    <input type="text" placeholder="supplier phone" name="supplier_phone"
+                                           class="supplier_phone">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-inner content-padded">
+                                <div class="item-title label">name</div>
+                                <div class="item-input">
+                                    <input type="email" placeholder="supplier name" name="supplier_name"
+                                           class="supplier_name">
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="customerShopInfo">
+        <!--<header class="bar bar-nav">
+            <a class="icon icon-left pull-left back" href="#" data-transition='slide-out' data-no-cache="true"></a>
+            <h1 class="title">Client Info</h1>
+        </header>-->
+        <div class="content">
+            <div class="shopInfo content-padded">
+                <span class="icon icon-home"></span>
+                <p class="shopName">Ann's Fashion Shop</p>
+                <p class="shopAddress">14-3 , Four Fashion shop Street , Shang Hai province , China</p>
+                <p class="shopUser">Ms.Annnie</p>
+                <p class="shopMobile">M:186-1232-0980</p>
+                <p class="shopChat">Q:2343242343</p>
+            </div>
+            <div class="list-block">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                            <div class="item-title">Last sale</div>
+                            <div class="item-after">$1230,0</div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                            <div class="item-title">Last deal date</div>
+                            <div class="item-after">2014-23-23</div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                            <div class="item-title">Total date</div>
+                            <div class="item-after">$123120</div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                            <div class="item-title">Deal</div>
+                            <div class="item-after">12</div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                            <div class="item-title">Memo</div>
+                            <div class="item-after">never say yes to 1st offer</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <p class="transion_title content-padded">Transaction log</p>
+            <div class="transaction_con content-padded" style="background: #FFFFFF;">
+                <div class="transaction_detail row">
+                    <div class="col-80">
+                        2015-12-12<br/>Coat,Sweater......
+                    </div>
+                    <div class="col-20">$12312</div>
+                </div>
+                <div class="transaction_detail row">
+                    <div class="col-80">
+                        2015-12-12<br/>Coat,Sweater......
+                    </div>
+                    <div class="col-20">$12312</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/vendor/require.min.js"></script>
+<script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+<script src="customer.js?timestrap=1000"></script>
+</body>
+
+</html>

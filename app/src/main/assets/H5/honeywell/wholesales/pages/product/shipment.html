@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          id="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="../../css/sm-extend.min.css">
+    <link rel="stylesheet" href="shipment.css"/>
+</head>
+
+<body>
+<div data-no-cache="true">
+    <div class="indicator-background"></div>
+    <div class="indicator-div">
+        <span class="indicator-box indicator-img"></span>
+    </div>
+    <div class="page" id="shipMentPage">
+        <header class="bar bar-nav">
+            <a class="icon icon-left pull-left backHomeBtn" href="#" data-transition='slide-out'></a>
+            <h3 class="title">报价</h3>
+        </header>
+        <div class="content shipMent_info">
+            <div class="list-block shipMent_proInfo">
+                <ul>
+                    <li class="">
+                        <div class="item-content">
+                            <div class="item-media"></div>
+                            <div class="item-inner">
+                                <div class="item-title label label-customer">客户</div>
+                                <div class="item-input open-customer div-border">
+                                    <input type="text" class="client_name" placeholder="choose customer" value="散户/新客户" readonly="true" />
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-name"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label label-perPrice">单价</div>
+                                <div class="item-input div-border">
+                                    <input type="tel" value="" class="product_price"/>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-form-name"></i></div>
+                            <div class="item-inner">
+                                <div class="item-title label label-quality">数量</div>
+                                <div class="item-input div-border row changeQuality">
+                                    <div class="col-20 qualityMinus" style="margin:0"> - </div>
+                                    <div class="col-60" style="margin:0 6%">
+                                        <input type="tel" value="9" class="total_number qty"/>
+                                    </div>
+                                    <div class="col-20 qualityAdd" style="margin:0"> + </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sp_total">
+                        <div class="item-content">
+                            <div class="item-media"></div>
+                            <div class="item-inner">
+                                <div class="item-title label label-totalPrice">总价</div>
+                                <div class="item-input div-border" >
+                                    <input type="tel" value="" class="total_money"/>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="ws_button row">
+                            <div class="col-50">
+                                <a href="javascript:void(0)" class="button button-big twoBtn"
+                                   id="addToCart">加入购物篮</a>
+                            </div>
+                            <div class="col-50">
+                                <a href="javascript:void(0)" class="button button-big twoBtn"
+                                   id="nowToClear">立即结算</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="sm-shopInfo ">
+                <div class="list-block shopInfo">
+                    <div class="sp_total">
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-computer"></i></div>
+                            <div class="item-inner">
+                                <div class="item-subtitle sm-cusName">客户名</div>
+                                <!--<div class="item-after"><span class="icon icon-down"></span></div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="sm-shopCon">
+                        <li>
+                            <div class="item-content">
+                                <div class="item-media"></div>
+                                <div class="item-inner">
+                                    <div class="item-title label">上次成交单价</div>
+                                    <div class="item-input" id="last_sale_price"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="item-content">
+                                <div class="item-media"></div>
+                                <div class="item-inner">
+                                    <div class="item-title label">上次成交数量</div>
+                                    <div class="item-input" id="last_sale_num"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="item-content">
+                                <div class="item-media"></div>
+                                <div class="item-inner">
+                                    <div class="item-title label">上次拿货时间</div>
+                                    <div class="item-input" id="sale_dt"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="list-block  sm-prodctInfo">
+                    <div class="sp_total">
+                        <div class="item-content">
+                            <div class="item-media"><i class="icon icon-card"></i></div>
+                            <div class="item-inner">
+                                <div class="item-subtitle product_name">商品名称</div>
+                                <!--<div class="item-after"><span class="icon icon-down"></span></div>-->
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="sm-productCon">
+                        <li>
+                            <div class="item-content">
+                                <div class="item-media"></div>
+                                <div class="item-inner">
+                                    <div class="item-title label">指导售价</div>
+                                    <div class="item-input" id="standard_price"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="item-content">
+                                <div class="item-media"></div>
+                                <div class="item-inner">
+                                    <div class="item-title label ">总销量</div>
+                                    <div class="item-input" id="allSellNum"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="item-content">
+                                <div class="item-media"></div>
+                                <div class="item-inner">
+                                    <div class="item-title label">库存量</div>
+                                    <div class="item-input" id="number"></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <div class="item-content">
+                                <div class="item-media"></div>
+                                <div class="item-inner">
+                                    <div class="item-title label">成本价</div>
+                                    <div class="item-input" id="stock_price"></div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--content end-->
+    </div>
+    <!--customer page -->
+    <div class="popup popup-customer">
+        <!--<div class="page page-current" >-->
+        <header class="bar bar-nav">
+            <a class="icon icon-left pull-left closePopup" href="#" data-transition='slide-out'
+               data-no-cache="true"></a>
+            <h1 class="title">选择客户</h1>
+        </header>
+        <div class="content">
+            <div class="customer_list">
+                <div class="list-block contacts-block">
+                    <div class="list-group">
+                        <div class="sm-newCustomer">
+                            <label class="label-checkbox item-content">
+                                <input type="radio" name="newCust-radio" id="newCust-radio"
+                                       checked="checked">
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title">散客/新客户</div>
+                                    </div>
+                                </div>
+                                <!--<div class="item-media"><i-->
+                                        <!--class="icon icon-check-checked radio-icon"></i></div>-->
+                            </label>
+                        </div>
+                        <ul id="box"></ul>
+                    </div>
+                </div>
+            </div>
+            <!--customer page end-->
+        </div>
+    </div>
+    <script src="../../js/vendor/require.min.js"></script>
+    <script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+    <script src="shipment.js?timestrap=1000"></script>
+</div>
+</body>
+</html>

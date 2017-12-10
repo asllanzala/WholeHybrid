@@ -1,0 +1,178 @@
+<resources>
+
+    <style name="AppTheme" parent="@android:style/Theme.Light">
+        <!-- 设置没有标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置activity切换动画 -->
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="android:Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item> <!-- 对话框是否有遮盖 -->
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <!-- animation 样式 -->
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+    <style name="SplitView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/split_line_color</item>
+    </style>
+
+    <style name="PopupAnimation">
+        <item name="@android:windowEnterAnimation">@anim/popup_show</item>
+        <item name="@android:windowExitAnimation">@anim/popup_disappear</item>
+    </style>
+
+    <!-- Dashboard左边菜单栏Icon item样式 -->
+    <style name="LeftMenuIconItemStyle">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">32dp</item>
+    </style>
+
+    <!-- Dashboard左边菜单栏TextView item样式 -->
+    <style name="LeftMenuTextItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:textColor">@color/dashboard_left_menu_item_text_color</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <!-- 一级Tab切换按钮的样式 -->
+    <style name="tabLevel1TextStyle">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- 二级Tab切换按钮的样式 -->
+    <style name="tabLevel2TextStyle">
+        <item name="android:textSize">14dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- 选择sku的Activity的样式 -->
+    <style name="skuDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="buttonStyle">
+        <item name="android:background">@color/transaction_tab_selected_bg_color</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="editStyle">
+        <item name="android:background">@null</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="android:width">210dp</item>
+    </style>
+
+    <style name="WholesaleTheme" parent="@style/HoneywellBaseTheme">
+
+    </style>
+
+
+    <style name="edit_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/list_item_text_color</item>
+        <item name="android:textSize">@dimen/list_item_text_size</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@null</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textColorHint">@color/base_text_color_hint</item>
+        <item name="android:maxLength">20</item>
+    </style>
+
+    <style name="base_edit_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/list_item_text_color</item>
+        <item name="android:textSize">@dimen/list_item_text_size</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:background">@drawable/edittext_frame</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textColorHint">@color/base_text_color_hint</item>
+        <item name="android:maxLength">20</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+    </style>
+
+    <style name="base_title_text_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/base_edit_title_text_color</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginTop">15dp</item>
+    </style>
+
+    <style name="wholesale_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_marginBottom">@dimen/base_margin_bottom</item>
+        <item name="android:layout_marginLeft">@dimen/base_margin_start_end</item>
+        <item name="android:layout_marginRight">@dimen/base_margin_start_end</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:background">@drawable/btn_background_border</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
+    <style name="wholesale_base_button_style">
+        <item name="android:background">@drawable/btn_background</item>
+        <item name="android:textColor">@color/wholesale_white</item>
+        <item name="android:textSize">@dimen/wholesale_button_text_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="wholesale_base_button_border_style">
+        <item name="android:background">@drawable/btn_background_border</item>
+        <item name="android:textColor">@color/button_border_text_color</item>
+        <item name="android:textSize">@dimen/wholesale_button_text_size</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SwitchButtonStyle">
+        <item name="android:paddingLeft">1dp</item>
+        <item name="android:paddingRight">1dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+    <style name="MyAppTheme" parent="android:Theme.Light">
+        <item name="android:textStyle">normal</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+
+</resources>

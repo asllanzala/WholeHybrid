@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          id="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta charset="UTF-8">
+    <title>login </title>
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="login.css"/>
+    <style>
+        input:-webkit-autofill,
+        textarea:-webkit-autofill,
+        select:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 1000px white inset;
+        }
+    </style>
+</head>
+<body>
+<div class="page-group">
+    <div class="page" id="loginPage" style="background: #FFFFFF;">
+        <header class="bar bar-nav" id="day1Header" style="background:white;height:0;">
+        </header>
+        <div class="content">
+            <div class="compayLog"></div>
+            <div class="login_form">
+                <div class="login_input">
+                    <input type="text" class="company_account" name="company_account" id="company_account" placeholder="公司名" value="">
+                </div>
+                <div class="login_userInfo">
+                    <div class="login_input">
+                        <input type="text" class="login_name" name="login_name" id="login_name" placeholder="用户名" value="">
+                        <span class="icon icon-down"></span>
+                    </div>
+                    <div class="logined_userList">
+                    </div>
+                </div>
+                <div class="login_input">
+                    <input type="password" class="password" name="password" id="password" placeholder="密码" value="">
+                </div>
+            </div>
+            <div class="wh-oneBtn content-padded" style="margin-top:0;">
+                <p class="buttonP"><a href="#" class="button button-big button-fill empLogin" id="empLogin">登录</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/vendor/require.min.js"></script>
+<script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+<script src="login.js?timestrap=1000"></script>
+</body>
+</html>

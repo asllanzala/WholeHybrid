@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+          id="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/sm.min.css">
+    <link rel="stylesheet" href="../../css/common.css">
+    <link rel="stylesheet" href="supplier.css"/>
+</head>
+<body>
+<div>
+    <div class="indicator-background"></div>
+    <div class="indicator-div">
+        <span class="indicator-box indicator-img"></span>
+    </div>
+    <div class="page page-current" id="supplierListPage">
+        <header class="bar bar-nav" id="cust_header" style="background:black">
+            <a class="icon icon-left pull-left backHomeBtn" id="backHomeBtn"></a>
+            <a class="icon pull-right" id="menu" >
+                <i id="searchBtn">查询</i>
+                <i id="addSupplierBtn">添加</i>
+            </a>
+            <h1 class="title">供应商名录</h1>
+        </header>
+        <div class="content">
+            <div class="list-group list-block media-list">
+                <ul class="supplierList" id="supplierList">
+                    <!--<li class="list-group-title">A</li>-->
+                    <script type="text/html" id="supplierListTemplate">
+                        <li class="showSupplierDetail">
+                            <a href="#" class="item-link item-content">
+                                <div class="item-inner">
+                                    <div class="item-title-row">
+                                        <div class="item-title" id="supplierName">{{supplier_name}}</div>
+                                        <input type="hidden" id="bankInfo" value="{{bank_info}}"/>
+                                        <input type="hidden" id="address" value="{{address}}"/>
+                                        <input type="hidden" id="spid" value="{{supplier_id}}"/>
+                                        <input type="hidden" id="descMemo" value="{{desc_memo}}"/>
+                                    </div>
+                                    <div class="item-subtitle"><i id="cname">{{contact_name}}</i>,<i id="cphone">{{contact_phone}}</i>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </script>
+                </ul>
+                <p class="noDataView">暂无供应商，快去添加吧 >_< !</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../js/vendor/require.min.js"></script>
+<script src="../../js/lib/requireConfig.js?timestrap=1000"></script>
+<script src="supplier.js"></script>
+</body>
+</html>

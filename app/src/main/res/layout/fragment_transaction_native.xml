@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <include layout="@layout/main_title_bar"/>
+    <LinearLayout
+        android:id="@+id/transaction_fragment_order_sub_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transaction_tab_bg_color"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/tab_order_cart"
+                style="@style/tabLevel2TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transaction_tab_bg_color"
+                android:gravity="center"
+                android:text="@string/transaction_fragment_tab_shop_basket"
+                android:textSize="15dp" />
+
+            <View
+                android:id="@+id/tab_order_cart_selected_sign"
+                android:layout_width="1dp"
+                android:layout_height="21dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transaction_tab_bg_color"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/tab_order_bill_no_payment"
+                style="@style/tabLevel2TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transaction_tab_bg_color"
+                android:gravity="center"
+                android:text="@string/transaction_fragment_tab_order_billing"
+                android:textSize="15dp" />
+
+            <View
+                android:id="@+id/tab_order_bill_no_payment_selected_sign"
+                android:layout_width="1dp"
+                android:layout_height="21dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transaction_tab_bg_color"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/tab_order_credit"
+                style="@style/tabLevel2TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transaction_tab_bg_color"
+                android:gravity="center"
+                android:text="@string/transaction_fragment_tab_order_unpaid"
+                android:textSize="15dp" />
+
+            <View
+                android:id="@+id/tab_order_credit_selected_sign"
+                android:layout_width="1dp"
+                android:layout_height="21dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/transaction_tab_bg_color"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/tab_order_paid"
+                style="@style/tabLevel2TextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transaction_tab_bg_color"
+                android:gravity="center"
+                android:text="@string/transaction_fragment_tab_order_paid"
+                android:textSize="15dp" />
+
+            <View
+                android:id="@+id/tab_order_paid_selected_sign"
+                android:layout_width="1dp"
+                android:layout_height="21dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sub_tab_credit_format_layout"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:background="@color/transaction_tab_bg_color"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_middle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/transaction_tab_bg_color"
+            android:orientation="horizontal">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/sub_tab_credit_format_time_textview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transaction_tab_bg_color"
+                android:gravity="center"
+                android:text="按时间"
+                android:textColor="@drawable/transaction_format_selector" />
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/sub_tab_credit_format_money_textview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transaction_tab_bg_color"
+                android:gravity="center"
+                android:text="按金额"
+                android:textColor="@drawable/transaction_format_selector" />
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/sub_tab_credit_format_customer_textview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transaction_tab_bg_color"
+                android:gravity="center"
+                android:text="按客户"
+                android:textColor="@drawable/transaction_format_selector" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/sub_tab_paid_format_layout"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:background="@color/transaction_tab_bg_color"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_middle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/transaction_tab_bg_color"
+            android:orientation="horizontal">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/sub_tab_paid_format_time_textview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transaction_tab_bg_color"
+                android:gravity="center"
+                android:text="按时间"
+                android:textColor="@drawable/transaction_format_selector" />
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/sub_tab_paid_format_money_textview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transaction_tab_bg_color"
+                android:gravity="center"
+                android:text="按金额"
+                android:textColor="@drawable/transaction_format_selector" />
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/sub_tab_paid_format_customer_textview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transaction_tab_bg_color"
+                android:gravity="center"
+                android:text="按客户"
+                android:textColor="@drawable/transaction_format_selector" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/sub_tab_credit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray_middle" />
+
+        <LinearLayout
+            android:id="@+id/credit_order_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/credit_format_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="123" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/pull_down_icon" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/credit_order_view"
+            android:background="@color/gray_middle" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sub_tab_square_layout"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/gray_middle" />
+
+        <LinearLayout
+            android:id="@+id/square_order_time_view"
+            android:layout_width="140dp"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/order_time_format_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingStart="12dp"
+                android:text="321x" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/pull_down_icon" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/square_order_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="12dp"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <com.honeywell.wholesale.ui.base.BaseTextView
+                android:id="@+id/square_order_format_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingStart="80dp"
+                android:text="321" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/pull_down_icon" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/transaction_fragment_stokein_sub_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/transaction_fragment_tab_stock_all"
+            style="@style/tabLevel2TextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/transaction_fragment_tab_stoke_in_all"
+            android:textColor="@color/gray_middle"
+            android:textSize="14dp" />
+
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/transaction_fragment_tab_stock_unconfirmed"
+            style="@style/tabLevel2TextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/transaction_fragment_tab_stoke_in_unconfirmed"
+            android:textSize="14dp" />
+
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/transaction_fragment_tab_stock_adjustment"
+            style="@style/tabLevel2TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/transaction_fragment_tab_stoke_in_adjustment"
+            android:textSize="14dp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/orders_listView_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/transaction_tab_format_border_color" />
+
+        <include layout="@layout/fragment_transaction_shop_basket_listview_headerview" />
+
+        <ListView
+            android:id="@+id/orders_listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/transaction_tab_format_border_color"
+            android:dividerHeight="1dp"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/stock_history_listView_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_middle" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/stock_history_listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:scrollbars="none" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

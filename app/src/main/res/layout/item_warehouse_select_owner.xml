@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="48dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/left_border_size"
+        android:paddingEnd="@dimen/right_border_size">
+        <com.honeywell.wholesale.ui.base.BaseTextView
+            android:id="@+id/item_warehouse_select_owner_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            android:text="一库"/>
+
+        <ImageView
+            android:id="@+id/item_warehouse_select_owner_setting_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:src="@drawable/warehouse_selected"/>
+    </RelativeLayout>
+
+</LinearLayout>

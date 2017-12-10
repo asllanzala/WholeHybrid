@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <include layout="@layout/activity_cart_management_title_bar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/warehouse_info_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/shop_listview_divider_color"
+            android:listSelector="@drawable/menu_item_selector"
+            android:dividerHeight="1dp"
+            android:layout_marginTop="1dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

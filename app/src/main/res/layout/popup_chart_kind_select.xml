@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="99dp"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    
+    <TextView
+        android:id="@+id/popup_chart_kind_both_text_view"
+        android:layout_width="99dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:text="销售额-利润"/>
+
+    <View
+        android:layout_width="99dp"
+        android:layout_height="1dp"
+        android:background="#717171"/>
+
+    <TextView
+        android:id="@+id/popup_chart_kind_sale_text_view"
+        android:layout_width="99dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:text="销售额"/>
+
+    <View
+        android:layout_width="99dp"
+        android:layout_height="1dp"
+        android:background="#717171"/>
+
+    <TextView
+        android:id="@+id/popup_chart_kind_profit_text_view"
+        android:layout_width="99dp"
+        android:layout_height="37dp"
+        android:gravity="center"
+        android:text="利润"/>
+
+    <View
+        android:layout_width="99dp"
+        android:layout_height="1dp"
+        android:background="#717171"/>
+
+
+</LinearLayout>
